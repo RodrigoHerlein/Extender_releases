@@ -1,0 +1,4129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pipeline EXTENDER — Documentación</title>
+<style>
+:root{
+  --bg:#0d0e1c;--bg2:#141526;--bg3:#1a1c30;--bg4:#22253d;--bg5:#2a2e4a;
+  --border:#2a2e4a;--accent:#5c7cfa;--acc2:#7c9cff;--acc3:#a5b4fc;
+  --text:#dde4f5;--text2:#9aa5c8;--text3:#606882;
+  --green:#43a047;--teal:#00acc1;--orange:#fb8c00;--red:#e53935;--purple:#9c27b0;
+  --yellow:#f9a825;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--acc2);text-decoration:none}
+
+/* NAV */
+#nav{height:52px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;gap:14px;flex-shrink:0;position:sticky;top:0;z-index:100}
+#nav h1{font-size:16px;font-weight:700;color:var(--acc2);white-space:nowrap}
+#nav h1 span{color:var(--text3);font-weight:400;font-size:12px;margin-left:6px}
+.nav-tabs{display:flex;gap:4px;overflow-x:auto}
+.nav-tab{padding:5px 12px;border-radius:5px;border:none;cursor:pointer;font-size:12.5px;font-weight:500;background:transparent;color:var(--text2);transition:all .15s;white-space:nowrap}
+.nav-tab:hover{background:var(--bg4);color:var(--text)}
+.nav-tab.active{background:var(--accent);color:#fff}
+.nav-tab.tab-yellow{border:2px solid #f9a825;color:#f9a825}
+.nav-tab.tab-yellow:hover{background:rgba(249,168,37,.15);color:#f9a825}
+.nav-tab.tab-yellow.active{background:#f9a825;color:#0d0e1c;border-color:#f9a825}
+.nav-tab.tab-green{border:2px solid #43a047;color:#81c784}
+.nav-tab.tab-green:hover{background:rgba(67,160,71,.15);color:#81c784}
+.nav-tab.tab-green.active{background:#43a047;color:#fff;border-color:#43a047}
+#search{margin-left:auto;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 10px;font-size:12.5px;width:200px;outline:none}
+#search:focus{border-color:var(--accent)}
+
+/* LAYOUT */
+#wrap{display:flex;flex:1;overflow:hidden;flex-direction:column}
+
+
+
+
+
+
+
+
+
+#content{flex:1;overflow-y:auto;padding:28px 32px}
+#content::-webkit-scrollbar{width:7px}
+#content::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+/* PANELS */
+.panel{display:none}.panel.active{display:block}
+
+/* SECTION */
+.sec{margin-bottom:40px;scroll-margin-top:20px}
+.sec-title{font-size:20px;font-weight:700;color:var(--text);padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.sec-title .icon{font-size:20px}
+.sec-subtitle{font-size:14px;font-weight:600;color:var(--acc2);margin:20px 0 10px;padding-left:2px}
+
+/* PROSE */
+p.prose{font-size:13.5px;color:var(--text2);line-height:1.65;margin-bottom:10px}
+p.prose code,span.code{font-family:'Consolas','Courier New',monospace;font-size:12px;background:var(--bg);color:#ffcc80;padding:1px 5px;border-radius:3px}
+
+/* ARCH CARD */
+.arch-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.arch-card{flex:1;min-width:200px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;position:relative}
+.arch-card .arch-title{font-size:13px;font-weight:700;color:var(--acc2);margin-bottom:6px}
+.arch-card .arch-file{font-family:'Consolas','Courier New',monospace;font-size:11px;color:var(--text3);margin-bottom:8px}
+.arch-card .arch-desc{font-size:12.5px;color:var(--text2);line-height:1.5}
+.arch-badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:600;margin-bottom:6px}
+.badge-core{background:rgba(92,124,250,.2);color:#82a0ff}
+.badge-enc{background:rgba(67,160,71,.2);color:#81c784}
+.badge-exp{background:rgba(0,172,193,.2);color:#4dd0e1}
+.badge-corp{background:rgba(251,140,0,.2);color:#ffcc80}
+
+/* CLASS CARD */
+.cls-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.cls-card.hidden{display:none}
+.cls-header{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none}
+.cls-header:hover{background:var(--bg4)}
+.cls-name{font-family:'Consolas','Courier New',monospace;font-size:14px;color:var(--acc2);font-weight:700}
+.cls-kind{font-size:11px;padding:2px 7px;border-radius:3px;font-weight:600}
+.kind-class{background:#1a237e;color:#90caf9}
+.kind-func{background:#1b5e20;color:#a5d6a7}
+.kind-dc{background:#4a148c;color:#ce93d8}
+.kind-cfg{background:#e65100;color:#ffccbc}
+.cls-toggle{margin-left:auto;color:var(--text3);font-size:12px;transition:transform .2s}
+.cls-toggle.open{transform:rotate(180deg)}
+.cls-body{border-top:1px solid var(--border);padding:14px;display:none}
+.cls-body.open{display:block}
+.cls-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px}
+.cls-desc code{font-family:'Consolas','Courier New',monospace;font-size:12px;background:var(--bg);color:#ffcc80;padding:1px 4px;border-radius:3px}
+
+/* ATTRS */
+.attrs-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:6px}
+.attrs-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:14px}
+.attrs-table th{background:var(--bg);color:var(--text3);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;padding:5px 8px;text-align:left;border-bottom:1px solid var(--border)}
+.attrs-table td{padding:5px 8px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+.attrs-table td:first-child{font-family:'Consolas','Courier New',monospace;font-size:12px;color:#ffcc80;white-space:nowrap}
+.attrs-table td:nth-child(2){color:var(--text3);font-style:italic;white-space:nowrap}
+.attrs-table tr:last-child td{border-bottom:none}
+
+/* METHODS */
+.method{margin-bottom:8px;background:var(--bg);border-left:3px solid var(--border);padding:8px 12px;border-radius:0 5px 5px 0}
+.method-sig{font-family:'Consolas','Courier New',monospace;font-size:12.5px;color:var(--acc2);margin-bottom:4px;font-weight:600}
+.method-desc{font-size:12.5px;color:var(--text2);line-height:1.55}
+.method-desc code{font-family:'Consolas','Courier New',monospace;font-size:11.5px;background:#0a0b14;color:#ffcc80;padding:1px 4px;border-radius:3px}
+.method-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.mtag{font-size:11px;padding:2px 7px;border-radius:3px;font-weight:500}
+.mt-in{background:rgba(0,172,193,.15);color:#4dd0e1}
+.mt-out{background:rgba(67,160,71,.15);color:#81c784}
+.mt-ef{background:rgba(251,140,0,.15);color:#ffcc80}
+
+/* PIPELINE STEPS */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:0;position:relative}
+.step-num{width:36px;flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+.step-circle{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1}
+.step-line{flex:1;width:2px;background:var(--border);margin:4px 0}
+.step-body{flex:1;padding:0 0 20px 12px;padding-top:4px}
+.step-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.step-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.step-desc code{font-family:'Consolas','Courier New',monospace;font-size:11.5px;background:var(--bg);color:#ffcc80;padding:1px 4px;border-radius:3px}
+
+/* ENCODERS GRID */
+.enc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:20px}
+.enc-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px}
+.enc-card .enc-name{font-size:13px;font-weight:700;color:var(--acc2);margin-bottom:4px}
+.enc-card .enc-class{font-family:'Consolas','Courier New',monospace;font-size:11px;color:var(--text3);margin-bottom:8px}
+.enc-card .enc-desc{font-size:12.5px;color:var(--text2);line-height:1.55}
+.enc-card .enc-tag{display:inline-block;margin-top:6px;font-size:10.5px;padding:2px 7px;border-radius:3px;background:rgba(67,160,71,.2);color:#81c784;font-weight:600}
+
+/* CONFIG TABLE */
+.cfg-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.cfg-table th{background:var(--bg);color:var(--text3);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;padding:5px 8px;text-align:left;border-bottom:1px solid var(--border)}
+.cfg-table td{padding:5px 8px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+.cfg-table td:first-child{font-family:'Consolas','Courier New',monospace;color:#ffcc80;white-space:nowrap;font-size:12px}
+.cfg-table td:nth-child(2){color:var(--text3);font-style:italic;white-space:nowrap}
+.cfg-table tr:last-child td{border-bottom:none}
+.cfg-group{padding:6px 8px;background:var(--bg4);color:var(--acc2);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border)}
+
+/* FLOW SVG */
+.flow-wrap{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:20px;overflow-x:auto}
+
+/* SUB-TABS */
+.sub-nav{display:flex;gap:4px;border-bottom:2px solid var(--border);margin-bottom:24px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:6px 6px 0 0;border:none;cursor:pointer;font-size:12.5px;font-weight:500;background:transparent;color:var(--text2);transition:all .15s;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px}
+.sub-tab:hover{background:var(--bg4);color:var(--text)}
+.sub-tab.active{background:var(--bg3);color:var(--acc2);border-bottom-color:var(--accent)}
+.sub-panel{display:none}.sub-panel.active{display:block}
+
+/* FUNC TABLE */
+.func-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:10px}
+.func-table th{background:var(--bg);color:var(--text3);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;padding:5px 10px;text-align:left;border-bottom:1px solid var(--border)}
+.func-table td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2);line-height:1.5}
+.func-table td:first-child{font-family:'Consolas','Courier New',monospace;font-size:12px;color:var(--acc2);white-space:nowrap;font-weight:600}
+.func-table tr:last-child td{border-bottom:none}
+.func-table td code{font-family:'Consolas','Courier New',monospace;font-size:11.5px;background:var(--bg);color:#ffcc80;padding:1px 4px;border-radius:3px}
+.func-row-header{background:var(--bg4)}
+.func-row-header td{color:var(--text3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:4px 10px}
+
+/* CHIPS */
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin:2px;background:var(--bg4);color:var(--text2)}
+.chip.accent{background:rgba(92,124,250,.2);color:var(--acc2)}
+
+/* ALERT */
+.alert{background:rgba(92,124,250,.1);border:1px solid rgba(92,124,250,.3);border-radius:7px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:var(--text2);line-height:1.6}
+.alert code{font-family:'Consolas','Courier New',monospace;font-size:12px;background:var(--bg);color:#ffcc80;padding:1px 4px;border-radius:3px}
+
+.no-results{display:none;text-align:center;padding:60px;color:var(--text3);font-size:14px}
+
+/* SPLIT PANE (core panel) */
+#content{position:relative}
+#panel-core.active{display:flex;flex-direction:row;overflow:hidden;margin:-28px -32px;height:calc(100vh - 52px)}
+#core-code-pane{width:44%;min-width:200px;background:#0a0b14;display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+#core-code-pre{margin:0;padding:8px 0;flex:1;overflow-y:auto;overflow-x:auto;font-family:"Consolas","Courier New",monospace;font-size:11.5px;line-height:1.55;counter-reset:lc}
+#core-code-pre .cl{display:block;padding:0 12px 0 50px;position:relative;white-space:pre;tab-size:4;min-height:1.55em}
+#core-code-pre .cl::before{content:counter(lc);counter-increment:lc;position:absolute;left:0;width:40px;text-align:right;color:#3d4451;padding-right:8px;user-select:none;font-size:10.5px;line-height:1.55;top:0}
+#core-code-pre .cl.hl-section{background:rgba(92,124,250,.13);border-left:2px solid var(--accent)}
+#core-code-pre .cl.hl-section::before{color:#5c7cfa}
+#core-divider{width:5px;background:var(--border);cursor:col-resize;flex-shrink:0;transition:background .15s}
+#core-divider:hover,#core-divider.dragging{background:var(--accent)}
+#core-code-file{background:#0a0b14;border-bottom:1px solid var(--border);padding:6px 10px;font-size:11px;font-family:"Consolas","Courier New",monospace;display:flex;align-items:center;gap:4px;flex-shrink:0}
+#core-code-file span:first-child{color:var(--acc2);font-weight:600}
+#core-doc-pane{flex:1;overflow-y:auto;padding:24px 28px;min-width:300px}
+.py-kw{color:#ff7b72}.py-str{color:#a5d6a7}.py-cmt{color:#6e7681;font-style:italic}
+.py-dec{color:#d2a8ff}.py-fn{color:#79c0ff}.py-cls{color:#ffa657}.py-num{color:#f0883e}
+.py-bi{color:#e3b341}
+
+.pal-btn{background:transparent;border:1px solid #3d4451;color:#8b949e;font-size:11px;font-weight:600;width:22px;height:22px;border-radius:4px;cursor:pointer;line-height:1;margin-left:3px;transition:all .15s}
+.pal-btn:hover{border-color:#79c0ff;color:#79c0ff}
+.pal-btn.active{background:#1c2a3a;border-color:#79c0ff;color:#79c0ff}
+
+/* ── GENERIC SPLIT PANELS ── */
+.split-code-pane{width:44%;min-width:180px;background:#0a0b14;display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+.split-code-pre{margin:0;padding:8px 0;flex:1;overflow-y:auto;overflow-x:auto;font-family:"Consolas","Courier New",monospace;font-size:11.5px;line-height:1.55;counter-reset:lc}
+.split-code-pre .cl{display:block;padding:0 12px 0 50px;position:relative;white-space:pre;tab-size:4;min-height:1.55em}
+.split-code-pre .cl::before{content:counter(lc);counter-increment:lc;position:absolute;left:0;width:40px;text-align:right;color:#3d4451;padding-right:8px;user-select:none;font-size:10.5px;line-height:1.55;top:0}
+.split-code-pre .cl.hl-section{background:rgba(92,124,250,.13);border-left:2px solid var(--accent)}
+.split-code-pre .cl.hl-section::before{color:#5c7cfa}
+.split-divider{width:5px;background:var(--border);cursor:col-resize;flex-shrink:0;transition:background .15s}
+.split-divider:hover,.split-divider.dragging{background:var(--accent)}
+.split-code-file{background:#0a0b14;border-bottom:1px solid var(--border);padding:6px 10px;font-size:11px;font-family:"Consolas","Courier New",monospace;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.split-doc-pane{flex:1;overflow-y:auto;padding:24px 28px;min-width:300px}
+#panel-encoders.active,#panel-explorer.active,#panel-corpus.active{display:flex;flex-direction:row;overflow:hidden;margin:-28px -32px;height:calc(100vh - 52px)}
+.file-btn{background:transparent;border:1px solid #3d4451;color:#8b949e;font-size:10.5px;padding:1px 7px;border-radius:3px;cursor:pointer;margin-left:4px}
+.file-btn:hover{border-color:#79c0ff;color:#79c0ff}
+.file-btn.active{background:#1c2a3a;border-color:#79c0ff;color:#79c0ff}
+
+/* ── GENERIC SPLIT PANELS ── */
+.split-code-pane{width:44%;min-width:180px;background:#0a0b14;display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+.split-code-pre{margin:0;padding:8px 0;flex:1;overflow-y:auto;overflow-x:auto;font-family:"Consolas","Courier New",monospace;font-size:11.5px;line-height:1.55;counter-reset:lc}
+.split-code-pre .cl{display:block;padding:0 12px 0 50px;position:relative;white-space:pre;tab-size:4;min-height:1.55em}
+.split-code-pre .cl::before{content:counter(lc);counter-increment:lc;position:absolute;left:0;width:40px;text-align:right;color:#3d4451;padding-right:8px;user-select:none;font-size:10.5px;line-height:1.55;top:0}
+.split-code-pre .cl.hl-section{background:rgba(92,124,250,.13);border-left:2px solid var(--accent)}
+.split-code-pre .cl.hl-section::before{color:#5c7cfa}
+.split-divider{width:5px;background:var(--border);cursor:col-resize;flex-shrink:0;transition:background .15s}
+.split-divider:hover,.split-divider.dragging{background:var(--accent)}
+.split-code-file{background:#0a0b14;border-bottom:1px solid var(--border);padding:6px 10px;font-size:11px;font-family:"Consolas","Courier New",monospace;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.split-doc-pane{flex:1;overflow-y:auto;padding:24px 28px;min-width:300px}
+#panel-encoders.active,#panel-explorer.active,#panel-corpus.active{display:flex;flex-direction:row;overflow:hidden;margin:-28px -32px;height:calc(100vh - 52px)}
+
+
+/* ── GENERIC SPLIT PANELS ── */
+.split-code-pane{width:44%;min-width:180px;background:#0a0b14;display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+.split-code-pre{margin:0;padding:8px 0;flex:1;overflow-y:auto;overflow-x:auto;font-family:"Consolas","Courier New",monospace;font-size:11.5px;line-height:1.55;counter-reset:lc}
+.split-code-pre .cl{display:block;padding:0 12px 0 50px;position:relative;white-space:pre;tab-size:4;min-height:1.55em}
+.split-code-pre .cl::before{content:counter(lc);counter-increment:lc;position:absolute;left:0;width:40px;text-align:right;color:#3d4451;padding-right:8px;user-select:none;font-size:10.5px;line-height:1.55;top:0}
+.split-code-pre .cl.hl-section{background:rgba(92,124,250,.13);border-left:2px solid var(--accent)}
+.split-code-pre .cl.hl-section::before{color:#5c7cfa}
+.split-divider{width:5px;background:var(--border);cursor:col-resize;flex-shrink:0;transition:background .15s}
+.split-divider:hover,.split-divider.dragging{background:var(--accent)}
+.split-code-file{background:#0a0b14;border-bottom:1px solid var(--border);padding:6px 10px;font-size:11px;font-family:"Consolas","Courier New",monospace;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.split-doc-pane{flex:1;overflow-y:auto;padding:24px 28px;min-width:300px}
+#panel-encoders.active,#panel-explorer.active,#panel-corpus.active{display:flex;flex-direction:row;overflow:hidden;margin:-28px -32px;height:calc(100vh - 52px)}
+.file-btn{background:transparent;border:1px solid #3d4451;color:#8b949e;font-size:10.5px;padding:1px 7px;border-radius:3px;cursor:pointer;margin-left:4px}
+.file-btn:hover{border-color:#79c0ff;color:#79c0ff}
+.file-btn.active{background:#1c2a3a;border-color:#79c0ff;color:#79c0ff}
+</style>
+</head>
+<body>
+
+<div id="nav">
+  <h1>🧠 EXTENDER <span>Pipeline Documentation</span></h1>
+  <div class="nav-tabs">
+    <button class="nav-tab tab-yellow active" onclick="showTab('overview',this)">Arquitectura</button>
+    <button class="nav-tab tab-green" onclick="showTab('core',this)">extender_bertopic</button>
+    <button class="nav-tab tab-green" onclick="showTab('encoders',this)">Encoders</button>
+    <button class="nav-tab tab-green" onclick="showTab('explorer',this)">TopicExplorer</button>
+    <button class="nav-tab tab-green" onclick="showTab('corpus',this)">Corpus</button>
+  </div>
+  <input id="search" type="text" placeholder="🔍 Buscar…" oninput="doSearch(this.value)">
+</div>
+
+<div id="wrap">
+
+<div id="content">
+<div class="no-results" id="no-results">Sin resultados para "<span id="nq"></span>"</div>
+
+<!-- ══════════════════════════════════════════════════════
+     PANEL: ARQUITECTURA
+════════════════════════════════════════════════════════ -->
+<div class="panel active" id="panel-overview">
+
+<div class="sec" id="ov-intro">
+  <div class="sec-title"><span class="icon">🗺️</span> Visión general</div>
+
+  <div class="alert">
+    El pipeline activo es <strong>TopicExplorer</strong>: descubrimiento de tópicos en una sola pasada sobre un corpus estático (Curlie). <code>extender_bertopic.py</code> ahora solo expone los bloques base compartidos: <code>ConceptMap</code>, <code>EmbeddingEngine</code>, <code>tokenise</code> y utilidades de texto. El pipeline iterativo basado en búsqueda web fue eliminado.
+  </div>
+
+  <div class="arch-row">
+    <div class="arch-card">
+      <div class="arch-title">extender_bertopic.py</div>
+      <div class="arch-file">📄 ~530 líneas</div>
+      <div class="arch-desc">Bloques base del pipeline: <strong>ConceptNode</strong> + <strong>ConceptMap</strong> (grafo del mapa), <strong>EmbeddingEngine</strong> (SBERT, 384 dim), y utilidades de texto (<code>tokenise</code>, <code>clean_text</code>, <code>_DOMAIN_SEEDS</code>). El pipeline iterativo de búsqueda web fue eliminado.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-badge badge-enc">Encoders</div>
+      <div class="arch-title">concept_map_encoder.py</div>
+      <div class="arch-file">📄 ~750 líneas</div>
+      <div class="arch-desc">4 estrategias para convertir un mapa conceptual en vectores de búsqueda: <strong>ConceptMapEncoder</strong> (nodos), <strong>RelationAwareEncoder</strong> (tripletas), <strong>PathAwareEncoder</strong> (caminos), <strong>HybridEncoder</strong> (híbrido adaptativo por profundidad).</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-badge badge-exp">Pipeline principal (app)</div>
+      <div class="arch-title">topic_explorer.py + explorer_extensions.py</div>
+      <div class="arch-file">📄 ~900 + 160 líneas</div>
+      <div class="arch-desc"><strong>TopicExplorer</strong>: pipeline en una sola pasada sobre un corpus pre-cargado. <strong>explorer_extensions.py</strong>: subclases (<code>RelationAwareExplorer</code>, <code>PathAwareExplorer</code>, <code>HybridExplorer</code>) que conectan cada encoder con el pipeline.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-badge badge-corp">Corpus</div>
+      <div class="arch-title">curlie_corpus.py + paper_corpus.py</div>
+      <div class="arch-file">📄 ~360 + 250 líneas</div>
+      <div class="arch-desc">Loaders de corpus. <strong>CurlieCorpus</strong>: carga archivos TSV del directorio de Curlie con filtros de categoría. <strong>PaperDatasetCorpus</strong>: corpus del paper ODP/Curlie, con caché pickle. Ambos exponen la misma interfaz.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="ov-pipelines">
+  <div class="sec-title"><span class="icon">🔄</span> Pipeline — TopicExplorer</div>
+
+  <div class="sec-subtitle">Pasos del pipeline</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"><div class="step-circle">1</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Cargar corpus</div>
+        <div class="step-desc"><code>CurlieCorpus</code> o <code>PaperDatasetCorpus</code> carga todos los documentos del directorio de datos, aplica filtros de categoría y deduplica por URL.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">2</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Embeddings del corpus (con caché)</div>
+        <div class="step-desc"><code>_get_corpus_embeddings()</code> — embeddea todo el corpus con SBERT (all-MiniLM-L6-v2, 384 dim). El resultado se guarda como <code>.npz</code> en disco y se reutiliza. La clave del caché incluye número de entradas e include_keywords para invalidación automática.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">3</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Encoder del mapa</div>
+        <div class="step-desc">El mapa conceptual se codifica en un centroide + N aspect vectors según la estrategia elegida (<code>node_label</code>, <code>relation_aware</code>, <code>path_aware</code>, <code>hybrid</code>). Cada encoder está implementado en <code>concept_map_encoder.py</code>.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">4</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Retrieval por similitud coseno</div>
+        <div class="step-desc"><code>_retrieve_candidates()</code> — para cada aspect vector recupera los <code>top_k_per_aspect</code> documentos más similares del corpus. Un documento entra como candidato si supera dos gates: similitud con el aspect ≥ <code>min_aspect_sim</code> y similitud con el centroide ≥ <code>min_doc_relevance</code>.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">5</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Gate de relevancia</div>
+        <div class="step-desc"><code>_compute_map_vec_and_gate()</code> — calcula el vector del mapa (<code>_map_vec</code>) a partir de los top-30 términos ponderados, y aplica un segundo gate descartando candidatos con similitud &lt; <code>min_doc_relevance</code>. Garantiza retener al menos <code>min_cluster_size × 4</code> documentos.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">6</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Clustering con BERTopic (UMAP + HDBSCAN)</div>
+        <div class="step-desc"><code>_fit_bertopic()</code> — ajusta BERTopic sobre el sub-conjunto de candidatos. UMAP reduce la dimensionalidad de 384 a <code>umap_n_components</code>; HDBSCAN clusteriza. n_neighbors y n_components se adaptan automáticamente si el corpus es pequeño. Construye jerarquía de tópicos si hay ≥ 2 tópicos base.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">7</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Selección del nivel óptimo del árbol</div>
+        <div class="step-desc"><code>_select_level()</code> — evalúa todos los niveles del árbol jerárquico de BERTopic (de <code>min_nr_topics</code> a <code>max_nr_topics</code>). Para cada nr calcula un score combinando <strong>focus</strong> (similitud media al mapa), <strong>specificity</strong> (distribución equitativa de tamaños, vía Gini) y <strong>quality</strong> (fracción de tópicos que pasan filtros de salida). Elige el nr con mayor score total.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"><div class="step-circle">8</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Construcción y ranking de tópicos</div>
+        <div class="step-desc"><code>_build_explored_topics()</code> calcula por cluster: centroide normalizado, coherencia (similitud media al centroide), focus_score (similitud centroide–mapa), keywords con TF-IDF, documentos ordenados por similitud. <code>_rank_topics()</code> filtra por coherencia, focus, tamaño y categoría; puntúa con overlap ponderado de términos del mapa.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="ov-deps">
+  <div class="sec-title"><span class="icon">📦</span> Dependencias de importación</div>
+  <div class="flow-wrap">
+    <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px">
+      <style>
+        .fn{fill:#0d0e1c;stroke:#2a2e4a;stroke-width:1.5;rx:6}
+        .ft{fill:#9aa5c8;font-family:'Consolas','Courier New',monospace;font-size:11px;text-anchor:middle;dominant-baseline:middle}
+        .arr{stroke:#5c7cfa;stroke-width:1.5;fill:none;marker-end:url(#ah)}
+        .arr2{stroke:#43a047;stroke-width:1.5;fill:none;marker-end:url(#ah2)}
+      </style>
+      <defs>
+        <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0,0 8,3 0,6" fill="#5c7cfa"/>
+        </marker>
+        <marker id="ah2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0,0 8,3 0,6" fill="#43a047"/>
+        </marker>
+      </defs>
+      <!-- extender_bertopic -->
+      <rect class="fn" x="10" y="70" width="160" height="40" rx="6"/>
+      <text class="ft" x="90" y="90">extender_bertopic.py</text>
+      <!-- concept_map_encoder -->
+      <rect class="fn" x="220" y="20" width="170" height="40" rx="6"/>
+      <text class="ft" x="305" y="40">concept_map_encoder.py</text>
+      <!-- topic_explorer -->
+      <rect class="fn" x="220" y="70" width="170" height="40" rx="6"/>
+      <text class="ft" x="305" y="90">topic_explorer.py</text>
+      <!-- curlie_corpus -->
+      <rect class="fn" x="220" y="120" width="170" height="40" rx="6"/>
+      <text class="ft" x="305" y="140">curlie_corpus.py</text>
+      <!-- explorer_extensions -->
+      <rect class="fn" x="450" y="20" width="165" height="40" rx="6"/>
+      <text class="ft" x="532" y="35">explorer_extensions</text>
+      <text class="ft" x="532" y="49">.py</text>
+      <!-- extender_app -->
+      <rect class="fn" x="450" y="70" width="165" height="40" rx="6"/>
+      <text class="ft" x="532" y="90">extender_app.py</text>
+      <!-- paper_corpus -->
+      <rect class="fn" x="450" y="120" width="165" height="40" rx="6"/>
+      <text class="ft" x="532" y="140">paper_corpus.py</text>
+      <!-- arrows -->
+      <line class="arr" x1="170" y1="87" x2="218" y2="40"/>
+      <line class="arr" x1="170" y1="90" x2="218" y2="90"/>
+      <line class="arr" x1="220" y1="37" x2="170" y2="80"/>
+      <line class="arr" x1="390" y1="40" x2="448" y2="40"/>
+      <line class="arr" x1="390" y1="90" x2="448" y2="90"/>
+      <line class="arr2" x1="390" y1="140" x2="448" y2="140"/>
+      <line class="arr" x1="390" y1="80" x2="450" y2="87"/>
+      <line class="arr" x1="220" y1="140" x2="170" y2="97"/>
+    </svg>
+    <p style="font-size:11px;color:var(--text3);margin-top:8px">Azul = import de código. Verde = mismo interfaz, drop-in replacement. Las flechas indican quién importa a quién.</p>
+  </div>
+</div>
+</div><!-- /panel-overview -->
+
+<!-- ══════════════════════════════════════════════════════
+     PANEL: CORE
+════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-core">
+<div id="core-code-pane">
+  <div id="core-code-file">
+    <span>extender_bertopic.py</span>
+    <span style="color:var(--text3);font-weight:400">&nbsp;·&nbsp; 531 líneas</span>
+    <span style="flex:1"></span>
+    <button class="pal-btn active" id="pal-A" onclick="_setPalette('A',this)" title="GitHub Dark">A</button>
+    <button class="pal-btn" id="pal-B" onclick="_setPalette('B',this)" title="Monokai">B</button>
+    <button class="pal-btn" id="pal-C" onclick="_setPalette('C',this)" title="Material Palenight">C</button>
+  </div>
+  <pre id="core-code-pre"></pre>
+</div>
+<div id="core-divider" title="Arrastrar para redimensionar"></div>
+<div id="core-doc-pane">
+  <div class="sub-nav">
+    <button class="sub-tab active" onclick="showSubTab('core','cn',this)" data-ls="196" data-le="208">ConceptNode</button>
+    <button class="sub-tab" onclick="showSubTab('core','cm',this)" data-ls="209" data-le="435">ConceptMap</button>
+    <button class="sub-tab" onclick="showSubTab('core','ee',this)" data-ls="436" data-le="531">EmbeddingEngine</button>
+    <button class="sub-tab" onclick="showSubTab('core','ut',this)" data-ls="1" data-le="195">Utilidades de texto</button>
+  </div>
+
+<div class="sub-panel active" id="core-cn">
+  <div class="sec-title"><span class="icon">🔷</span> ConceptNode <span style="font-size:13px;color:var(--text3);font-weight:400;margin-left:8px">dataclass</span></div>
+  <p class="prose">Nodo del mapa conceptual. Almacena la etiqueta del concepto y las listas paralelas de vecinos y etiquetas de arcos.</p>
+
+  <div class="sec-subtitle">Atributos</div>
+  <table class="attrs-table">
+    <tr><th>Atributo</th><th>Tipo</th><th>Default</th><th>Descripción</th></tr>
+    <tr><td>label</td><td>str</td><td>—</td><td>Etiqueta del concepto.</td></tr>
+    <tr><td>neighbors</td><td>list[str]</td><td>[]</td><td>Etiquetas de los nodos adyacentes.</td></tr>
+    <tr><td>link_labels</td><td>list[str]</td><td>[]</td><td>Etiquetas de los arcos hacia cada vecino. Los índices son paralelos a <code>neighbors</code>.</td></tr>
+  </table>
+
+  <p class="prose" style="margin-top:12px">No define métodos propios. Es un contenedor de datos creado y manipulado por <code>ConceptMap</code>.</p>
+</div>
+
+<!-- ── ConceptMap ── -->
+<div class="sub-panel" id="core-cm">
+  <div class="sec-title"><span class="icon">🗺️</span> ConceptMap <span style="font-size:13px;color:var(--text3);font-weight:400;margin-left:8px">class</span></div>
+  <p class="prose">Grafo del mapa conceptual con nodos (<code>ConceptNode</code>) y arcos etiquetados. Es la entrada de todos los encoders y del pipeline.</p>
+
+  <div class="sec-subtitle">Atributos de instancia</div>
+  <table class="attrs-table">
+    <tr><th>Atributo</th><th>Tipo</th><th>Descripción</th></tr>
+    <tr><td>title</td><td>str</td><td>Título descriptivo del mapa.</td></tr>
+    <tr><td>nodes</td><td>dict[str, ConceptNode]</td><td>Diccionario etiqueta → nodo.</td></tr>
+    <tr><td>edges</td><td>list[tuple[str,str,str]]</td><td>Lista de tripletas <code>(src, link, dst)</code>.</td></tr>
+    <tr><td>_root</td><td>str | None</td><td>Etiqueta del nodo raíz (None si no se definió).</td></tr>
+  </table>
+
+  <div class="sec-subtitle" style="margin-top:20px">Métodos</div>
+  <table class="func-table">
+    <tr><th>Método</th><th>Recibe</th><th>Devuelve</th><th>Qué hace</th></tr>
+    <tr class="func-row-header"><td colspan="4">Construcción del grafo</td></tr>
+    <tr>
+      <td>add_concept</td>
+      <td><code>label: str</code></td>
+      <td>None</td>
+      <td>Agrega un nodo al mapa si la etiqueta no existe todavía.</td>
+    </tr>
+    <tr>
+      <td>add_relation</td>
+      <td><code>src: str, link: str, dst: str</code></td>
+      <td>None</td>
+      <td>Agrega un arco dirigido src→dst con etiqueta <code>link</code>. Crea los nodos src y dst si no existen y registra la adyacencia en ambos.</td>
+    </tr>
+    <tr>
+      <td>set_root</td>
+      <td><code>label: str</code></td>
+      <td>None</td>
+      <td>Marca un nodo como raíz topológica del mapa. Lo crea si no existe.</td>
+    </tr>
+    <tr class="func-row-header"><td colspan="4">Análisis topológico</td></tr>
+    <tr>
+      <td>topological_weights</td>
+      <td>—</td>
+      <td><code>dict[str, float]</code></td>
+      <td>Calcula un peso por nodo en [0,1] combinando grado normalizado y proximidad BFS a la raíz. Fórmula: <code>0.5 × deg/max_deg + 0.5 × (1 − dist/(max_dist+1))</code>. Usado por todos los encoders.</td>
+    </tr>
+    <tr>
+      <td>term_weights</td>
+      <td><code>focus_concepts: list[str] | None, focus_multiplier: float = 2.0</code></td>
+      <td><code>dict[str, float]</code></td>
+      <td>Acumula el peso topológico de cada nodo sobre sus tokens (100 %) y sobre los tokens de sus arcos (30 %). Los conceptos en <code>focus_concepts</code> reciben un multiplicador. Retorna pesos normalizados a suma 1.</td>
+    </tr>
+    <tr>
+      <td>as_pseudo_documents</td>
+      <td>—</td>
+      <td><code>list[str]</code></td>
+      <td>Genera pseudo-documentos del mapa para BERTopic: título, cada etiqueta de nodo, cada tripleta "src link dst" y las frases semilla de dominio correspondientes.</td>
+    </tr>
+    <tr>
+      <td>domain_context_tokens</td>
+      <td><code>top_n: int = 6</code></td>
+      <td><code>list[str]</code></td>
+      <td>Retorna los <code>top_n</code> tokens más representativos del mapa ordenados por <code>term_weights()</code>.</td>
+    </tr>
+    <tr>
+      <td>concept_bigrams</td>
+      <td><code>top_n: int = 6</code></td>
+      <td><code>list[str]</code></td>
+      <td>Retorna los <code>top_n</code> conceptos multi-palabra (≥2 tokens) mejor rankeados topológicamente.</td>
+    </tr>
+    <tr class="func-row-header"><td colspan="4">Serialización</td></tr>
+    <tr>
+      <td>from_dict <span style="color:var(--text3);font-size:10.5px">classmethod</span></td>
+      <td><code>data: dict</code> — claves opcionales: <code>title</code>, <code>concepts</code>, <code>relations</code>, <code>root</code></td>
+      <td><code>ConceptMap</code></td>
+      <td>Construye un ConceptMap poblado a partir de un dict serializado (formato JSON de la app).</td>
+    </tr>
+    <tr>
+      <td>from_json_file <span style="color:var(--text3);font-size:10.5px">classmethod</span></td>
+      <td><code>path: str</code></td>
+      <td><code>ConceptMap</code></td>
+      <td>Carga un ConceptMap directamente desde un archivo JSON en disco.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ── EmbeddingEngine ── -->
+<div class="sub-panel" id="core-ee">
+  <div class="sec-title"><span class="icon">🔢</span> EmbeddingEngine <span style="font-size:13px;color:var(--text3);font-weight:400;margin-left:8px">class</span></div>
+  <p class="prose">Wrapper sobre SBERT (<code>all-MiniLM-L6-v2</code>, 384 dimensiones). Los pesos del modelo son fijos y no se re-entrenan. Produce embeddings L2-normalizados en float64.</p>
+
+  <div class="sec-subtitle">Atributos de instancia</div>
+  <table class="attrs-table">
+    <tr><th>Atributo</th><th>Tipo</th><th>Descripción</th></tr>
+    <tr><td>random_state</td><td>int</td><td>Semilla aleatoria para reproducibilidad (default 42).</td></tr>
+  </table>
+
+  <div class="sec-subtitle" style="margin-top:20px">Constantes</div>
+  <table class="attrs-table">
+    <tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr>
+    <tr><td>dim</td><td><code>384</code></td><td>Dimensión fija de los embeddings generados por <code>all-MiniLM-L6-v2</code>. No varía entre instancias ni llamadas.</td></tr>
+  </table>
+
+  <div class="sec-subtitle" style="margin-top:20px">Métodos</div>
+  <table class="func-table">
+    <tr><th>Método</th><th>Recibe</th><th>Devuelve</th><th>Qué hace</th></tr>
+    <tr>
+      <td>fit</td>
+      <td><code>texts: list[str] = ()</code> — ignorado</td>
+      <td><code>EmbeddingEngine</code> (self)</td>
+      <td>Carga el modelo SBERT (<code>all-MiniLM-L6-v2</code>) en memoria. El parámetro <code>texts</code> existe solo por compatibilidad de interfaz con sklearn.</td>
+    </tr>
+    <tr>
+      <td>embed</td>
+      <td><code>texts: list[str]</code></td>
+      <td><code>np.ndarray</code> shape (N, 384)</td>
+      <td>Embeddea los textos con SBERT. Batch size interno: 64. Lanza <code>RuntimeError</code> si <code>fit()</code> no fue llamado antes.</td>
+    </tr>
+    <tr>
+      <td>fit_embed</td>
+      <td><code>texts: list[str]</code></td>
+      <td><code>np.ndarray</code> shape (N, 384)</td>
+      <td>Atajo: llama <code>fit()</code> + <code>embed()</code> en una sola llamada.</td>
+    </tr>
+    <tr>
+      <td>refit</td>
+      <td><code>all_texts: list[str] = ()</code> — ignorado</td>
+      <td><code>EmbeddingEngine</code> (self)</td>
+      <td>No-op. SBERT tiene pesos fijos y no requiere re-entrenamiento. Solo presente por compatibilidad de interfaz.</td>
+    </tr>
+    <tr>
+      <td>dim <span style="color:var(--text3);font-size:10.5px">@property</span></td>
+      <td>—</td>
+      <td><code>int</code></td>
+      <td>Retorna la constante <code>dim</code> (384). Implementado como <code>@property</code> para poder llamarse como atributo (<code>engine.dim</code>) sin paréntesis.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ── Utilidades de texto ── -->
+<div class="sub-panel" id="core-ut">
+  <div class="sec-title"><span class="icon">🧩</span> Utilidades de texto</div>
+  <p class="prose">Funciones y constantes auxiliares definidas en <code>extender_bertopic.py</code>. <code>tokenise</code> y <code>_DOMAIN_SEEDS</code> son importados externamente por <code>concept_map_encoder.py</code>.</p>
+
+  <table class="func-table">
+    <tr><th>Nombre</th><th>Recibe</th><th>Devuelve</th><th>Qué hace</th></tr>
+    <tr>
+      <td>tokenise</td>
+      <td><code>text: str, stopwords: frozenset = _BASE_STOPWORDS</code></td>
+      <td><code>list[str]</code></td>
+      <td>Extrae tokens alfanuméricos de 3+ caracteres en minúsculas, descartando stopwords y tokens puramente numéricos. Usado en pesos topológicos y por los encoders.</td>
+    </tr>
+    <tr>
+      <td>clean_text</td>
+      <td><code>text: str</code></td>
+      <td><code>str</code></td>
+      <td>Elimina del texto los tokens que son exclusivamente dígitos (IDs de páginas, números sueltos). Útil para normalizar snippets antes de procesar.</td>
+    </tr>
+    <tr>
+      <td>_get_domain_seeds</td>
+      <td><code>concept_map_title: str, concept_map_root: str = ""</code></td>
+      <td><code>list[str]</code></td>
+      <td>Selecciona las frases semilla de <code>_DOMAIN_SEEDS</code> cuyo dominio aparece como substring del título o la raíz del mapa. Llamado por <code>ConceptMap.as_pseudo_documents()</code>.</td>
+    </tr>
+    <tr>
+      <td>_DOMAIN_SEEDS</td>
+      <td colspan="2">— constante —<br><code>dict[str, list[str]]</code></td>
+      <td>Diccionario de frases semilla por dominio: <code>"space"</code>, <code>"moon"</code>, <code>"mars"</code>, … Cada lista contiene frases de vocabulario especializado que enriquecen los pseudo-documentos del mapa.</td>
+    </tr>
+    <tr>
+      <td>_BASE_STOPWORDS</td>
+      <td colspan="2">— constante —<br><code>frozenset[str]</code></td>
+      <td>Conjunto de stopwords en inglés (artículos, preposiciones, conectores, términos genéricos de web) usado por <code>tokenise()</code>.</td>
+    </tr>
+  </table>
+</div>
+
+</div></div><!-- /core-doc-pane -->
+</div><!-- /panel-core -->
+
+<!-- ══════════════════════════════════════════════════════
+     PANEL: ENCODERS
+════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-encoders">
+<div class="split-code-pane" id="enc-code-pane">
+  <div class="split-code-file" id="enc-code-file"><span id="enc-fname" style="color:#89b4fa;font-weight:600">concept_map_encoder.py</span><span style="color:#6e7681;font-weight:400">&nbsp;·&nbsp;<span id="enc-lcount">754</span> líneas</span><span style="flex:1"></span></div>
+  <pre class="split-code-pre" id="enc-code-pre"></pre>
+</div>
+<div class="split-divider" id="enc-divider" title="Arrastrar para redimensionar"></div>
+<div class="split-doc-pane" id="enc-doc-pane">
+  <div class="sub-nav">
+    <button class="sub-tab active" onclick="showSubTabG('encoders','enc-over',this)" data-ls="1" data-le="23" data-prefix="enc">Comparativa</button>
+    <button class="sub-tab" onclick="showSubTabG('encoders','enc-cme',this)" data-ls="24" data-le="358" data-prefix="enc">ConceptMapEncoder</button>
+    <button class="sub-tab" onclick="showSubTabG('encoders','enc-rae',this)" data-ls="359" data-le="471" data-prefix="enc">RelationAwareEncoder</button>
+    <button class="sub-tab" onclick="showSubTabG('encoders','enc-pae',this)" data-ls="472" data-le="647" data-prefix="enc">PathAwareEncoder</button>
+    <button class="sub-tab" onclick="showSubTabG('encoders','enc-he',this)" data-ls="648" data-le="753" data-prefix="enc">HybridEncoder</button>
+  </div>
+<div class="sub-panel active" id="enc-over">
+<div class="sec-title"><span class="icon">🎯</span> Estrategias de encoding</div>
+<p class="prose">Cada encoder transforma el mapa conceptual en vectores densos de 384 dim (SBERT). Todos producen un centroide y N aspect vectors.</p>
+<div class="enc-grid">
+    <div class="enc-card"><div class="enc-name">1. Nodos aislados</div><div class="enc-class">ConceptMapEncoder / DiagnosticExplorer</div><div class="enc-desc">Embeddea cada etiqueta de nodo individualmente. El centroide es el promedio ponderado por topología. Más simple pero puede fallar en mapas donde los términos aislados no capturan el dominio.</div><div class="enc-tag">node_label</div></div>
+    <div class="enc-card"><div class="enc-name">2. Tripletas relacionales</div><div class="enc-class">RelationAwareEncoder / RelationAwareExplorer</div><div class="enc-desc">Embeddea tripletas completas "src link dst" como oraciones. Da a SBERT contexto relacional. Soluciona el desalineamiento semántico en mapas donde los términos aislados no capturan el dominio.</div><div class="enc-tag">relation_aware</div></div>
+    <div class="enc-card"><div class="enc-name">3. Caminos raíz→nodo</div><div class="enc-class">PathAwareEncoder / PathAwareExplorer</div><div class="enc-desc">Enumera todos los caminos simples desde la raíz hasta cada nodo (DFS). Embeddea cada camino como una oración completa. Captura el contexto acumulado a lo largo del camino. max_depth=12, max_paths_per_node=200.</div><div class="enc-tag">path_aware</div></div>
+    <div class="enc-card"><div class="enc-name">4. Híbrido (ancla + ventana)</div><div class="enc-class">HybridEncoder / HybridExplorer</div><div class="enc-desc">Elige la representación por nodo según su profundidad en el mapa: depth=1 → etiqueta aislada; depth≤3 → tripleta anclada a la raíz ("root :: src link dst"); depth>3 → ventana de las últimas window_k=3 tripletas del camino anclada. También aplica collapse_2cycles para evitar inflar nodos genéricos.</div><div class="enc-tag">hybrid</div></div>
+  </div>
+</div>
+<div class="sub-panel" id="enc-cme">
+<div class="cls-card" data-search="conceptmapencoder centroid aspects label embeddings query_strings">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">ConceptMapEncoder</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Encoder de nodos: promedio ponderado de embeddings de etiquetas de nodo. Los pesos combinan topología × focus_multiplier.</div>
+      <div class="method"><div class="method-sig">centroid  @property → np.ndarray</div><div class="method-desc">Promedio ponderado de embeddings de nodos (calculado bajo demanda, cacheado).</div></div>
+      <div class="method"><div class="method-sig">aspects  @property → list[np.ndarray]</div><div class="method-desc">Lista de N aspect vectors. El primero es el centroide global; los siguientes son centroides de vecindades de los top-nodos. Un aspect se agrega solo si su similitud coseno con los existentes es &lt; aspect_sim_threshold (0.97).</div></div>
+      <div class="method"><div class="method-sig">query_strings(max_queries=12) → list[str]</div><div class="method-desc">Queries BM25 a partir de arcos del mapa (para speedup opcional de pre-filtrado).</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="enc-rae">
+<div class="cls-card" data-search="relationawareencoder tripletas triple texts weights">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">RelationAwareEncoder</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Encoder de tripletas "src link dst". El peso de cada tripleta es el promedio de pesos topológicos de src y dst.</div>
+      <div class="method"><div class="method-sig">_triple_texts_and_weights() → (texts, weights)</div><div class="method-desc">Genera textos y pesos a partir de los arcos del mapa. Si el mapa no tiene arcos, usa nodos aislados como fallback.</div></div>
+      <div class="method"><div class="method-sig">centroid / aspects  @property</div><div class="method-desc">Calculados sobre las tripletas. Los aspects se seleccionan por mayor peso y distancia coseno entre sí.</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="enc-pae">
+<div class="cls-card" data-search="pathawareencoder all_root_paths path_to_text caminos raiz nodo">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">PathAwareEncoder</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Encoder de caminos. Usa <code>all_root_paths()</code> (DFS con backtracking) para enumerar todos los caminos simples raíz→nodo. Cada camino se serializa como una oración con <code>path_to_text()</code>.</div>
+      <div class="method"><div class="method-sig">paths_by_node  @property → dict</div><div class="method-desc">Diccionario {nodo: [[tripleta, ...], ...]} con todos los caminos simples desde la raíz.</div></div>
+      <div class="method"><div class="method-sig">_path_texts_and_weights()</div><div class="method-desc">El peso de cada camino es el peso topológico del nodo destino dividido por el número de caminos que llegan a ese nodo.</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="enc-he">
+<div class="cls-card" data-search="hybridencoder collapse_2cycles depth window_k ancla">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">HybridEncoder</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Encoder adaptativo por profundidad. Usa <code>collapse_2cycles()</code> para eliminar arcos bidireccionales y <code>all_root_paths_from_relations()</code> sobre las relaciones limpias.</div>
+      <div class="method"><div class="method-sig">_build_hybrid_texts_and_weights() (función auxiliar)</div><div class="method-desc">Para depth=1: etiqueta aislada. Para depth≤3: <code>"root :: src link dst"</code>. Para depth>3: <code>"root :: últimas window_k tripletas"</code>.</div></div>
+    </div>
+  </div>
+<div class="sec-subtitle" style="margin-top:20px">Funciones auxiliares</div>
+<div class="sec-subtitle">Funciones auxiliares (concept_map_encoder.py)</div>
+  <div class="method"><div class="method-sig">all_root_paths(cm, max_depth, max_paths_per_node) → dict</div><div class="method-desc">DFS desde la raíz del mapa. Enumera todos los caminos simples (sin repetir nodos) hasta cada nodo alcanzable.</div></div>
+  <div class="method"><div class="method-sig">path_to_text(path_edges) → str</div><div class="method-desc">Serializa una lista de tripletas como una oración: "raíz link1 nodo1 link2 nodo2 …"</div></div>
+  <div class="method"><div class="method-sig">collapse_2cycles(relations) → list</div><div class="method-desc">Si existen "A→B" y "B→A", conserva solo la primera. Evita inflar el peso de nodos genéricos.</div></div>
+  <div class="method"><div class="method-sig">all_root_paths_from_relations(root, relations, …) → dict</div><div class="method-desc">Como all_root_paths() pero opera sobre una lista de relaciones ya procesada (después de collapse_2cycles).</div></div>
+</div>
+</div>
+</div><!-- /panel-encoders -->
+
+
+<div class="panel" id="panel-explorer">
+<div class="split-code-pane" id="exp-code-pane">
+  <div class="split-code-file" id="exp-code-file"><span id="exp-fname" style="color:#89b4fa;font-weight:600">topic_explorer.py</span><span style="color:#6e7681;font-weight:400">&nbsp;·&nbsp;<span id="exp-lcount">886</span> líneas</span><span style="flex:1"></span><button class="file-btn active" onclick="_swFile('exp','exp_main',this)">topic_explorer.py</button><button class="file-btn" onclick="_swFile('exp','exp_ext',this)">explorer_extensions.py</button></div>
+  <pre class="split-code-pre" id="exp-code-pre"></pre>
+</div>
+<div class="split-divider" id="exp-divider" title="Arrastrar para redimensionar"></div>
+<div class="split-doc-pane" id="exp-doc-pane">
+  <div class="sub-nav">
+    <button class="sub-tab active" onclick="showSubTabG('explorer','exp-cfg',this)" data-ls="45" data-le="126" data-prefix="exp">ExplorerConfig</button>
+    <button class="sub-tab" onclick="showSubTabG('explorer','exp-topic',this)" data-ls="127" data-le="147" data-prefix="exp">ExploredTopic</button>
+    <button class="sub-tab" onclick="showSubTabG('explorer','exp-te',this)" data-ls="148" data-le="885" data-prefix="exp">TopicExplorer</button>
+    <button class="sub-tab" onclick="showSubTabG('explorer','exp-ext',this)" data-ls="1" data-le="159" data-prefix="exp">Extensions</button>
+  </div>
+<div class="sub-panel active" id="exp-cfg">
+<div class="cls-card" data-search="explorerconfig top_k umap hdbscan focus weight coherence">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-cfg">config dataclass</span>
+      <span class="cls-name">ExplorerConfig</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Todos los hiperparámetros del TopicExplorer. Los parámetros de exclusión de categoría son especialmente útiles para evitar que mapas no-terrestres (ej: Luna) traigan tópicos de ciencias terrestres por overlap semántico.</div>
+      <table class="cfg-table">
+        <tr><th>Parámetro</th><th>Default</th><th>Descripción</th></tr>
+        <tr><td colspan="3" class="cfg-group">Retrieval</td></tr>
+        <tr><td>top_k_per_aspect</td><td>500</td><td>Docs a recuperar por cada aspect vector</td></tr>
+        <tr><td>min_aspect_sim</td><td>0.15</td><td>Similitud mínima con el aspect para ser candidato</td></tr>
+        <tr><td>min_doc_relevance</td><td>0.10</td><td>Similitud mínima con el centroide del mapa</td></tr>
+        <tr><td colspan="3" class="cfg-group">Clustering</td></tr>
+        <tr><td>min_cluster_size</td><td>5</td><td>Tamaño mínimo de cluster HDBSCAN</td></tr>
+        <tr><td>umap_n_components</td><td>10</td><td>Dimensiones UMAP</td></tr>
+        <tr><td>umap_n_neighbors</td><td>20</td><td>Vecinos locales UMAP</td></tr>
+        <tr><td colspan="3" class="cfg-group">Selección de nivel del árbol</td></tr>
+        <tr><td>focus_weight</td><td>0.45</td><td>Peso del foco en el score de nivel</td></tr>
+        <tr><td>specificity_weight</td><td>0.35</td><td>Peso de la especificidad (anti-Gini)</td></tr>
+        <tr><td>quality_weight</td><td>0.20</td><td>Peso de la calidad (fracción que pasa filtros)</td></tr>
+        <tr><td>min_nr_topics / max_nr_topics</td><td>4 / 15</td><td>Rango de niveles a evaluar</td></tr>
+        <tr><td colspan="3" class="cfg-group">Filtros de categoría</td></tr>
+        <tr><td>domain_category_keywords</td><td>(Science, Technology, …)</td><td>Categorías Curlie incluidas; tópicos con poca fracción se penalizan</td></tr>
+        <tr><td>domain_category_min_fraction</td><td>0.40</td><td>Fracción mínima de docs en dominio para no ser penalizado</td></tr>
+        <tr><td>domain_category_penalty</td><td>0.05</td><td>Multiplicador de score para tópicos fuera del dominio</td></tr>
+        <tr><td>exclude_category_keywords</td><td>()</td><td>Categorías cuya fracción excesiva descarta el tópico completamente</td></tr>
+        <tr><td>exclude_category_max_fraction</td><td>0.30</td><td>Fracción máxima de docs en categorías de exclusión</td></tr>
+        <tr><td colspan="3" class="cfg-group">Output</td></tr>
+        <tr><td>n_output_topics</td><td>6</td><td>Tópicos a retornar</td></tr>
+        <tr><td>min_coherence / min_output_focus</td><td>0.20 / 0.05</td><td>Filtros mínimos de coherencia y focus</td></tr>
+        <tr><td>max_topic_fraction</td><td>0.35</td><td>Descarta clusters que contengan más del X% del candidate set (evita clusters genéricos)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="exp-topic">
+<div class="cls-card" data-search="exploredtopic coherence focus_score documents centroid">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-dc">dataclass</span>
+      <span class="cls-name">ExploredTopic</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Tópico retornado por TopicExplorer. Similar a TopicResult pero con focus_score explícito y lista de documentos completa.</div>
+      <table class="attrs-table">
+        <tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr>
+        <tr><td>topic_id</td><td>int</td><td>ID del cluster (merged_id del nivel seleccionado)</td></tr>
+        <tr><td>keywords</td><td>list[str]</td><td>Top TF-IDF sobre el cluster (ngrams 1-2)</td></tr>
+        <tr><td>doc_indices</td><td>list[int]</td><td>Índices en el corpus del conjunto de candidatos</td></tr>
+        <tr><td>coherence</td><td>float</td><td>Similitud coseno media al centroide del cluster</td></tr>
+        <tr><td>focus_score</td><td>float</td><td>Similitud coseno del centroide del cluster con el vector del mapa</td></tr>
+        <tr><td>documents</td><td>list[dict]</td><td>Documentos del cluster ordenados por similitud al centroide</td></tr>
+        <tr><td>centroid</td><td>list[float]|None</td><td>Centroide normalizado del cluster (384-dim)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="exp-te">
+<div class="cls-card" data-search="topicexplorer run retrieve candidates fit_bertopic select_level rank_topics">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">TopicExplorer</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Pipeline de descubrimiento de tópicos en una sola pasada sobre un corpus estático. Inicializa EmbeddingEngine + ConceptMapEncoder al construirse.</div>
+      <div class="method"><div class="method-sig">run() → list[ExploredTopic]</div><div class="method-desc">Ejecuta los 7 pasos del pipeline y retorna hasta n_output_topics tópicos rankeados.</div></div>
+      <div class="method"><div class="method-sig">_get_corpus_embeddings() → np.ndarray</div><div class="method-desc">Embeddea el corpus completo o lo carga desde caché .npz. La clave del caché incluye número de entradas, include_keywords y "sbert384".</div></div>
+      <div class="method"><div class="method-sig">_retrieve_candidates() → list[int]</div><div class="method-desc">Para cada aspect vector recupera top_k_per_aspect docs. Un doc entra si supera: similitud con aspect ≥ min_aspect_sim Y similitud con centroide ≥ min_doc_relevance.</div></div>
+      <div class="method"><div class="method-sig">_compute_map_vec_and_gate()</div><div class="method-desc">Calcula _map_vec y aplica segundo gate de relevancia. Garantiza retener al menos min_cluster_size × 4 docs.</div></div>
+      <div class="method"><div class="method-sig">_fit_bertopic(embs, texts) → (model, base_count, orig_topics, hier_df)</div><div class="method-desc">Ajusta BERTopic sobre los candidatos. n_neighbors y n_components se adaptan al tamaño del corpus. Construye la jerarquía si hay ≥ 2 tópicos base.</div></div>
+      <div class="method"><div class="method-sig">_select_level(orig_topics, base_count, hier_df) → (best_nr, level_scores, level_assignments)</div><div class="method-desc">Evalúa todos los niveles del árbol jerárquico. Score total = focus_weight × focus + specificity_weight × specificity + quality_weight × quality. specificity usa el coeficiente de Gini sobre los tamaños de los clusters.</div></div>
+      <div class="method"><div class="method-sig">_build_explored_topics(model, assignments, orig_topics) → list[ExploredTopic]</div><div class="method-desc">Construye ExploredTopics: centroide, coherencia, focus_score, keywords TF-IDF, docs ordenados.</div></div>
+      <div class="method"><div class="method-sig">_rank_topics(topics) → list[ExploredTopic]</div><div class="method-desc">Filtra (focus, coherencia, tamaño, exclusión de categoría) y puntúa con overlap ponderado de términos del mapa. Aplica penalización a tópicos fuera del dominio.</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="exp-ext">
+<div class="sec-title"><span class="icon">🧩</span> Explorer Extensions</div>
+<p class="prose">Subclases de TopicExplorer definidas en <code>explorer_extensions.py</code>. Cada una reemplaza <code>self.encoder</code> en su <code>__init__</code>.</p>
+<div class="cls-card" data-search="diagnosticexplorer hdbscan_labels diagnostic">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">DiagnosticExplorer  (TopicExplorer)</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Subclase de TopicExplorer que captura las etiquetas crudas de HDBSCAN en <code>self._hdbscan_labels</code> para diagnosticar pérdida de recall por etapa. Usa <code>ConceptMapEncoder</code> (nodos aislados) — es el encoder por defecto.</div>
+    </div>
+  </div><div class="cls-card" data-search="relationawareexplorer relacion tripleta">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">RelationAwareExplorer  (DiagnosticExplorer)</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Reemplaza el encoder por <code>RelationAwareEncoder</code> (tripletas). Útil cuando los términos aislados no capturan el dominio del mapa.</div>
+    </div>
+  </div><div class="cls-card" data-search="pathawareexplorer caminos raiz profundidad">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">PathAwareExplorer  (DiagnosticExplorer)</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Reemplaza el encoder por <code>PathAwareEncoder</code>. Pasa los parámetros <code>path_max_depth</code> y <code>path_max_paths_per_node</code> desde <code>ExplorerConfig</code>.</div>
+    </div>
+  </div><div class="cls-card" data-search="hybridexplorer window_k hibrido">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">HybridExplorer  (DiagnosticExplorer)</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Reemplaza el encoder por <code>HybridEncoder</code>. Pasa <code>hybrid_window_k</code>, <code>path_max_depth</code> y <code>path_max_paths_per_node</code> desde <code>ExplorerConfig</code>.</div>
+    </div>
+  </div>
+</div>
+</div>
+</div><!-- /panel-explorer -->
+
+
+<div class="panel" id="panel-corpus">
+<div class="split-code-pane" id="corp-code-pane">
+  <div class="split-code-file" id="corp-code-file"><span id="corp-fname" style="color:#89b4fa;font-weight:600">curlie_corpus.py</span><span style="color:#6e7681;font-weight:400">&nbsp;·&nbsp;<span id="corp-lcount">362</span> líneas</span><span style="flex:1"></span><button class="file-btn active" onclick="_swFile('corp','corp_a',this)">curlie_corpus.py</button><button class="file-btn" onclick="_swFile('corp','corp_b',this)">paper_corpus.py</button></div>
+  <pre class="split-code-pre" id="corp-code-pre"></pre>
+</div>
+<div class="split-divider" id="corp-divider" title="Arrastrar para redimensionar"></div>
+<div class="split-doc-pane" id="corp-doc-pane">
+  <div class="sub-nav">
+    <button class="sub-tab active" onclick="showSubTabG('corpus','corp-cc',this)" data-ls="112" data-le="361" data-prefix="corp">CurlieCorpus</button>
+    <button class="sub-tab" onclick="showSubTabG('corpus','corp-ce',this)" data-ls="75" data-le="111" data-prefix="corp">CurlieEntry</button>
+    <button class="sub-tab" onclick="showSubTabG('corpus','corp-pd',this)" data-ls="1" data-le="245" data-prefix="corp">PaperDatasetCorpus</button>
+  </div>
+<div class="sub-panel active" id="corp-cc">
+<div class="cls-card" data-search="curliecorpus tsv data_dir include_keywords load discover">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">CurlieCorpus</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Carga todos los archivos TSV de Curlie de un directorio. Descubre automáticamente pares <code>rdf-&lt;Tag&gt;-c.tsv</code> (contenido) y <code>rdf-&lt;Tag&gt;-s.tsv</code> (estructura/categorías). Aplica filtros de categoría y deduplica por URL.</div>
+      <div class="attrs-title">Atributos de configuración</div>
+      <table class="attrs-table">
+        <tr><th>Parámetro</th><th>Default</th><th>Descripción</th></tr>
+        <tr><td>data_dir</td><td>—</td><td>Directorio con los TSV de Curlie</td></tr>
+        <tr><td>include_keywords</td><td>DEFAULT_SCIENCE_KEYWORDS</td><td>Categorías a incluir. None = todas</td></tr>
+        <tr><td>exclude_tags</td><td>("Adult",)</td><td>Tags de archivo a excluir</td></tr>
+        <tr><td>max_entries_per_file</td><td>None</td><td>Límite por archivo TSV</td></tr>
+        <tr><td>max_total_entries</td><td>None</td><td>Límite total del corpus</td></tr>
+      </table>
+      <div class="method" style="margin-top:10px"><div class="method-sig">_discover_pairs() → list[tuple]</div><div class="method-desc">Descubre pares (tag, c_path, s_path) excluyendo los tags en exclude_tags.</div></div>
+      <div class="method"><div class="method-sig">_detect_regional(cat_map) → bool</div><div class="method-desc">Retorna True si ≥ 80% de las categorías comienzan con "Regional/". Los dumps regionales usan filtro por substring; los globales por prefijo.</div></div>
+      <div class="method"><div class="method-sig">_passes_filter(cat_path, regional) → bool</div><div class="method-desc">Filtra por include_keywords usando prefijo (dump global) o substring (dump regional).</div></div>
+      <div class="method"><div class="method-sig">texts() → list[str]</div><div class="method-desc">Retorna el texto de embedding de cada entrada: "title. description cat_words".</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="corp-ce">
+<div class="cls-card" data-search="curlieentry url title description category text to_dict">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-dc">dataclass</span>
+      <span class="cls-name">CurlieEntry</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Una entrada del directorio Curlie. El texto de embedding incluye las palabras de la categoría para darle al modelo contexto temático.</div>
+      <div class="method"><div class="method-sig">text() → str</div><div class="method-desc">Retorna <code>"title. description cat_words"</code> donde cat_words convierte "/" y "_" de la categoría en espacios.</div></div>
+      <div class="method"><div class="method-sig">to_dict() → dict</div><div class="method-desc">Serializa a <code>{url, title, snippet, category, source_tag}</code> para el pipeline.</div></div>
+    </div>
+  </div>
+</div>
+<div class="sub-panel" id="corp-pd">
+<div class="cls-card" data-search="paperdatasetcorpus odp paper topic_names texts urls cache pickle">
+    <div class="cls-header" onclick="toggleCls(this)">
+      <span class="cls-kind kind-class">class</span>
+      <span class="cls-name">PaperDatasetCorpus</span>
+      <span class="cls-toggle">▼</span>
+    </div>
+    <div class="cls-body">
+      <div class="cls-desc">Drop-in replacement para CurlieCorpus usando el dataset del paper ODP/Curlie. Estructura esperada: <code>topic_names.txt</code> (topic_id → category_path), <code>texts/{tid}/{n}.txt</code> (primera línea = título), <code>urls/{tid}.txt</code> (una URL por línea). Si texts/ o urls/ no existen, los extrae desde <code>texts.tar.gz</code> y <code>urls.tar.gz</code>.</div>
+      <div class="attrs-title">Parámetros</div>
+      <table class="attrs-table">
+        <tr><th>Parámetro</th><th>Default</th><th>Descripción</th></tr>
+        <tr><td>max_docs_per_topic</td><td>150</td><td>Límite de docs por tópico (~80k docs total con default)</td></tr>
+        <tr><td>max_chars_per_doc</td><td>2000</td><td>Truncar cada texto a estos caracteres antes de embeddear</td></tr>
+      </table>
+      <div class="method" style="margin-top:10px"><div class="method-sig">_load_with_cache()</div><div class="method-desc">Usa caché pickle en data_dir si su mtime es posterior al de topic_names.txt. Al cargar desde disco, guarda el resultado en caché.</div></div>
+      <div class="method"><div class="method-sig">texts() → list[str]</div><div class="method-desc">Retorna el texto de embedding de cada PaperEntry. Incluye las palabras de categoría.</div></div>
+    </div>
+  </div>
+</div>
+</div>
+</div><!-- /panel-corpus -->
+
+
+
+</div><!-- #content -->
+</div><!-- #wrap -->
+
+<script>
+
+// -- PANEL CODES --
+const _CODES={
+  enc:`"""
+concept_map_encoder.py
+======================
+Converts a ConceptMap into:
+  1. A single dense query vector (weighted centroid of concept embeddings)
+  2. A ranked list of query strings for BM25 pre-filtering (optional speedup)
+"""
+
+from __future__ import annotations
+
+import numpy as np
+from typing import Optional
+from collections import defaultdict
+
+# Import from the refactored extender module
+from extender_bertopic import ConceptMap, EmbeddingEngine, tokenise, _DOMAIN_SEEDS
+
+
+# ---------------------------------------------------------------------------
+# ConceptMapEncoder
+# ---------------------------------------------------------------------------
+
+
+class ConceptMapEncoder:
+    """Codifica un mapa conceptual en vectores densos para búsqueda semántica.
+
+    Genera un vector centroide (promedio ponderado de embeddings de nodos)
+    y hasta n_aspects aspect vectors (sub-centroides por vecindad) para
+    representar múltiples facetas del mapa.
+
+    Attributes:
+        cm: Mapa conceptual fuente.
+        engine: Motor de embeddings SBERT.
+        focus_set: Conjunto de conceptos a enfatizar.
+        focus_multiplier: Factor de peso para conceptos en foco.
+        aspect_sim_threshold: Umbral coseno para descartar aspects redundantes.
+        n_aspects: Número máximo de aspect vectors a generar.
+    """
+
+    def __init__(
+        self,
+        concept_map:          ConceptMap,
+        engine:               EmbeddingEngine,
+        focus_concepts:       Optional[list[str]] = None,
+        focus_multiplier:     float               = 3.0,
+        n_aspects:            int                 = 4,
+        aspect_sim_threshold: float               = 0.97,
+    ):
+        """Inicializa el encoder.
+
+        Args:
+            concept_map: Mapa conceptual a codificar.
+            engine: Motor de embeddings ya fiteado.
+            focus_concepts: Conceptos a enfatizar con mayor peso.
+            focus_multiplier: Factor multiplicador para conceptos en foco.
+            n_aspects: Número máximo de aspect vectors a generar (incluye el centroide).
+            aspect_sim_threshold: Similitud coseno máxima para considerar dos aspects distintos.
+        """
+        self.cm                   = concept_map
+        self.engine               = engine
+        self.focus_set            = set(focus_concepts or [])
+        self.focus_multiplier     = focus_multiplier
+        self.aspect_sim_threshold = aspect_sim_threshold
+        self.n_aspects        = n_aspects
+
+        self._term_weights = concept_map.term_weights(
+            focus_concepts=focus_concepts,
+            focus_multiplier=focus_multiplier,
+        )
+        self._topo = concept_map.topological_weights()
+
+        # Computed on first access
+        self._centroid:     Optional[np.ndarray]       = None
+        self._aspects:      Optional[list[np.ndarray]] = None
+        self._label_embs:   Optional[dict[str, np.ndarray]] = None
+
+    # ------------------------------------------------------------------
+    # Main interface
+
+    @property
+    def centroid(self) -> np.ndarray:
+        """Vector centroide normalizado del mapa (calculado bajo demanda).
+
+        Returns:
+            Array unitario de 384 dimensiones.
+        """
+        if self._centroid is None:
+            self._centroid = self._build_centroid()
+        return self._centroid
+
+    @property
+    def aspects(self) -> list[np.ndarray]:
+        """Lista de aspect vectors normalizados (calculados bajo demanda).
+
+        El primer elemento siempre es el centroide global. Los siguientes
+        representan sub-zonas del mapa por vecindad de conceptos.
+
+        Returns:
+            Lista de arrays unitarios de 384 dimensiones.
+        """
+        if self._aspects is None:
+            self._aspects = self._build_aspects()
+        return self._aspects
+
+    @property
+    def label_embeddings(self) -> dict[str, np.ndarray]:
+        """Per-concept normalised embedding vectors."""
+        if self._label_embs is None:
+            labels = list(self.cm.nodes.keys())
+            raw    = self.engine.embed(labels)
+            self._label_embs = {}
+            for label, vec in zip(labels, raw):
+                n = np.linalg.norm(vec)
+                self._label_embs[label] = vec / n if n > 0 else vec
+        return self._label_embs
+
+    def query_strings(self, max_queries: int = 12) -> list[str]:
+        """Genera strings de consulta a partir de los arcos del mapa para BM25.
+
+        Ordena los arcos por peso topológico y construye queries "src dst guard".
+
+        Args:
+            max_queries: Número máximo de queries a retornar.
+
+        Returns:
+            Lista de strings de consulta.
+        """
+        topo = self._topo
+        focus = self.focus_set
+        mult  = self.focus_multiplier
+
+        # Score edges
+        scored: list[tuple[float, str, str]] = []
+        for src, link, dst in self.cm.edges:
+            w = topo.get(src, 0.0) + topo.get(dst, 0.0)
+            if src in focus or dst in focus:
+                w *= mult
+            scored.append((w, src, dst))
+        scored.sort(reverse=True)
+
+        queries: list[str] = []
+        seen:    set[str]  = set()
+        title_toks = tokenise(self.cm.title)[:3]
+        guard = " ".join(title_toks)
+
+        for _, src, dst in scored:
+            q = f"{src} {dst} {guard}".strip()
+            if q not in seen:
+                queries.append(q)
+                seen.add(q)
+            if len(queries) >= max_queries:
+                break
+
+        return queries
+
+    def summary(self) -> str:
+        """Retorna un resumen legible del encoder con estadísticas del mapa.
+
+        Returns:
+            String multilínea con título, número de conceptos, arcos,
+            conceptos en foco, top-10 términos y número de aspects.
+        """
+        top_terms = sorted(
+            self._term_weights.items(), key=lambda x: -x[1]
+        )[:10]
+        lines = [
+            f"ConceptMapEncoder: '{self.cm.title}'",
+            f"  Concepts : {len(self.cm.nodes)}",
+            f"  Edges    : {len(self.cm.edges)}",
+            f"  Focus    : {', '.join(self.focus_set) or 'none'}",
+            f"  Top terms: {', '.join(t for t, _ in top_terms)}",
+            f"  Aspects  : {len(self.aspects)} vectors",
+        ]
+        return "\\n".join(lines)
+
+    # ------------------------------------------------------------------
+    # Private builders
+
+    def _build_centroid(self) -> np.ndarray:
+        """Construye el centroide como promedio ponderado de embeddings de nodos.
+
+        Los pesos combinan el score topológico y el multiplicador de foco.
+
+        Returns:
+            Vector unitario de 384 dimensiones.
+        """
+        labels  = list(self.cm.nodes.keys())
+        weights = np.array([
+            self._topo.get(label, 0.1) *
+            (self.focus_multiplier if label in self.focus_set else 1.0)
+            for label in labels
+        ])
+        weights /= weights.sum()
+
+        raw_embs = self.engine.embed(labels)   # (N, dim)
+        centroid = (raw_embs * weights[:, None]).sum(axis=0)
+        n = np.linalg.norm(centroid)
+        return centroid / n if n > 0 else centroid
+
+    def _build_aspects(self) -> list[np.ndarray]:
+        """Construye aspect vectors a partir de vecindades de conceptos top-rankeados.
+
+        Para cada concepto top: calcula el centroide de su vecindad (label + 4 vecinos)
+        y lo agrega como aspect si es suficientemente distinto de los ya existentes.
+
+        Returns:
+            Lista de hasta n_aspects vectores unitarios de 384 dimensiones.
+        """
+        aspects: list[np.ndarray] = [self.centroid]
+
+        if self.n_aspects <= 1:
+            return aspects
+
+        # Top concepts by topological weight, focused concepts first
+        ranked = sorted(
+            self.cm.nodes.keys(),
+            key=lambda lbl: self._topo.get(lbl, 0.0) *
+                            (self.focus_multiplier if lbl in self.focus_set else 1.0),
+            reverse=True,
+        )
+
+        le = self.label_embeddings
+        seen_vecs: list[np.ndarray] = [self.centroid]
+
+        for label in ranked:
+            if len(aspects) >= self.n_aspects:
+                break
+
+            # Neighbourhood centroid: label + its direct neighbours
+            neighbours = self.cm.nodes[label].neighbors[:4]
+            group      = [label] + neighbours
+            group_embs = np.vstack([le[g] for g in group if g in le])
+            if len(group_embs) == 0:
+                continue
+
+            vec = group_embs.mean(axis=0)
+            n   = np.linalg.norm(vec)
+            vec = vec / n if n > 0 else vec
+
+            # Skip if too similar to an existing aspect
+            if any(float(np.dot(vec, sv)) > self.aspect_sim_threshold for sv in seen_vecs):
+                continue
+
+            aspects.append(vec)
+            seen_vecs.append(vec)
+
+        return aspects
+
+
+# ===========================================================================
+# Funciones auxiliares para caminos raíz→nodo
+# ===========================================================================
+
+def build_undirected_adjacency(cm):
+    """Adyacencia no dirigida preservando la tripleta original (src, link, dst)."""
+    adj = defaultdict(list)
+    for src, link, dst in cm.edges:
+        adj[src].append((dst, (src, link, dst)))
+        adj[dst].append((src, (src, link, dst)))
+    return adj
+
+
+def all_root_paths(cm, max_depth=12, max_paths_per_node=200):
+    """
+    Enumera todos los caminos simples (sin repetir nodos) desde la raíz del
+    mapa hasta cada nodo alcanzable, incluyendo los arcos traversados.
+
+    Returns:
+        dict { nodo: [ [(src, link, dst), ...], ... ] }
+    """
+    root = cm._root or next(iter(cm.nodes))
+    adj = build_undirected_adjacency(cm)
+    paths_by_node = defaultdict(list)
+
+    def dfs(current, visited, path_edges):
+        if current != root:
+            if len(paths_by_node[current]) < max_paths_per_node:
+                paths_by_node[current].append(list(path_edges))
+            else:
+                return
+        if len(path_edges) >= max_depth:
+            return
+        for neighbor, triple in adj[current]:
+            if neighbor in visited:
+                continue
+            visited.add(neighbor)
+            path_edges.append(triple)
+            dfs(neighbor, visited, path_edges)
+            path_edges.pop()
+            visited.discard(neighbor)
+
+    dfs(root, {root}, [])
+    return dict(paths_by_node)
+
+
+def path_to_text(path_edges):
+    """Serializa una lista de tripletas como una única oración sin repetir nodos intermedios."""
+    if not path_edges:
+        return ""
+    parts = [path_edges[0][0]]  # nodo raíz
+    for s, l, d in path_edges:
+        parts.append(l)
+        parts.append(d)
+    return " ".join(parts)
+
+
+def collapse_2cycles(relations):
+    """
+    Si existen 'A link1 B' y 'B link2 A', conserva solo la primera aparición.
+    Evita que ciclos bidireccionales inflen el peso de nodos genéricos (caso Volcanism).
+    """
+    seen_pairs = set()
+    cleaned = []
+    for s, l, d in relations:
+        if (d, s) in seen_pairs:
+            continue
+        seen_pairs.add((s, d))
+        cleaned.append((s, l, d))
+    return cleaned
+
+
+def all_root_paths_from_relations(root, relations, max_depth=12, max_paths_per_node=200):
+    """
+    Como all_root_paths(), pero opera sobre una lista de relaciones ya procesada
+    (por ejemplo, después de collapse_2cycles) en vez de un ConceptMap.
+    """
+    adj = defaultdict(list)
+    for s, l, d in relations:
+        adj[s].append((d, (s, l, d)))
+        adj[d].append((s, (s, l, d)))
+
+    paths_by_node = defaultdict(list)
+
+    def dfs(current, visited, path_edges):
+        if current != root:
+            if len(paths_by_node[current]) < max_paths_per_node:
+                paths_by_node[current].append(list(path_edges))
+            else:
+                return
+        if len(path_edges) >= max_depth:
+            return
+        for neighbor, triple in adj[current]:
+            if neighbor in visited:
+                continue
+            visited.add(neighbor)
+            path_edges.append(triple)
+            dfs(neighbor, visited, path_edges)
+            path_edges.pop()
+            visited.discard(neighbor)
+
+    dfs(root, {root}, [])
+    return dict(paths_by_node)
+
+
+# ===========================================================================
+# RelationAwareEncoder
+# ===========================================================================
+
+class RelationAwareEncoder:
+    """
+    Representa el mapa conceptual embeddendo tripletas completas "src link dst"
+    como oraciones, en vez de nodos aislados. Da a SBERT contexto relacional.
+
+    Soluciona el desalineamiento semántico en mapas donde los términos aislados
+    no capturan el dominio (ej: "Gram positive", "prokaryotes" → Infectious Diseases).
+    """
+
+    def __init__(self, concept_map, engine, focus_concepts=None,
+                 focus_multiplier=3.0, n_aspects=4, aspect_sim_threshold=0.97):
+        self.cm                   = concept_map
+        self.engine               = engine
+        self.focus_set            = set(focus_concepts or [])
+        self.focus_multiplier     = focus_multiplier
+        self.n_aspects            = n_aspects
+        self.aspect_sim_threshold = aspect_sim_threshold
+        self._topo                = concept_map.topological_weights()
+        self._term_weights = concept_map.term_weights(
+            focus_concepts=focus_concepts, focus_multiplier=focus_multiplier)
+        self._centroid = None
+        self._aspects  = None
+
+    def _triple_texts_and_weights(self):
+        """Genera textos y pesos a partir de las tripletas del mapa.
+
+        Cada tripleta "src link dst" produce un texto; su peso es el promedio
+        de los pesos topológicos de src y dst, multiplicado si alguno está en foco.
+        Si el mapa no tiene arcos, retorna los nodos aislados como fallback.
+
+        Returns:
+            Tupla (texts, weights) con listas paralelas de strings y floats.
+        """
+        texts, weights = [], []
+        for src, link, dst in self.cm.edges:
+            text = f"{src} {link} {dst}".strip()
+            w = (self._topo.get(src, 0.1) + self._topo.get(dst, 0.1)) / 2.0
+            if src in self.focus_set or dst in self.focus_set:
+                w *= self.focus_multiplier
+            texts.append(text)
+            weights.append(w)
+        if not texts:  # fallback: nodos aislados
+            for node in self.cm.nodes:
+                texts.append(node)
+                weights.append(self._topo.get(node, 0.1))
+        return texts, weights
+
+    @property
+    def centroid(self):
+        """Vector centroide normalizado calculado sobre tripletas (calculado bajo demanda).
+
+        Returns:
+            Array unitario de 384 dimensiones.
+        """
+        if self._centroid is None:
+            texts, weights = self._triple_texts_and_weights()
+            w = np.array(weights, dtype=float)
+            w /= w.sum()
+            embs = self.engine.embed(texts)
+            vec  = (embs * w[:, None]).sum(axis=0)
+            n    = np.linalg.norm(vec)
+            self._centroid = vec / n if n > 0 else vec
+        return self._centroid
+
+    @property
+    def aspects(self):
+        """Lista de aspect vectors calculados sobre tripletas (calculados bajo demanda).
+
+        Returns:
+            Lista de arrays unitarios de 384 dimensiones.
+        """
+        if self._aspects is None:
+            self._aspects = self._build_aspects()
+        return self._aspects
+
+    def _build_aspects(self):
+        """Construye aspect vectors seleccionando tripletas de mayor peso que sean suficientemente distintas.
+
+        Returns:
+            Lista de hasta n_aspects vectores unitarios.
+        """
+        texts, weights = self._triple_texts_and_weights()
+        w    = np.array(weights, dtype=float)
+        embs = self.engine.embed(texts)
+        norms = np.linalg.norm(embs, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        embs_n = embs / norms
+        aspects = [self.centroid]
+        seen    = [self.centroid]
+        for i in np.argsort(w)[::-1]:
+            if len(aspects) >= self.n_aspects:
+                break
+            vec = embs_n[i]
+            if any(float(np.dot(vec, sv)) > self.aspect_sim_threshold for sv in seen):
+                continue
+            aspects.append(vec)
+            seen.append(vec)
+        return aspects
+
+    def summary(self):
+        """Retorna un resumen legible del encoder.
+
+        Returns:
+            String con título, número de arcos y número de aspects.
+        """
+        return (f"RelationAwareEncoder: '{self.cm.title}'\\n"
+                f"  Edges: {len(self.cm.edges)}  Aspects: {len(self.aspects)}")
+
+
+# ===========================================================================
+# PathAwareEncoder
+# ===========================================================================
+
+class PathAwareEncoder:
+    """
+    Representa el mapa mediante TODOS los caminos simples raíz→nodo, incluyendo
+    los arcos traversados. Captura el contexto acumulado del camino completo
+    (ej: "VirusChar → is a → Microorganism → infects → Host → causes → Disease").
+    """
+
+    def __init__(self, concept_map, engine, focus_concepts=None,
+                 focus_multiplier=3.0, n_aspects=4,
+                 max_depth=12, max_paths_per_node=200,
+                 aspect_sim_threshold=0.97):
+        self.cm                   = concept_map
+        self.engine               = engine
+        self.focus_set            = set(focus_concepts or [])
+        self.focus_multiplier     = focus_multiplier
+        self.n_aspects            = n_aspects
+        self.max_depth            = max_depth
+        self.max_paths_per_node   = max_paths_per_node
+        self.aspect_sim_threshold = aspect_sim_threshold
+        self._topo         = concept_map.topological_weights()
+        self._term_weights = concept_map.term_weights(
+            focus_concepts=focus_concepts, focus_multiplier=focus_multiplier)
+        self._paths_by_node = None
+        self._centroid = None
+        self._aspects  = None
+
+    @property
+    def paths_by_node(self):
+        """Diccionario de caminos raíz→nodo enumerados (calculado bajo demanda).
+
+        Returns:
+            Dict {nodo: [[tripleta, ...], ...]} con todos los caminos simples desde la raíz.
+        """
+        if self._paths_by_node is None:
+            self._paths_by_node = all_root_paths(
+                self.cm,
+                max_depth=self.max_depth,
+                max_paths_per_node=self.max_paths_per_node,
+            )
+        return self._paths_by_node
+
+    def _path_texts_and_weights(self):
+        """Genera textos y pesos a partir de los caminos raíz→nodo.
+
+        El peso de cada camino es el peso topológico del nodo destino dividido
+        por el número de caminos que llegan a ese nodo.
+
+        Returns:
+            Tupla (texts, weights) con listas paralelas de strings y floats.
+        """
+        texts, weights = [], []
+        for node, paths in self.paths_by_node.items():
+            if not paths:
+                continue
+            w_node = self._topo.get(node, 0.1)
+            if node in self.focus_set:
+                w_node *= self.focus_multiplier
+            w_each = w_node / len(paths)
+            for path_edges in paths:
+                texts.append(path_to_text(path_edges))
+                weights.append(w_each)
+        if not texts:  # fallback
+            for node in self.cm.nodes:
+                texts.append(node)
+                weights.append(self._topo.get(node, 0.1))
+        return texts, weights
+
+    @property
+    def centroid(self):
+        """Vector centroide normalizado calculado sobre caminos raíz→nodo (bajo demanda).
+
+        Returns:
+            Array unitario de 384 dimensiones.
+        """
+        if self._centroid is None:
+            texts, weights = self._path_texts_and_weights()
+            w    = np.array(weights, dtype=float)
+            w   /= w.sum()
+            embs = self.engine.embed(texts)
+            vec  = (embs * w[:, None]).sum(axis=0)
+            n    = np.linalg.norm(vec)
+            self._centroid = vec / n if n > 0 else vec
+        return self._centroid
+
+    @property
+    def aspects(self):
+        """Lista de aspect vectors construidos sobre caminos raíz→nodo (bajo demanda).
+
+        Returns:
+            Lista de arrays unitarios de 384 dimensiones.
+        """
+        if self._aspects is None:
+            self._aspects = self._build_aspects()
+        return self._aspects
+
+    def _build_aspects(self):
+        """Construye aspect vectors seleccionando caminos de mayor peso que sean suficientemente distintos.
+
+        Returns:
+            Lista de hasta n_aspects vectores unitarios.
+        """
+        texts, weights = self._path_texts_and_weights()
+        w    = np.array(weights, dtype=float)
+        embs = self.engine.embed(texts)
+        norms = np.linalg.norm(embs, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        embs_n = embs / norms
+        aspects = [self.centroid]
+        seen    = [self.centroid]
+        for i in np.argsort(w)[::-1]:
+            if len(aspects) >= self.n_aspects:
+                break
+            vec = embs_n[i]
+            if any(float(np.dot(vec, sv)) > self.aspect_sim_threshold for sv in seen):
+                continue
+            aspects.append(vec)
+            seen.append(vec)
+        return aspects
+
+    def summary(self):
+        """Retorna un resumen legible del PathAwareEncoder.
+
+        Returns:
+            String con título, nodos alcanzados, caminos totales y número de aspects.
+        """
+        n_paths = sum(len(p) for p in self.paths_by_node.values())
+        return (f"PathAwareEncoder: '{self.cm.title}'\\n"
+                f"  Nodos alcanzados: {len(self.paths_by_node)}  "
+                f"Caminos totales: {n_paths}  Aspects: {len(self.aspects)}")
+
+
+# ===========================================================================
+# HybridEncoder
+# ===========================================================================
+
+def _build_hybrid_texts_and_weights(cm, root_label, topo, focus_set, focus_multiplier,
+                                    window_k=3, max_depth=12, max_paths_per_node=200):
+    """
+    Para cada nodo, elige la representación según profundidad mínima desde la raíz:
+        depth == 1 → etiqueta aislada del nodo
+        depth <= 3 → tripleta anclada a la raíz: "root :: src link dst"
+        depth  > 3 → ventana de camino anclada:  "root :: últimas k tripletas"
+    Además aplica collapse_2cycles para evitar inflar nodos genéricos con ciclos.
+    """
+    clean_edges = collapse_2cycles(cm.edges)
+    paths_by_node = all_root_paths_from_relations(
+        root_label, clean_edges,
+        max_depth=max_depth, max_paths_per_node=max_paths_per_node,
+    )
+    texts, weights = [], []
+    for node, paths in paths_by_node.items():
+        if not paths:
+            continue
+        depth  = min(len(p) for p in paths)
+        w_node = topo.get(node, 0.1)
+        if node in focus_set:
+            w_node *= focus_multiplier
+        used_paths = paths
+        w_each     = w_node / len(used_paths)
+        for path_edges in used_paths:
+            if depth <= 1:
+                text = node
+            elif depth <= 3:
+                text = f"{root_label} :: " + path_to_text([path_edges[-1]])
+            else:
+                window = path_edges[-window_k:]
+                text   = f"{root_label} :: " + path_to_text(window)
+            texts.append(text)
+            weights.append(w_each)
+    if not texts:  # fallback
+        for node in cm.nodes:
+            texts.append(node)
+            weights.append(topo.get(node, 0.1))
+    return texts, weights
+
+
+class HybridEncoder:
+    """
+    Combina las 3 representaciones anteriores:
+    - Colapsa ciclos de 2 nodos (collapse_2cycles)
+    - Elige por nodo entre etiqueta aislada / tripleta anclada / ventana anclada
+      según la profundidad del nodo respecto de la raíz.
+    """
+
+    def __init__(self, concept_map, engine, focus_concepts=None,
+                 focus_multiplier=3.0, n_aspects=4, window_k=3,
+                 max_depth=12, max_paths_per_node=200,
+                 aspect_sim_threshold=0.97):
+        self.cm                      = concept_map
+        self.engine                  = engine
+        self.focus_set               = set(focus_concepts or [])
+        self.focus_multiplier        = focus_multiplier
+        self.n_aspects               = n_aspects
+        self.window_k                = window_k
+        self.max_depth               = max_depth
+        self.max_paths_per_node      = max_paths_per_node
+        self.aspect_sim_threshold    = aspect_sim_threshold
+        self._topo         = concept_map.topological_weights()
+        self._term_weights = concept_map.term_weights(
+            focus_concepts=focus_concepts, focus_multiplier=focus_multiplier)
+        self._root_label    = concept_map._root or next(iter(concept_map.nodes))
+        self._texts_weights = None
+        self._centroid      = None
+        self._aspects       = None
+
+    def _get_texts_weights(self):
+        """Obtiene (con caché) los textos y pesos del encoder híbrido.
+
+        Returns:
+            Tupla (texts, weights) calculada por _build_hybrid_texts_and_weights().
+        """
+        if self._texts_weights is None:
+            self._texts_weights = _build_hybrid_texts_and_weights(
+                self.cm, self._root_label, self._topo,
+                self.focus_set, self.focus_multiplier,
+                window_k=self.window_k,
+                max_depth=self.max_depth,
+                max_paths_per_node=self.max_paths_per_node,
+            )
+        return self._texts_weights
+
+    @property
+    def centroid(self):
+        """Vector centroide normalizado del encoder híbrido (bajo demanda).
+
+        Returns:
+            Array unitario de 384 dimensiones.
+        """
+        if self._centroid is None:
+            texts, weights = self._get_texts_weights()
+            w    = np.array(weights, dtype=float)
+            w   /= w.sum()
+            embs = self.engine.embed(texts)
+            vec  = (embs * w[:, None]).sum(axis=0)
+            n    = np.linalg.norm(vec)
+            self._centroid = vec / n if n > 0 else vec
+        return self._centroid
+
+    @property
+    def aspects(self):
+        """Lista de aspect vectors del encoder híbrido (bajo demanda).
+
+        Returns:
+            Lista de arrays unitarios de 384 dimensiones.
+        """
+        if self._aspects is None:
+            self._aspects = self._build_aspects()
+        return self._aspects
+
+    def _build_aspects(self):
+        """Construye aspect vectors del encoder híbrido seleccionando textos de mayor peso distintos.
+
+        Returns:
+            Lista de hasta n_aspects vectores unitarios.
+        """
+        texts, weights = self._get_texts_weights()
+        w    = np.array(weights, dtype=float)
+        embs = self.engine.embed(texts)
+        norms = np.linalg.norm(embs, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        embs_n = embs / norms
+        aspects = [self.centroid]
+        seen    = [self.centroid]
+        for i in np.argsort(w)[::-1]:
+            if len(aspects) >= self.n_aspects:
+                break
+            vec = embs_n[i]
+            if any(float(np.dot(vec, sv)) > self.aspect_sim_threshold for sv in seen):
+                continue
+            aspects.append(vec)
+            seen.append(vec)
+        return aspects
+
+    def summary(self):
+        """Retorna un resumen legible del HybridEncoder.
+
+        Returns:
+            String con título, número de unidades de texto y número de aspects.
+        """
+        texts, _ = self._get_texts_weights()
+        return (f"HybridEncoder: '{self.cm.title}'\\n"
+                f"  Unidades de texto: {len(texts)}  Aspects: {len(self.aspects)}")
+`,
+  exp_main:`"""
+topic_explorer.py
+=================
+Pipeline de descubrimiento de tópicos en una sola pasada.
+
+  1. Embeddear el corpus Curlie con SBERT (cacheado en disco)
+  2. Recuperar candidatos por similitud coseno con los aspect vectors del mapa
+  3. Clusterizar con HDBSCAN via BERTopic
+  4. Seleccionar el mejor nivel del árbol jerárquico
+  5. Rankear y filtrar tópicos
+
+Embeddings: all-MiniLM-L6-v2 (384 dim, pesos fijos).
+"""
+
+from __future__ import annotations
+
+import hashlib
+import logging
+import os
+import re
+import time
+from dataclasses import dataclass, field
+from typing import Optional
+
+import hdbscan
+import numpy as np
+from bertopic import BERTopic
+from bertopic.vectorizers import ClassTfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from umap import UMAP
+
+from curlie_corpus import CurlieCorpus
+from concept_map_encoder import ConceptMapEncoder
+from extender_bertopic import EmbeddingEngine, ConceptMap
+
+logger = logging.getLogger(__name__)
+
+
+# ---------------------------------------------------------------------------
+# Config
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class ExplorerConfig:
+    """Todos los hiperparámetros del TopicExplorer."""
+
+    # ── Retrieval ────────────────────────────────────────────────────────
+    top_k_per_aspect:   int   = 500
+    min_aspect_sim:     float = 0.15
+    min_doc_relevance:  float = 0.10
+
+    # ── Clustering ───────────────────────────────────────────────────────
+    min_cluster_size:   int   = 5
+    min_samples:        int   = 2
+    umap_n_components:  int   = 10
+    umap_n_neighbors:   int   = 20
+    random_state:       int   = 42
+
+    # ── Selección de nivel del árbol ─────────────────────────────────────
+    focus_weight:       float = 0.45
+    specificity_weight: float = 0.35
+    quality_weight:     float = 0.20
+    min_nr_topics:      int   = 4
+    max_nr_topics:      int   = 15
+
+    # ── Filtro de categoría de inclusión ─────────────────────────────────
+    domain_category_keywords: tuple = (
+        "Science", "Technology", "Space", "Astronomy", "Astro",
+        "Planetary", "Physics", "Geophysics", "Atmospheric", "Geology",
+        "Academic", "Research", "Observatory", "Institute", "University",
+    )
+    domain_category_min_fraction: float = 0.40
+    domain_category_penalty:      float = 0.05
+
+    # ── Filtro de categoría de exclusión (descarte duro) ─────────────────
+    # Tópicos donde más del exclude_category_max_fraction de sus documentos
+    # caen en estas categorías son descartados completamente del output.
+    # Útil para mapas no-terrestres donde ciencias terrestres aparecen
+    # por overlap semántico (e.g. volcanes/crateres en el mapa de la Luna).
+    exclude_category_keywords:     tuple = ()
+    exclude_category_max_fraction: float = 0.30
+
+    # ── Filtro de coherencia mínima ──────────────────────────────────────
+    min_coherence: float = 0.20
+
+    # ── Filtro de tamaño máximo ──────────────────────────────────────────
+    # Tópicos con más del X% del candidate set son clusters residuales
+    # genéricos ("space, science, technology") y se descartan.
+    max_topic_fraction: float = 0.35
+
+    # ── Output ───────────────────────────────────────────────────────────
+    min_output_focus:   float = 0.05
+    n_output_topics:    int   = 6
+
+    # ── Ranking score: score = overlap × (rank_base + rank_coherence_w·coh + rank_focus_w·foc)
+    rank_base:          float = 0.40
+    rank_coherence_w:   float = 0.30
+    rank_focus_w:       float = 0.30
+
+    # ── Aspect vectors: umbral de similitud coseno para descartar un aspecto redundante ──
+    aspect_sim_threshold: float = 0.97
+
+    # ── Parámetros de representación (PathAware / Hybrid) ────────────────
+    # Afectan a los encoders PathAwareEncoder y HybridEncoder.
+    # max_depth: profundidad máxima de caminos raíz→nodo enumerados.
+    # max_paths_per_node: cuántos caminos distintos se guardan por nodo.
+    # hybrid_window_k: cuántas tripletas de la ventana se incluyen (solo Híbrida).
+    # n_aspects: cantidad de aspect vectors por encoder (todos los encoders).
+    path_max_depth:                  int   = 12
+    path_max_paths_per_node:         int   = 200
+    hybrid_window_k:                 int   = 3
+    n_aspects:                       int   = 4
+
+    # ── Cache ────────────────────────────────────────────────────────────
+    # Directorio donde se guarda el archivo .npz con los embeddings del corpus.
+    # None = mismo directorio que los TSV de Curlie.
+    cache_dir:          Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# Resultado
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class ExploredTopic:
+    """Un tópico retornado por TopicExplorer."""
+    topic_id:       int
+    keywords:       list[str]
+    doc_indices:    list[int]
+    coherence:      float
+    focus_score:    float
+    label:          str = ""
+    documents:      list[dict] = field(default_factory=list)
+    centroid:       Optional[list[float]] = None  # centroide normalizado del tópico (384-dim)
+
+    def __post_init__(self):
+        if not self.label:
+            self.label = "_".join(self.keywords[:3])
+
+
+# ---------------------------------------------------------------------------
+# TopicExplorer
+# ---------------------------------------------------------------------------
+
+
+class TopicExplorer:
+    """Pipeline de descubrimiento de tópicos en una sola pasada sobre un corpus Curlie.
+
+    Pasos:
+      1. Embeddea el corpus con SBERT (con caché en disco).
+      2. Recupera candidatos por similitud coseno con los aspect vectors del mapa.
+      3. Clusteriza con HDBSCAN via BERTopic.
+      4. Selecciona el mejor nivel del árbol jerárquico.
+      5. Rankea y filtra tópicos según coherencia, focus y categoría.
+    """
+
+    def __init__(
+        self,
+        corpus:         CurlieCorpus,
+        concept_map:    ConceptMap,
+        config:         Optional[ExplorerConfig] = None,
+        focus_concepts: Optional[list[str]]      = None,
+    ):
+        """Inicializa el TopicExplorer cargando el modelo SBERT y el encoder del mapa.
+
+        Args:
+            corpus: Corpus Curlie (o compatible) a explorar.
+            concept_map: Mapa conceptual que define el dominio de búsqueda.
+            config: Configuración del explorer. Si es None, usa ExplorerConfig().
+            focus_concepts: Conceptos a enfatizar en la recuperación y el ranking.
+        """
+        self.corpus = corpus
+        self.cm     = concept_map
+        self.cfg    = config or ExplorerConfig()
+        self.focus  = focus_concepts or []
+        self._log   = self._make_logger()
+
+        # SBERT: los pesos del modelo son fijos, no necesita entrenamiento.
+        # fit() solo inicializa el modelo en memoria (descarga ~80 MB la primera vez).
+        self._log("🔧 Cargando modelo SBERT (all-MiniLM-L6-v2) …")
+        self.engine = EmbeddingEngine(random_state=self.cfg.random_state)
+        self.engine.fit()
+
+        self.encoder = ConceptMapEncoder(
+            concept_map=concept_map,
+            engine=self.engine,
+            focus_concepts=self.focus,
+            focus_multiplier=3.0,
+            n_aspects=self.cfg.n_aspects,
+            aspect_sim_threshold=self.cfg.aspect_sim_threshold,
+        )
+        self._log(self.encoder.summary())
+
+        self._corpus_embeddings: Optional[np.ndarray] = None
+        self._candidate_indices: list[int]             = []
+        self._candidate_embs:    Optional[np.ndarray]  = None
+        self._candidate_texts:   list[str]             = []
+        self._map_vec:           Optional[np.ndarray]  = None
+        self.topics:             list[ExploredTopic]   = []
+
+    # ------------------------------------------------------------------
+    # API pública
+
+    def run(self) -> list[ExploredTopic]:
+        """Ejecuta el pipeline completo y retorna los tópicos rankeados."""
+        t0 = time.time()
+        self._log(f"\\n{'='*60}")
+        self._log(f"TopicExplorer — mapa: '{self.cm.title}'")
+        self._log(f"Corpus: {len(self.corpus.entries):,} entradas  |  SBERT 384-dim")
+        self._log("=" * 60)
+
+        # Paso 1: embeddings del corpus (con caché)
+        self._corpus_embeddings = self._get_corpus_embeddings()
+
+        # Paso 2: recuperar candidatos por similitud coseno con los aspects
+        self._candidate_indices = self._retrieve_candidates()
+        n_raw = len(self._candidate_indices)
+        self._log(f"\\n📥 {n_raw:,} candidatos recuperados")
+
+        if n_raw < self.cfg.min_cluster_size:
+            self._log("⚠  Muy pocos candidatos — bajar min_aspect_sim o min_doc_relevance.")
+            return []
+
+        self._candidate_embs  = self._corpus_embeddings[self._candidate_indices]
+        self._candidate_texts = [
+            self.corpus.entries[i].text() for i in self._candidate_indices
+        ]
+
+        # Paso 3: calcular _map_vec y aplicar gate de relevancia
+        self._compute_map_vec_and_gate()
+
+        if len(self._candidate_indices) < self.cfg.min_cluster_size:
+            self._log("⚠  Muy pocos candidatos después del gate de relevancia.")
+            return []
+
+        # Paso 4: clustering
+        self._log("🔬 Clustering …")
+        model, base_topics, orig_topics, hier_df = self._fit_bertopic(
+            self._candidate_embs, self._candidate_texts
+        )
+
+        if model is None or base_topics == 0:
+            self._log("⚠  El clustering no produjo tópicos.")
+            return []
+
+        self._log(f"   Tópicos base: {base_topics}")
+
+        # Paso 5: seleccionar el mejor nivel del árbol jerárquico
+        self._log("🌳 Seleccionando mejor nivel del árbol …")
+        best_nr, level_scores, level_assignments = self._select_level(
+            orig_topics, base_topics, hier_df
+        )
+        n_pass = level_scores.get(best_nr, {}).get("n_pass", "?")
+        self._log(f"   Mejor nivel : nr_topics={best_nr}  ({n_pass} tópicos pasarían filtros)")
+        for nr, s in sorted(level_scores.items()):
+            self._log(
+                f"     nr={nr:3d}  score={s['total']:.3f}  "
+                f"(focus={s['focus']:.3f}  spec={s.get('specificity',0):.3f}  "
+                f"qual={s.get('quality',0):.3f}  n_real={s.get('n_real_topics',0)})"
+            )
+
+        # Paso 6: extraer tópicos y rankear
+        best_assignments = level_assignments[best_nr]
+        self.topics = self._build_explored_topics(model, best_assignments, orig_topics)
+        self.topics = self._rank_topics(self.topics)[:self.cfg.n_output_topics]
+
+        elapsed = time.time() - t0
+        self._log(f"\\n✅ Listo en {elapsed:.1f}s — {len(self.topics)} tópicos retornados")
+        return self.topics
+
+    # ------------------------------------------------------------------
+    # Paso 1: embeddings del corpus
+
+    def _get_corpus_embeddings(self) -> np.ndarray:
+        """Carga desde caché si es válida; sino embeddea y guarda."""
+        cache_path = self._cache_path()
+        if cache_path and os.path.exists(cache_path):
+            self._log(f"\\n💾 Cargando embeddings: {os.path.basename(cache_path)}")
+            data = np.load(cache_path, allow_pickle=True)
+            cached_urls = set(data["urls"].tolist())
+            corpus_urls = {e.url for e in self.corpus.entries}
+            if cached_urls == corpus_urls:
+                embs = data["embeddings"].astype(np.float64)
+                if embs.shape[1] == 384:
+                    self._log(f"   ✓ Caché válida ({embs.shape[0]:,} entradas)")
+                    return embs
+                self._log("   ✗ Caché de dimensión incorrecta — reconstruyendo")
+            else:
+                self._log("   ✗ Caché desactualizada — reconstruyendo")
+
+        self._log(f"\\n🔢 Embeddiendo {len(self.corpus.entries):,} entradas con SBERT …")
+        self._log("   (esto tarda ~5-10 min la primera vez; las siguientes usan caché)")
+        texts  = self.corpus.texts()
+        embs_l = []
+        for i in range(0, len(texts), 256):
+            embs_l.append(self.engine.embed(texts[i : i + 256]))
+            if (i // 256) % 20 == 0 and i > 0:
+                self._log(f"   {i:,}/{len(texts):,} embeddidos …")
+        result = np.vstack(embs_l).astype(np.float64)
+
+        if cache_path:
+            self._log(f"💾 Guardando caché: {os.path.basename(cache_path)}")
+            np.savez_compressed(
+                cache_path,
+                embeddings=result.astype(np.float32),
+                urls=np.array([e.url for e in self.corpus.entries], dtype=object),
+            )
+        return result
+
+    # ------------------------------------------------------------------
+    # Paso 2: retrieval
+
+    def _retrieve_candidates(self) -> list[int]:
+        """
+        Para cada aspect vector recupera los top_k_per_aspect documentos
+        del corpus por similitud coseno.
+        Un documento entra como candidato si pasa ambos gates:
+          - similitud con el aspect   >= min_aspect_sim
+          - similitud con el centroid >= min_doc_relevance
+        """
+        norms  = np.linalg.norm(self._corpus_embeddings, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        normed = self._corpus_embeddings / norms
+
+        centroid      = self.encoder.centroid
+        centroid_sims = normed @ centroid
+        scores: dict[int, float] = {}
+
+        for aspect in self.encoder.aspects:
+            aspect_sims = normed @ aspect
+            k = min(self.cfg.top_k_per_aspect, len(aspect_sims))
+            top_idx = np.argpartition(aspect_sims, -k)[-k:]
+            for idx in top_idx:
+                a_sim = float(aspect_sims[idx])
+                c_sim = float(centroid_sims[idx])
+                if a_sim < self.cfg.min_aspect_sim:
+                    continue
+                if c_sim < self.cfg.min_doc_relevance:
+                    continue
+                if idx not in scores or scores[idx] < a_sim:
+                    scores[idx] = a_sim
+
+        return sorted(scores.keys(), key=lambda i: float(centroid_sims[i]), reverse=True)
+
+    # ------------------------------------------------------------------
+    # Paso 3: map_vec y gate de relevancia
+
+    def _compute_map_vec_and_gate(self) -> None:
+        """Calcula el vector del mapa y aplica un gate de relevancia al candidate set.
+
+        Embeddea los top-30 términos ponderados del mapa para obtener _map_vec,
+        luego descarta candidatos con similitud < min_doc_relevance, garantizando
+        retener al menos min_cluster_size * 4 documentos.
+        """
+        map_text = " ".join(
+            t for t, _ in sorted(
+                self.cm.term_weights(focus_concepts=self.focus, focus_multiplier=3.0).items(),
+                key=lambda x: -x[1],
+            )[:30]
+        )
+        v = self.engine.embed([map_text])[0]
+        n = np.linalg.norm(v)
+        self._map_vec = v / n if n > 0 else v
+
+        cand_norms = np.linalg.norm(self._candidate_embs, axis=1, keepdims=True)
+        cand_norms[cand_norms == 0] = 1.0
+        refit_sims = (self._candidate_embs / cand_norms) @ self._map_vec
+
+        gate      = self.cfg.min_doc_relevance
+        keep_mask = refit_sims >= gate
+        min_keep  = max(self.cfg.min_cluster_size * 4, 30)
+        if int(keep_mask.sum()) < min_keep:
+            keep_mask = np.zeros(len(refit_sims), dtype=bool)
+            keep_mask[np.argsort(refit_sims)[-min_keep:]] = True
+
+        keep_idx = np.where(keep_mask)[0].tolist()
+        n_before = len(self._candidate_indices)
+        self._candidate_indices = [self._candidate_indices[i] for i in keep_idx]
+        self._candidate_embs    = self._candidate_embs[keep_idx]
+        self._candidate_texts   = [self._candidate_texts[i] for i in keep_idx]
+        self._log(
+            f"🔧 Gate de relevancia: {len(self._candidate_indices):,} / {n_before:,} "
+            f"candidatos retenidos (sim >= {gate:.2f})"
+        )
+
+    # ------------------------------------------------------------------
+    # Paso 4: clustering
+
+    def _fit_bertopic(self, embs: np.ndarray, texts: list[str]):
+        """Ajusta BERTopic sobre el subconjunto de candidatos.
+
+        Adapta automáticamente n_neighbors y n_components de UMAP al tamaño
+        del corpus. Construye la jerarquía de tópicos si hay >= 2 tópicos base.
+
+        Args:
+            embs: Array de embeddings de los candidatos, shape (N, 384).
+            texts: Textos paralelos a los embeddings.
+
+        Returns:
+            Tupla (model, base_count, orig_topics, hier_df). Retorna
+            (None, 0, [], None) si el clustering falla o el corpus es muy pequeño.
+        """
+        n = len(texts)
+        if n < self.cfg.min_cluster_size:
+            return None, 0, [], None
+
+        n_neighbors  = min(self.cfg.umap_n_neighbors, max(2, n // 3))
+        n_components = min(self.cfg.umap_n_components, max(1, n - 2))
+
+        model = BERTopic(
+            umap_model=UMAP(
+                n_neighbors=n_neighbors, n_components=n_components,
+                min_dist=0.0, metric="cosine",
+                random_state=self.cfg.random_state,
+            ),
+            hdbscan_model=hdbscan.HDBSCAN(
+                min_cluster_size=self.cfg.min_cluster_size,
+                min_samples=self.cfg.min_samples,
+                metric="euclidean",
+                cluster_selection_method="eom",
+                prediction_data=True,
+            ),
+            vectorizer_model=CountVectorizer(
+                stop_words="english", min_df=2, ngram_range=(1, 2),
+            ),
+            ctfidf_model=ClassTfidfTransformer(reduce_frequent_words=True),
+            verbose=False,
+        )
+        try:
+            model.fit_transform(texts, embeddings=embs)
+        except Exception as exc:
+            logger.warning("BERTopic falló (%d docs): %s", n, exc)
+            return None, 0, [], None
+
+        info       = model.get_topic_info()
+        base_count = int((info["Topic"] >= 0).sum())
+        orig       = list(model.topics_)
+
+        hier_df = None
+        if base_count >= 2:
+            try:
+                hier_df = model.hierarchical_topics(texts)
+            except Exception as exc:
+                logger.warning("hierarchical_topics falló: %s", exc)
+
+        return model, base_count, orig, hier_df
+
+    # ------------------------------------------------------------------
+    # Paso 5: selección de nivel del árbol
+
+    def _select_level(self, orig_topics, base_count, hier_df):
+        """Selecciona el mejor número de tópicos evaluando niveles del árbol jerárquico.
+
+        Para cada nr en [min_nr_topics, max_nr_topics] calcula un score combinando
+        focus (similitud al mapa), specificity (distribución de tamaños de tópicos)
+        y quality (fracción de tópicos que pasan los filtros de salida).
+
+        Args:
+            orig_topics: Asignaciones de tópico originales de HDBSCAN (lista de ints).
+            base_count: Número de tópicos base producidos por HDBSCAN.
+            hier_df: DataFrame jerárquico de BERTopic, o None.
+
+        Returns:
+            Tupla (best_nr, level_scores, level_assignments) donde:
+              - best_nr: el nr_topics óptimo.
+              - level_scores: dict {nr: {focus, specificity, quality, total, ...}}.
+              - level_assignments: dict {nr: lista de asignaciones de tópico}.
+        """
+        n_docs   = len(orig_topics)
+
+        merge_tree: list[tuple[float, int, int]] = []
+        if hier_df is not None:
+            try:
+                for _, row in hier_df.iterrows():
+                    merge_tree.append((
+                        float(row["Distance"]),
+                        int(row["Child_Left_ID"]),
+                        int(row["Child_Right_ID"]),
+                    ))
+                merge_tree.sort(key=lambda x: x[0])
+            except Exception as exc:
+                logger.warning("No se pudo parsear el árbol: %s", exc)
+
+        node_leaves: dict[int, set] = {i: {i} for i in range(base_count)}
+        for dist, left, right in merge_tree:
+            parent_id = max(
+                (k for k in node_leaves if k >= base_count),
+                default=base_count - 1,
+            ) + 1
+            left_leaves  = node_leaves.get(left,  {left}  if left  < base_count else set())
+            right_leaves = node_leaves.get(right, {right} if right < base_count else set())
+            node_leaves[parent_id] = left_leaves | right_leaves
+
+        def assignments_at_nr(nr: int) -> list[int]:
+            if nr >= base_count or not merge_tree:
+                return list(orig_topics)
+            uf = list(range(base_count))
+
+            def find(x):
+                root = x
+                while uf[root] != root:
+                    root = uf[root]
+                while uf[x] != root:
+                    uf[x], x = root, uf[x]
+                return root
+
+            def union(a, b):
+                ra, rb = find(a), find(b)
+                if ra == rb:
+                    return False
+                uf[ra] = rb
+                return True
+
+            n_groups = base_count
+            for dist, left, right in merge_tree:
+                if n_groups <= nr:
+                    break
+                left_leaves  = node_leaves.get(left,  {left}  if left  < base_count else set())
+                right_leaves = node_leaves.get(right, {right} if right < base_count else set())
+                if not left_leaves or not right_leaves:
+                    continue
+                all_leaves = left_leaves | right_leaves
+                reps = list(all_leaves)
+                for i in range(1, len(reps)):
+                    if union(reps[0], reps[i]):
+                        n_groups -= 1
+                    if n_groups <= nr:
+                        break
+
+            return [
+                (find(tid) if 0 <= tid < base_count else -1)
+                for tid in orig_topics
+            ]
+
+        lo = max(self.cfg.min_nr_topics, 2)
+        hi = min(self.cfg.max_nr_topics, base_count)
+        nr_candidates = sorted(set(list(range(lo, hi + 1)) + [base_count]))
+
+        scores:      dict[int, dict] = {}
+        assignments: dict[int, list] = {}
+        prev_n_real = -1
+
+        kws_d    = self.cfg.domain_category_keywords
+        exc_kws  = self.cfg.exclude_category_keywords
+        min_frac = self.cfg.domain_category_min_fraction
+        max_exc  = self.cfg.exclude_category_max_fraction
+        max_docs = int(n_docs * self.cfg.max_topic_fraction)
+
+        def in_domain(doc):
+            return any(kw in doc.get("category", "") for kw in kws_d)
+
+        def is_excluded(doc):
+            return exc_kws and any(kw in doc.get("category", "") for kw in exc_kws)
+
+        for nr in nr_candidates:
+            asgn          = assignments_at_nr(nr)
+            asgn_arr      = np.array(asgn)
+            unique_topics = [t for t in set(asgn) if t >= 0]
+            n_real        = len(unique_topics)
+
+            if n_real == prev_n_real and nr != base_count:
+                if nr - 1 in scores:
+                    scores[nr]      = dict(scores[nr - 1])
+                    assignments[nr] = list(assignments[nr - 1])
+                    continue
+            prev_n_real = n_real
+
+            if not unique_topics:
+                continue
+
+            topic_sizes, topic_focuses = [], []
+            n_pass = 0
+
+            for tid in unique_topics:
+                doc_idxs = np.where(asgn_arr == tid)[0]
+                if len(doc_idxs) == 0:
+                    continue
+                size = len(doc_idxs)
+                topic_sizes.append(size)
+
+                t_embs   = self._candidate_embs[doc_idxs]
+                centroid = t_embs.mean(axis=0)
+                cn       = np.linalg.norm(centroid)
+                coh  = float((t_embs @ (centroid / cn if cn > 0 else centroid)).mean())
+                foc  = float((centroid / cn if cn > 0 else centroid) @ self._map_vec)
+                topic_focuses.append(foc)
+
+                global_ids = [self._candidate_indices[i] for i in doc_idxs if i < len(self._candidate_indices)]
+                docs = [self.corpus.entries[gi].to_dict() for gi in global_ids if gi < len(self.corpus.entries)]
+                frac_dom = sum(1 for d in docs if in_domain(d)) / len(docs) if docs else 0.0
+                frac_exc = sum(1 for d in docs if is_excluded(d)) / len(docs) if docs else 0.0
+
+                if (coh >= self.cfg.min_coherence and foc >= self.cfg.min_output_focus
+                        and frac_dom >= min_frac and size <= max_docs
+                        and (not exc_kws or frac_exc <= max_exc)):
+                    n_pass += 1
+
+            if not topic_sizes:
+                continue
+
+            total_docs = sum(topic_sizes)
+            n_t        = len(topic_sizes)
+            focus      = sum(f * s for f, s in zip(topic_focuses, topic_sizes)) / total_docs
+
+            if n_t > 1:
+                sa   = np.array(topic_sizes, dtype=float)
+                ss   = np.sort(sa)
+                gini = (2 * np.sum(np.arange(1, n_t+1) * ss) / (n_t * ss.sum()) - (n_t + 1) / n_t)
+                specificity = 1.0 - float(np.clip(gini, 0, 1))
+            else:
+                specificity = 0.0
+
+            quality = n_pass / n_t if n_t > 0 else 0.0
+
+            scores[nr] = {
+                "focus":         focus,
+                "specificity":   specificity,
+                "quality":       quality,
+                "n_real_topics": n_real,
+                "n_pass":        n_pass,
+                "total": (
+                    self.cfg.focus_weight       * focus
+                    + self.cfg.specificity_weight * specificity
+                    + self.cfg.quality_weight     * quality
+                ),
+            }
+            assignments[nr] = asgn
+
+        if not scores:
+            asgn = list(orig_topics)
+            assignments[base_count] = asgn
+            scores[base_count] = {"focus": 0, "specificity": 0, "quality": 0,
+                                   "total": 0, "n_real_topics": base_count, "n_pass": 0}
+
+        best_nr = max(scores, key=lambda k: scores[k]["total"])
+        return best_nr, scores, assignments
+
+    # ------------------------------------------------------------------
+    # Paso 6: construir tópicos
+
+    def _build_explored_topics(self, model, assignments, orig_topics):
+        """Construye la lista de ExploredTopic a partir de las asignaciones del nivel seleccionado.
+
+        Para cada cluster: calcula centroide, coherencia, focus_score, keywords
+        con TF-IDF y lista de documentos ordenados por similitud al centroide.
+
+        Args:
+            model: Modelo BERTopic ajustado.
+            assignments: Lista de asignaciones de tópico para el nivel seleccionado.
+            orig_topics: Asignaciones originales de HDBSCAN (no usadas directamente).
+
+        Returns:
+            Lista de ExploredTopic sin filtrar ni rankear.
+        """
+        asgn_arr = np.array(assignments)
+        embs     = self._candidate_embs
+        results: list[ExploredTopic] = []
+
+        merged_ids = sorted(t for t in set(assignments) if t >= 0)
+        if not merged_ids:
+            return results
+
+        try:
+            tfidf = TfidfVectorizer(
+                stop_words="english", ngram_range=(1, 2),
+                min_df=2, max_features=5000, sublinear_tf=True,
+            )
+            tfidf_matrix = tfidf.fit_transform(self._candidate_texts)
+            vocab    = tfidf.get_feature_names_out()
+            tfidf_ok = True
+        except Exception:
+            tfidf_ok = False
+
+        for merged_id in merged_ids:
+            local_ids = np.where(asgn_arr == merged_id)[0].tolist()
+            if not local_ids:
+                continue
+
+            cluster_embs = embs[local_ids]
+            centroid     = cluster_embs.mean(axis=0)
+            cn           = np.linalg.norm(centroid)
+            centroid_n   = centroid / cn if cn > 0 else centroid
+
+            coherence   = float((cluster_embs @ centroid_n).mean())
+            focus_score = float(centroid_n @ self._map_vec)
+
+            if tfidf_ok:
+                cluster_tfidf = np.asarray(tfidf_matrix[local_ids].mean(axis=0)).flatten()
+                top_j    = np.argsort(cluster_tfidf)[-10:][::-1]
+                keywords = [vocab[j] for j in top_j if cluster_tfidf[j] > 0]
+            else:
+                keywords = [f"topic_{merged_id}"]
+
+            global_ids = [self._candidate_indices[i] for i in local_ids if i < len(self._candidate_indices)]
+            docs = [self.corpus.entries[gi].to_dict() for gi in global_ids if gi < len(self.corpus.entries)]
+
+            if len(local_ids) > 1:
+                sims  = cluster_embs @ centroid_n
+                order = np.argsort(sims)[::-1]
+                docs  = [docs[i] for i in order if i < len(docs)]
+
+            results.append(ExploredTopic(
+                topic_id    = merged_id,
+                keywords    = keywords,
+                doc_indices = global_ids,
+                coherence   = coherence,
+                focus_score = focus_score,
+                documents   = docs,
+                centroid    = centroid_n.tolist(),
+            ))
+
+        return results
+
+    # ------------------------------------------------------------------
+    # Paso 7: filtrar y rankear
+
+    def _rank_topics(self, topics: list[ExploredTopic]) -> list[ExploredTopic]:
+        """Filtra y rankea tópicos según focus, coherencia, tamaño y categoría.
+
+        Aplica en orden: filtro por focus mínimo, coherencia mínima, tamaño máximo,
+        exclusión de categorías, y finalmente puntúa con overlap de términos del mapa.
+        Tópicos con fracción de documentos en dominio < domain_category_min_fraction
+        reciben un multiplicador de penalización.
+
+        Args:
+            topics: Lista de ExploredTopic a filtrar y rankear.
+
+        Returns:
+            Lista de tópicos ordenada de mayor a menor puntuación.
+        """
+        n_candidates = len(self._candidate_indices)
+
+        if self.cfg.min_output_focus > 0:
+            n_before = len(topics)
+            topics   = [t for t in topics if t.focus_score >= self.cfg.min_output_focus]
+            if len(topics) < n_before:
+                self._log(f"   Descartados {n_before - len(topics)} tópico(s): focus < {self.cfg.min_output_focus:.2f}")
+
+        if self.cfg.min_coherence > 0:
+            n_before = len(topics)
+            topics   = [t for t in topics if t.coherence >= self.cfg.min_coherence]
+            if len(topics) < n_before:
+                self._log(f"   Descartados {n_before - len(topics)} tópico(s): coherencia < {self.cfg.min_coherence:.2f}")
+
+        if self.cfg.max_topic_fraction > 0 and n_candidates > 0:
+            max_docs = int(n_candidates * self.cfg.max_topic_fraction)
+            n_before = len(topics)
+            topics   = [t for t in topics if len(t.documents) <= max_docs]
+            if len(topics) < n_before:
+                self._log(f"   Descartados {n_before - len(topics)} tópico(s): >{max_docs} docs")
+
+        exc_kws = self.cfg.exclude_category_keywords
+        max_exc = self.cfg.exclude_category_max_fraction
+        if exc_kws:
+            def frac_excluded(t):
+                if not t.documents:
+                    return 0.0
+                return sum(
+                    1 for d in t.documents
+                    if any(kw in d.get("category", "") for kw in exc_kws)
+                ) / len(t.documents)
+
+            n_before = len(topics)
+            topics   = [t for t in topics if frac_excluded(t) <= max_exc]
+            if len(topics) < n_before:
+                self._log(f"   Descartados {n_before - len(topics)} tópico(s): exclusión de categoría")
+
+        tw        = self.cm.term_weights(focus_concepts=self.focus, focus_multiplier=3.0)
+        map_terms = set(tw.keys())
+        inc_kws   = self.cfg.domain_category_keywords
+        min_frac  = self.cfg.domain_category_min_fraction
+        penalty   = self.cfg.domain_category_penalty
+
+        def in_domain(doc):
+            return any(kw in doc.get("category", "") for kw in inc_kws)
+
+        def score(t: ExploredTopic) -> float:
+            overlap = sum(tw.get(w, 0.0) for w in frozenset(t.keywords) & map_terms)
+            base    = overlap * (self.cfg.rank_base + self.cfg.rank_coherence_w * t.coherence + self.cfg.rank_focus_w * t.focus_score)
+            if t.documents:
+                frac_in = sum(1 for d in t.documents if in_domain(d)) / len(t.documents)
+                if frac_in < min_frac:
+                    base *= penalty
+            return base
+
+        ranked = sorted(topics, key=score, reverse=True)
+
+        for t in ranked:
+            if t.documents:
+                n      = len(t.documents)
+                frac_i = sum(1 for d in t.documents if in_domain(d)) / n
+                self._log(
+                    f"   📊 '{t.label[:40]}': focus={t.focus_score:.3f}  "
+                    f"coh={t.coherence:.3f}  n={n}  dom={frac_i:.0%}"
+                    + ("  ⚠ penalizado" if frac_i < min_frac else "")
+                )
+
+        return ranked
+
+    # ------------------------------------------------------------------
+    # Cache
+
+    def _cache_path(self) -> Optional[str]:
+        """Construye la ruta del archivo de caché de embeddings (.npz).
+
+        La clave del caché incluye número de entradas, include_keywords y
+        el nombre del modelo (sbert384) para invalidación automática.
+
+        Returns:
+            Ruta absoluta al archivo .npz, o None si no hay directorio disponible.
+        """
+        cache_dir = self.cfg.cache_dir or self.corpus.data_dir
+        if not cache_dir:
+            return None
+        key = (
+            f"{len(self.corpus.entries)}"
+            f"|{'|'.join(self.corpus.include_keywords or [])}"
+            f"|sbert384"
+        )
+        h = hashlib.md5(key.encode()).hexdigest()[:10]
+        return os.path.join(cache_dir, f"curlie_embeddings_sbert_{h}.npz")
+
+    def _make_logger(self):
+        """Crea una función de logging que imprime siempre a stdout.
+
+        Returns:
+            Función _log(msg) que imprime el mensaje.
+        """
+        def _log(msg: str) -> None:
+            print(msg)
+        return _log
+
+
+# ---------------------------------------------------------------------------
+# Helpers de salida
+# ---------------------------------------------------------------------------
+
+
+def print_topics(topics: list[ExploredTopic], top_docs: int = 3) -> None:
+    """Imprime los tópicos descubiertos a stdout en formato legible.
+
+    Args:
+        topics: Lista de ExploredTopic a imprimir.
+        top_docs: Número de documentos representativos a mostrar por tópico.
+    """
+    print(f"\\n{'='*65}")
+    print(f"Topic Explorer — {len(topics)} tópicos sugeridos")
+    print("=" * 65)
+    for i, t in enumerate(topics, 1):
+        print(f"\\n📌 Tópico {i}: {t.label}")
+        print(f"   Keywords   : {', '.join(t.keywords[:8])}")
+        print(f"   Coherencia : {t.coherence:.3f}   Focus: {t.focus_score:.3f}   Docs: {len(t.documents)}")
+        for d in t.documents[:top_docs]:
+            print(f"     • {d['title'][:65]}")
+            if d.get("snippet"):
+                print(f"       {d['snippet'][:110]}…")
+            print(f"       [{d.get('category','?')[:55]}]")
+            print(f"       🔗 {d['url']}")
+    print("\\n" + "=" * 65)
+
+
+def save_topics_json(topics: list[ExploredTopic], path: str) -> None:
+    """Serializa los tópicos descubiertos a un archivo JSON.
+
+    Args:
+        topics: Lista de ExploredTopic a serializar.
+        path: Ruta del archivo JSON de salida.
+    """
+    import json
+    data = [
+        {
+            "topic_id":    i,
+            "label":       t.label,
+            "keywords":    t.keywords,
+            "coherence":   round(t.coherence, 4),
+            "focus_score": round(t.focus_score, 4),
+            "documents":   t.documents,
+        }
+        for i, t in enumerate(topics, 1)
+    ]
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2)
+    print(f"💾 Resultados guardados en {path}")
+`,
+  exp_ext:`"""
+explorer_extensions.py
+======================
+Subclases de TopicExplorer que conectan cada estrategia de encoder con el
+pipeline de BERTopic. Separado de concept_map_encoder.py porque TopicExplorer
+importa ConceptMapEncoder, y poner estas clases allí generaría un ciclo.
+
+Clases:
+    DiagnosticExplorer     — TopicExplorer con captura de labels HDBSCAN
+    RelationAwareExplorer  — usa RelationAwareEncoder (tripletas)
+    PathAwareExplorer      — usa PathAwareEncoder (caminos raíz→nodo)
+    HybridExplorer         — usa HybridEncoder (ancla + ventana)
+
+Registros:
+    ENCODER_CLASSES : dict[str, type]   clave → clase Explorer
+    ENCODER_LABELS  : dict[str, str]    clave → nombre legible para tablas
+"""
+
+from __future__ import annotations
+
+from topic_explorer import TopicExplorer
+from concept_map_encoder import RelationAwareEncoder, PathAwareEncoder, HybridEncoder
+
+
+# ---------------------------------------------------------------------------
+# DiagnosticExplorer
+# ---------------------------------------------------------------------------
+
+class DiagnosticExplorer(TopicExplorer):
+    """
+    TopicExplorer que captura las etiquetas crudas de HDBSCAN en
+    self._hdbscan_labels para diagnosticar pérdida de recall por etapa.
+    """
+
+    def _fit_bertopic(self, embs, texts):
+        """Ajusta BERTopic y captura las etiquetas crudas de HDBSCAN en self._hdbscan_labels.
+
+        Args:
+            embs: Array de embeddings de candidatos, shape (N, 384).
+            texts: Textos paralelos a los embeddings.
+
+        Returns:
+            Tupla (model, base_count, orig_topics, hier_df) igual que el método padre.
+        """
+        result = super()._fit_bertopic(embs, texts)
+        model, base_topics, orig_topics, hier_df = result
+        self._hdbscan_labels = list(orig_topics) if orig_topics is not None else []
+        return result
+
+
+# ---------------------------------------------------------------------------
+# RelationAwareExplorer
+# ---------------------------------------------------------------------------
+
+class RelationAwareExplorer(DiagnosticExplorer):
+    """Explorer que usa RelationAwareEncoder (tripletas nodo-arco-nodo).
+
+    Reemplaza el encoder de nodos aislados por uno que embeddea tripletas
+    completas "src link dst", dando a SBERT contexto relacional.
+    """
+
+    def __init__(self, *args, **kwargs):
+        """Inicializa el explorer y reemplaza el encoder por RelationAwareEncoder.
+
+        Args:
+            *args: Argumentos posicionales de TopicExplorer (corpus, concept_map, ...).
+            **kwargs: Argumentos de keyword de TopicExplorer.
+        """
+        super().__init__(*args, **kwargs)
+        self.encoder = RelationAwareEncoder(
+            concept_map=self.cm,
+            engine=self.engine,
+            focus_concepts=self.focus,
+            focus_multiplier=3.0,
+            n_aspects=self.cfg.n_aspects,
+            aspect_sim_threshold=self.cfg.aspect_sim_threshold,
+        )
+
+
+# ---------------------------------------------------------------------------
+# PathAwareExplorer
+# ---------------------------------------------------------------------------
+
+class PathAwareExplorer(DiagnosticExplorer):
+    """Explorer que usa PathAwareEncoder (caminos raíz→nodo).
+
+    Embeddea todos los caminos simples desde la raíz hasta cada nodo,
+    capturando el contexto acumulado a lo largo del camino.
+    """
+
+    def __init__(self, *args, **kwargs):
+        """Inicializa el explorer y reemplaza el encoder por PathAwareEncoder.
+
+        Args:
+            *args: Argumentos posicionales de TopicExplorer.
+            **kwargs: Argumentos de keyword de TopicExplorer.
+        """
+        super().__init__(*args, **kwargs)
+        self.encoder = PathAwareEncoder(
+            concept_map=self.cm,
+            engine=self.engine,
+            focus_concepts=self.focus,
+            focus_multiplier=3.0,
+            n_aspects=self.cfg.n_aspects,
+            max_depth=self.cfg.path_max_depth,
+            max_paths_per_node=self.cfg.path_max_paths_per_node,
+            aspect_sim_threshold=self.cfg.aspect_sim_threshold,
+        )
+
+
+# ---------------------------------------------------------------------------
+# HybridExplorer
+# ---------------------------------------------------------------------------
+
+class HybridExplorer(DiagnosticExplorer):
+    """Explorer que usa HybridEncoder (representación híbrida ancla+ventana).
+
+    Elige por nodo entre etiqueta aislada, tripleta anclada a la raíz o
+    ventana de camino anclada según la profundidad del nodo en el mapa.
+    """
+
+    def __init__(self, *args, **kwargs):
+        """Inicializa el explorer y reemplaza el encoder por HybridEncoder.
+
+        Args:
+            *args: Argumentos posicionales de TopicExplorer.
+            **kwargs: Argumentos de keyword de TopicExplorer.
+        """
+        super().__init__(*args, **kwargs)
+        self.encoder = HybridEncoder(
+            concept_map=self.cm,
+            engine=self.engine,
+            focus_concepts=self.focus,
+            focus_multiplier=3.0,
+            n_aspects=self.cfg.n_aspects,
+            window_k=self.cfg.hybrid_window_k,
+            max_depth=self.cfg.path_max_depth,
+            max_paths_per_node=self.cfg.path_max_paths_per_node,
+            aspect_sim_threshold=self.cfg.aspect_sim_threshold,
+        )
+
+
+# ---------------------------------------------------------------------------
+# Registro de encoders disponibles
+# ---------------------------------------------------------------------------
+
+ENCODER_CLASSES = {
+    "node_label":     DiagnosticExplorer,
+    "relation_aware": RelationAwareExplorer,
+    "path_aware":     PathAwareExplorer,
+    "hybrid":         HybridExplorer,
+}
+
+ENCODER_LABELS = {
+    "node_label":     "1. Nodos aislados",
+    "relation_aware": "2. Tripletas (nodo-arco-nodo)",
+    "path_aware":     "3. Caminos raíz->nodo",
+    "hybrid":         "4. Híbrida (ancla + ventana)",
+}
+`,
+  corp_a:`"""
+curlie_corpus.py
+================
+Loads and indexes ALL Curlie TSV files from a directory (or a subset),
+producing a unified, deduplicated corpus ready for embedding.
+ 
+Supported file pairs (auto-discovered from a directory):
+  rdf-<Tag>-c.tsv   content / sites
+  rdf-<Tag>-s.tsv   structure / categories
+
+ 
+"""
+
+from __future__ import annotations
+
+import os
+import re
+from collections import defaultdict
+from dataclasses import dataclass, field
+from typing import Optional
+
+# ---------------------------------------------------------------------------
+# Category filter defaults
+# ---------------------------------------------------------------------------
+
+# These are tested as PREFIXES for global dumps and SUBSTRINGS for regional ones.
+DEFAULT_SCIENCE_KEYWORDS: tuple[str, ...] = (
+    "Science",
+    "Technology",
+    "Computers",
+    "Engineering",
+    "Astronomy",
+    "Astronomical",
+    "Space",
+    "Research",
+    "Environment",
+    "Physics",
+    "Chemistry",
+    "Biology",
+    "Geology",
+    "Mathematics",
+    "Observatory",
+    "Planetarium",
+    "University",
+    "Institute",
+    "Aerospace",
+    "Geophysics",
+    "Atmospheric",
+    "Oceanography",
+    "Meteorology",
+    "Reference",
+    "Health",
+    "Medicine",
+    "Education",
+)
+
+# Global-dump prefix whitelist (for rdf-Top-c.tsv etc.)
+DEFAULT_PREFIX_CATEGORIES: tuple[str, ...] = (
+    "Science",
+    "Computers",
+    "Reference",
+    "Health",
+    "Society/Issues",
+    "Recreation/Aviation",
+    "Arts/Education",
+    "Arts/Museums_and_Galleries",
+)
+
+# ---------------------------------------------------------------------------
+# Data class
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class CurlieEntry:
+    """One site record from the Curlie directory."""
+    url:         str
+    title:       str
+    description: str
+    category:    str = ""
+    source_tag:  str = ""   # which TSV pair this came from, e.g. "NorthAmerica"
+
+    def text(self) -> str:
+        """Genera el texto combinado para embedding: título + descripción + palabras de categoría.
+
+        Returns:
+            String con "title. description cat_words" listo para embeddear.
+        """
+        cat_words = self.category.replace("/", " ").replace("_", " ")
+        return f"{self.title}. {self.description} {cat_words}".strip()
+
+    def to_dict(self) -> dict:
+        """Serializa la entrada a un diccionario compatible con el pipeline.
+
+        Returns:
+            Diccionario con claves url, title, snippet, category y source_tag.
+        """
+        return {
+            "url":         self.url,
+            "title":       self.title,
+            "snippet":     self.description[:300],
+            "category":    self.category,
+            "source_tag":  self.source_tag,
+        }
+
+
+# ---------------------------------------------------------------------------
+# CurlieCorpus
+# ---------------------------------------------------------------------------
+
+
+class CurlieCorpus:
+    """
+    Unified corpus loader for all Curlie TSV files in a directory.
+    """
+
+    def __init__(
+        self,
+        data_dir:              str,
+        include_keywords:      Optional[tuple[str, ...]] = DEFAULT_SCIENCE_KEYWORDS,
+        exclude_tags:          Optional[tuple[str, ...]] = ("Adult",),
+        max_entries_per_file:  Optional[int]             = None,
+        max_total_entries:     Optional[int]             = None,
+        verbose:               bool                      = True,
+    ):
+        """Carga y deduplica todas las entradas de archivos TSV de Curlie en el directorio.
+
+        Descubre automáticamente pares rdf-<Tag>-c.tsv / rdf-<Tag>-s.tsv,
+        aplica filtros de categoría e inicia la carga al construirse.
+
+        Args:
+            data_dir: Directorio que contiene los archivos TSV de Curlie.
+            include_keywords: Palabras clave de categorías a incluir. None = todas.
+            exclude_tags: Tags de archivo a excluir (ej. "Adult").
+            max_entries_per_file: Límite de entradas a cargar por archivo TSV.
+            max_total_entries: Límite total de entradas en el corpus.
+            verbose: Si True, imprime progreso a stdout.
+        """
+        self.data_dir             = data_dir
+        self.include_keywords     = include_keywords
+        self.exclude_tags         = exclude_tags or ()
+        self.max_entries_per_file = max_entries_per_file
+        self.max_total_entries    = max_total_entries
+        self.verbose              = verbose
+
+        self.entries: list[CurlieEntry] = []
+        self._seen_urls: set[str]       = set()
+
+        self._load_all()
+
+    # ------------------------------------------------------------------
+    # Discovery
+
+    def _discover_pairs(self) -> list[tuple[str, str, Optional[str]]]:
+        """Descubre pares (c, s) de archivos TSV en data_dir.
+
+        Excluye tags que coincidan con exclude_tags.
+
+        Returns:
+            Lista de tuplas (tag, c_path, s_path) donde s_path puede ser None.
+        """
+        c_files: dict[str, str] = {}
+        s_files: dict[str, str] = {}
+
+        for fname in os.listdir(self.data_dir):
+            fpath = os.path.join(self.data_dir, fname)
+            if not fname.endswith(".tsv"):
+                continue
+            # Extract tag from rdf-<Tag>-c.tsv or rdf-<Tag>-s.tsv
+            m = re.match(r"rdf-(.+)-([cs])\\.tsv$", fname)
+            if not m:
+                continue
+            tag, kind = m.group(1), m.group(2)
+            if kind == "c":
+                c_files[tag] = fpath
+            else:
+                s_files[tag] = fpath
+
+        pairs: list[tuple[str, str, Optional[str]]] = []
+        for tag, c_path in sorted(c_files.items()):
+            # Skip excluded tags (default: Adult)
+            if any(ex.lower() in tag.lower() for ex in self.exclude_tags):
+                self._log(f"  ⏭  Skipping excluded tag: {tag}")
+                continue
+            s_path = s_files.get(tag)
+            pairs.append((tag, c_path, s_path))
+
+        return pairs
+
+    # ------------------------------------------------------------------
+    # Load loop
+
+    def _load_all(self) -> None:
+        """Descubre y carga todos los pares de archivos TSV del directorio.
+
+        Raises:
+            FileNotFoundError: Si no se encuentran archivos rdf-*-c.tsv en data_dir.
+        """
+        pairs = self._discover_pairs()
+        if not pairs:
+            raise FileNotFoundError(
+                f"No rdf-*-c.tsv files found in {self.data_dir}"
+            )
+
+        self._log(f"📦 Found {len(pairs)} TSV pair(s) in {self.data_dir}")
+        for tag, c_path, s_path in pairs:
+            if (self.max_total_entries
+                    and len(self.entries) >= self.max_total_entries):
+                self._log("  ⚠  Total entry cap reached — stopping.")
+                break
+            self._load_pair(tag, c_path, s_path)
+
+        self._log(
+            f"\\n✅ CurlieCorpus ready: {len(self.entries):,} entries "
+            f"from {len(pairs)} file(s)"
+        )
+
+    def _load_pair(
+        self, tag: str, c_path: str, s_path: Optional[str]
+    ) -> None:
+        """Load one (c, s) file pair."""
+        self._log(f"\\n  📂 Loading tag={tag} …")
+
+        cat_map    = self._load_structure(s_path)
+        regional   = self._detect_regional(cat_map)
+        mode_label = "substring/regional" if regional else "prefix/global"
+        self._log(f"     Filter mode: {mode_label}")
+        
+        count_before = len(self.entries)
+        limit = self.max_entries_per_file
+
+        skipped_cat = 0
+        skipped_dup = 0
+
+        with open(c_path, encoding="utf-8", errors="replace") as fh:
+            for raw_line in fh:
+                if (limit and (len(self.entries) - count_before) >= limit):
+                    break
+                if (self.max_total_entries
+                        and len(self.entries) >= self.max_total_entries):
+                    break
+
+                parts   = raw_line.rstrip("\\n").split("\\t")
+                url     = parts[0].strip() if len(parts) > 0 else ""
+                title   = parts[1].strip() if len(parts) > 1 else ""
+                desc    = parts[2].strip() if len(parts) > 2 else ""
+                cat_id  = parts[3].strip() if len(parts) > 3 else ""
+
+                if not url or not title:
+                    continue
+
+                # Dedup by URL across all loaded files
+                if url in self._seen_urls:
+                    skipped_dup += 1
+                    continue
+
+                cat_path = cat_map.get(cat_id, "")
+
+                # Skip World/* (non-English)
+                if cat_path.startswith("World/"):
+                    skipped_cat += 1
+                    continue
+
+                # Category filter
+                if self.include_keywords is not None:
+                    if not self._passes_filter(cat_path, regional):
+                        skipped_cat += 1
+                        continue
+
+                self._seen_urls.add(url)
+                self.entries.append(CurlieEntry(
+                    url=url, title=title, description=desc,
+                    category=cat_path, source_tag=tag,
+                ))
+
+        added = len(self.entries) - count_before
+        self._log(
+            f"     +{added:,} entries  "
+            f"(skipped {skipped_cat:,} by category, {skipped_dup:,} duplicates)"
+        )
+
+    # ------------------------------------------------------------------
+    # Helpers
+
+    @staticmethod
+    def _load_structure(path: Optional[str]) -> dict[str, str]:
+        """Carga el archivo de estructura TSV (rdf-<Tag>-s.tsv) como {cat_id: cat_path}.
+
+        Args:
+            path: Ruta al archivo -s.tsv, o None si no existe.
+
+        Returns:
+            Diccionario {category_id: category_path}. Vacío si path es None o no existe.
+        """
+        if not path or not os.path.exists(path):
+            return {}
+        cat_map: dict[str, str] = {}
+        with open(path, encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                parts = line.rstrip("\\n").split("\\t")
+                if len(parts) >= 2:
+                    cid, cp = parts[0].strip(), parts[1].strip()
+                    if cid and cp:
+                        cat_map[cid] = cp
+        return cat_map
+
+    @staticmethod
+    def _detect_regional(cat_map: dict[str, str]) -> bool:
+        """Return True if ≥ 80 % of sampled paths start with 'Regional/'."""
+        if not cat_map:
+            return False
+        sample = list(cat_map.values())[:500]
+        n_reg  = sum(1 for p in sample if p.startswith("Regional/"))
+        return (n_reg / len(sample)) >= 0.80
+
+    def _passes_filter(self, cat_path: str, regional: bool) -> bool:
+        """Evalúa si una ruta de categoría pasa el filtro de include_keywords.
+
+        Para dumps globales usa comparación por prefijo; para dumps regionales
+        usa comparación por substring.
+
+        Args:
+            cat_path: Ruta de categoría Curlie (ej. "Science/Astronomy/Telescopes").
+            regional: True si el dump es regional (prefijo "Regional/").
+
+        Returns:
+            True si la categoría contiene al menos una keyword de include_keywords.
+        """
+        if not self.include_keywords:
+            return True
+        if regional:
+            return any(kw in cat_path for kw in self.include_keywords)
+        else:
+            return any(cat_path.startswith(kw) for kw in self.include_keywords)
+
+    def _log(self, msg: str) -> None:
+        """Imprime un mensaje a stdout si verbose=True.
+
+        Args:
+            msg: Mensaje a imprimir.
+        """
+        if self.verbose:
+            print(msg)
+
+    # ------------------------------------------------------------------
+    # Convenience
+
+    def texts(self) -> list[str]:
+        """Return the embedding text for every entry."""
+        return [e.text() for e in self.entries]
+
+    def stats(self) -> dict:
+        """Retorna estadísticas del corpus: total de entradas y conteo por tag.
+
+        Returns:
+            Diccionario con claves "total" (int) y "by_tag" (dict {tag: count}).
+        """
+        tags = defaultdict(int)
+        for e in self.entries:
+            tags[e.source_tag] += 1
+        return {"total": len(self.entries), "by_tag": dict(tags)}
+`,
+  corp_b:`"""
+paper_corpus.py
+===============
+Corpus loader for the labeled ODP/Curlie paper dataset.
+Presents the same interface as CurlieCorpus so it can be
+used as a drop-in replacement in the Extender pipeline.
+
+Dataset structure expected:
+    <data_dir>/
+        topic_names.txt              — "topic_id\\tcategory_path" per line
+        texts/texts/{tid}/{n}.txt    — web page text (first line = title)
+        urls/urls/{tid}.txt          — one URL per line (same order as docs)
+"""
+
+from __future__ import annotations
+
+import os
+import pickle
+from collections import Counter
+from dataclasses import dataclass, field
+
+
+# ---------------------------------------------------------------------------
+# PaperEntry  (same interface as CurlieEntry)
+# ---------------------------------------------------------------------------
+
+@dataclass
+class PaperEntry:
+    """One document from the paper dataset."""
+    url:        str
+    title:      str
+    description: str
+    category:   str = ""
+    _full_text: str = field(default="", repr=False)
+
+    def text(self) -> str:
+        """Combined text used for embedding — mirrors CurlieEntry.text()."""
+        cat_words = self.category.replace("/", " ").replace("_", " ")
+        body = self._full_text or f"{self.title}. {self.description}"
+        return f"{body} {cat_words}".strip()
+
+    def to_dict(self) -> dict:
+        """Serializa la entrada a un diccionario compatible con el pipeline.
+
+        Returns:
+            Diccionario con claves url, title, snippet, category y source_tag.
+        """
+        return {
+            "url":        self.url,
+            "title":      self.title,
+            "snippet":    self.description[:300],
+            "category":   self.category,
+            "source_tag": "paper_dataset",
+        }
+
+
+# ---------------------------------------------------------------------------
+# PaperDatasetCorpus  (same interface as CurlieCorpus)
+# ---------------------------------------------------------------------------
+
+class PaperDatasetCorpus:
+    """
+    Drop-in replacement for CurlieCorpus using the labeled ODP/Curlie
+    paper dataset (texts/ + urls/ + topic_names.txt).
+
+    Parameters
+    ----------
+    data_dir : str
+        Path to the Dataset directory (contains topic_names.txt, texts/, urls/).
+    max_docs_per_topic : int
+        Limit documents loaded per topic (default 150 → ~80 k docs total).
+    max_chars_per_doc : int
+        Truncate each document text to this many characters before embedding.
+    verbose : bool
+        Print progress to stdout.
+    """
+
+    def __init__(
+        self,
+        data_dir: str,
+        max_docs_per_topic: int = 150,
+        max_chars_per_doc: int  = 2000,
+        verbose: bool           = True,
+    ):
+        self.data_dir           = data_dir
+        self.max_docs_per_topic = max_docs_per_topic
+        self.max_chars_per_doc  = max_chars_per_doc
+        self.verbose            = verbose
+        self.entries: list[PaperEntry] = []
+        # Compatibility attribute — CurlieCorpus has include_keywords;
+        # TopicExplorer._cache_path() uses it to build the cache key.
+        self.include_keywords: tuple | None = None
+        self._load_with_cache()
+
+    # ------------------------------------------------------------------
+    def _cache_path(self) -> str:
+        """Construye la ruta del archivo pickle de caché del corpus.
+
+        Returns:
+            Ruta absoluta al archivo .pkl dentro de data_dir.
+        """
+        return os.path.join(
+            self.data_dir,
+            f".paper_corpus_{self.max_docs_per_topic}_{self.max_chars_per_doc}.pkl",
+        )
+
+    def _load_with_cache(self) -> None:
+        """Carga el corpus desde caché pickle si es válido, o desde disco si no.
+
+        La caché se considera válida si su mtime es posterior al de topic_names.txt.
+        Al final del camino lento, guarda el resultado en la caché.
+        """
+        cache = self._cache_path()
+        names_path = os.path.join(self.data_dir, "topic_names.txt")
+
+        # Use cache if it exists and is newer than topic_names.txt
+        if os.path.isfile(cache):
+            try:
+                cache_mtime = os.path.getmtime(cache)
+                names_mtime = os.path.getmtime(names_path)
+                if cache_mtime > names_mtime:
+                    if self.verbose:
+                        print("PaperDatasetCorpus: cargando desde caché...")
+                    with open(cache, "rb") as f:
+                        self.entries = pickle.load(f)
+                    if self.verbose:
+                        print(f"✅ PaperDatasetCorpus listo (caché): {len(self.entries):,} entradas")
+                    return
+            except Exception as e:
+                if self.verbose:
+                    print(f"Caché inválido, recargando desde disco... ({e})")
+
+        # Slow path: read files, then save cache
+        self._load()
+        try:
+            with open(cache, "wb") as f:
+                pickle.dump(self.entries, f, protocol=pickle.HIGHEST_PROTOCOL)
+            if self.verbose:
+                print(f"💾 Caché guardado en {cache}")
+        except Exception as e:
+            if self.verbose:
+                print(f"Advertencia: no se pudo guardar el caché ({e})")
+
+    def _load(self) -> None:
+        """Carga el corpus desde disco leyendo topic_names.txt, texts/ y urls/.
+
+        Si los archivos texts/ o urls/ no están extraídos, los extrae desde
+        sus respectivos tar.gz. Popula self.entries con instancias de PaperEntry.
+        """
+        # ── 1. topic_names.txt ─────────────────────────────────────────
+        names_path = os.path.join(self.data_dir, "topic_names.txt")
+        topic_to_cat: dict[str, str] = {}
+        with open(names_path, encoding="utf-8") as f:
+            for line in f:
+                parts = line.rstrip("\\n").split("\\t", 1)
+                if len(parts) == 2:
+                    topic_to_cat[parts[0].strip()] = parts[1].strip()
+
+        texts_root = os.path.join(self.data_dir, "texts")
+        urls_root  = os.path.join(self.data_dir, "urls")
+
+        # Si los archivos no están extraídos, extraer desde los tar.gz
+        _has_texts = os.path.isdir(texts_root) and any(
+            os.path.isdir(os.path.join(texts_root, d)) for d in os.listdir(texts_root)
+        ) if os.path.isdir(texts_root) else False
+        if not _has_texts:
+            import tarfile
+            texts_tar = os.path.join(self.data_dir, "texts.tar.gz")
+            urls_tar  = os.path.join(self.data_dir, "urls.tar.gz")
+            if os.path.isfile(texts_tar):
+                if self.verbose:
+                    print("PaperDatasetCorpus: extrayendo texts.tar.gz ...")
+                with tarfile.open(texts_tar, "r:gz") as tf:
+                    tf.extractall(self.data_dir)
+            if os.path.isfile(urls_tar):
+                if self.verbose:
+                    print("PaperDatasetCorpus: extrayendo urls.tar.gz ...")
+                with tarfile.open(urls_tar, "r:gz") as tf:
+                    tf.extractall(self.data_dir)
+
+        if self.verbose:
+            print(f"PaperDatasetCorpus: {len(topic_to_cat):,} topics — "
+                  f"loading up to {self.max_docs_per_topic} docs/topic ...")
+
+        # ── 2. Iterate topics ──────────────────────────────────────────
+        for tid, category in sorted(topic_to_cat.items()):
+            topic_dir = os.path.join(texts_root, tid)
+            if not os.path.isdir(topic_dir):
+                continue
+
+            # URLs for this topic (one per line, same index as doc files)
+            urls: list[str] = []
+            url_file = os.path.join(urls_root, f"{tid}.txt")
+            if os.path.isfile(url_file):
+                try:
+                    with open(url_file, encoding="utf-8", errors="ignore") as f:
+                        urls = [ln.strip() for ln in f if ln.strip()]
+                except Exception:
+                    pass
+
+            # Sort doc files numerically and cap
+            try:
+                fnames = sorted(
+                    [fn for fn in os.listdir(topic_dir) if fn.endswith(".txt")],
+                    key=lambda fn: int(fn.replace(".txt", "")),
+                )[: self.max_docs_per_topic]
+            except Exception:
+                fnames = sorted(
+                    [fn for fn in os.listdir(topic_dir) if fn.endswith(".txt")]
+                )[: self.max_docs_per_topic]
+
+            for i, fname in enumerate(fnames):
+                fpath = os.path.join(topic_dir, fname)
+                try:
+                    with open(fpath, encoding="utf-8", errors="ignore") as f:
+                        raw = f.read(self.max_chars_per_doc)
+                except Exception:
+                    continue
+
+                lines = raw.strip().split("\\n", 2)
+                title       = lines[0][:200] if lines else fname
+                description = lines[1][:500] if len(lines) > 1 else ""
+                url         = urls[i] if i < len(urls) else f"paper://{tid}/{fname}"
+
+                self.entries.append(PaperEntry(
+                    url         = url,
+                    title       = title,
+                    description = description,
+                    category    = category,
+                    _full_text  = raw,
+                ))
+
+        if self.verbose:
+            n_cats = len(Counter(e.category for e in self.entries))
+            print(f"✅ PaperDatasetCorpus listo: {len(self.entries):,} entradas "
+                  f"en {n_cats:,} categorías")
+
+    # ------------------------------------------------------------------
+    def texts(self) -> list[str]:
+        """Retorna el texto de embedding de cada entrada del corpus.
+
+        Returns:
+            Lista de strings paralela a self.entries.
+        """
+        return [e.text() for e in self.entries]
+`,
+};
+const _FILE_NAMES={enc:'concept_map_encoder.py',exp_main:'topic_explorer.py',exp_ext:'explorer_extensions.py',corp_a:'curlie_corpus.py',corp_b:'paper_corpus.py'};
+const _PANEL_FILE={enc:'enc',exp:'exp_main',corp:'corp_a'};
+
+function _buildSplit(prefix){
+  const pre=document.getElementById(prefix+'-code-pre');
+  if(!pre) return;
+  const code=_CODES[_PANEL_FILE[prefix]]||'';
+  const p=_PALETTES[_activePalette]||_PALETTES.A;
+  pre.style.color=p.base;
+  const lines=code.split('\n');
+  const frags=[];
+  for(let i=0;i<lines.length;i++){
+    frags.push('<span class="cl" id="'+prefix+'-cl'+(i+1)+'">'+_hlLine(lines[i])+'</span>');
+  }
+  pre.innerHTML=frags.join('');
+}
+
+function _swFile(prefix,fileKey,btn){
+  _PANEL_FILE[prefix]=fileKey;
+  document.querySelectorAll('#'+prefix+'-code-file .file-btn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  const fn=document.getElementById(prefix+'-fname');
+  if(fn) fn.textContent=_FILE_NAMES[fileKey]||fileKey;
+  const lc=document.getElementById(prefix+'-lcount');
+  if(lc) lc.textContent=(_CODES[fileKey]||'').split('\n').length;
+  _buildSplit(prefix);
+}
+
+function showSubTabG(panelId,subId,btn){
+  const panel=document.getElementById('panel-'+panelId);
+  if(!panel) return;
+  panel.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  panel.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  const sp=document.getElementById(subId);if(sp)sp.classList.add('active');
+  btn.classList.add('active');
+  const prefix=btn.dataset.prefix;
+  const ls=parseInt(btn.dataset.ls||0),le=parseInt(btn.dataset.le||0);
+  if(!prefix||!ls)return;
+  const pre=document.getElementById(prefix+'-code-pre');
+  const pane=document.getElementById(prefix+'-code-pane');
+  if(!pre||!pane)return;
+  pre.querySelectorAll('.cl.hl-section').forEach(el=>el.classList.remove('hl-section'));
+  for(let i=ls;i<=le;i++){const el=document.getElementById(prefix+'-cl'+i);if(el)el.classList.add('hl-section');}
+  const first=document.getElementById(prefix+'-cl'+ls);
+  if(first){const offset=first.offsetTop-pane.clientHeight*0.1;pre.scrollTo({top:Math.max(0,offset),behavior:'smooth'});}
+}
+
+function _initSplitDivider(prefix){
+  const div=document.getElementById(prefix+'-divider');
+  const lp=document.getElementById(prefix+'-code-pane');
+  if(!div||!lp)return;
+  let dragging=false,startX=0,startW=0;
+  div.addEventListener('mousedown',e=>{dragging=true;startX=e.clientX;startW=lp.offsetWidth;div.classList.add('dragging');document.body.style.cursor='col-resize';document.body.style.userSelect='none';});
+  document.addEventListener('mousemove',e=>{if(!dragging)return;const nw=Math.max(160,Math.min(startW+e.clientX-startX,window.innerWidth*0.75));lp.style.width=nw+'px';lp.style.flex='none';});
+  document.addEventListener('mouseup',()=>{dragging=false;div.classList.remove('dragging');document.body.style.cursor='';document.body.style.userSelect='';});
+}
+
+
+// ── TAB SWITCHING ──
+function showTab(name,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  if(btn) btn.classList.add('active');
+  document.getElementById('search').value='';
+  doSearch('');
+}
+
+// ── TOGGLE CLASS CARD ──
+function toggleCls(header){
+  const body=header.nextElementSibling;
+  const tog=header.querySelector('.cls-toggle');
+  const open=body.classList.toggle('open');
+  if(tog) tog.classList.toggle('open',open);
+}
+
+// ── SEARCH ──
+function doSearch(q){
+  q=q.trim().toLowerCase();
+  const nr=document.getElementById('no-results');
+  if(!q){
+    document.querySelectorAll('.cls-card').forEach(c=>c.classList.remove('hidden'));
+    document.querySelectorAll('.sec').forEach(s=>s.style.display='');
+    nr.style.display='none';
+    document.getElementById('nq').textContent='';
+    return;
+  }
+  let total=0;
+  document.querySelectorAll('.cls-card').forEach(card=>{
+    const name=card.dataset.search||'';
+    const text=card.textContent.toLowerCase();
+    const match=name.includes(q)||text.includes(q);
+    card.classList.toggle('hidden',!match);
+    if(match){
+      total++;
+      const body=card.querySelector('.cls-body');
+      if(body&&!body.classList.contains('open')){
+        body.classList.add('open');
+        const tog=card.querySelector('.cls-toggle');
+        if(tog) tog.classList.add('open');
+      }
+    }
+  });
+  document.querySelectorAll('.sec').forEach(sec=>{
+    const visible=Array.from(sec.querySelectorAll('.cls-card')).some(c=>!c.classList.contains('hidden'));
+    const hasMethods=!sec.querySelector('.cls-card');
+    sec.style.display=(visible||hasMethods)?'':'none';
+  });
+  if(total===0){nr.style.display='block';document.getElementById('nq').textContent=q;}
+  else{nr.style.display='none';}
+}
+
+// ── CODE SOURCE ──
+const _RAW_CODE = `
+
+from __future__ import annotations
+
+import json
+import re
+from collections import defaultdict
+from dataclasses import dataclass, field
+from typing import Optional
+
+import numpy as np
+
+
+# ===========================================================================
+# Domain seed texts
+# ===========================================================================
+
+_DOMAIN_SEEDS: dict[str, list[str]] = {
+    "space": [
+        "planetary science geology astrobiology exobiology",
+        "spacecraft orbit trajectory mission launch rocket propulsion",
+        "Mars Venus Jupiter Saturn planetary exploration probe",
+        "NASA ESA JAXA space agency astronaut cosmonaut crew",
+        "telescope observatory spectroscopy remote sensing instrument",
+        "satellite orbital mechanics rendezvous docking manoeuvre",
+        "interplanetary transfer Hohmann spacecraft delta-v",
+        "rover lander orbiter flyby probe descent ascent",
+        "sample collection curation analysis laboratory geology",
+        "surface terrain crater basin volcano regolith dust",
+        "atmosphere climate weather dust storm pressure temperature",
+        "radiation magnetic field solar wind plasma environment",
+        "landing site selection hazard terrain mapping reconnaissance",
+        "entry descent landing parachute retrorocket airbag",
+        "biosignature organic chemistry life detection abiotic",
+        "mineralogy petrology stratigraphy rock geochemistry",
+        "photovoltaic solar panel power radioisotope thermoelectric",
+        "communication antenna relay uplink downlink bandwidth",
+        "navigation guidance control autonomous software system",
+        "human spaceflight life support habitat crew deep space",
+        "technology development prototype test validation engineering",
+        "planetary protection contamination protocol sterilisation",
+        "subsurface drilling borehole coring ice permafrost",
+        "airborne balloon drone aerial platform reconnaissance",
+        "sample return capsule re-entry Earth retrieval curation",
+    ],
+    "moon": [
+        "lunar surface regolith soil impact crater ejecta",
+        "Apollo program astronaut moonwalk EVA sample return geology",
+        "mare basalt highland anorthosite mineralogy petrology",
+        "tidal locking synchronous rotation libration orbit",
+        "water ice permanently shadowed region polar crater volatile",
+        "selenology lunar science topography selenographic",
+        "ISRU resource utilisation helium-3 oxygen hydrogen",
+        "Lunar Reconnaissance Orbiter LADEE GRAIL gravity",
+        "moonquake seismometer internal core mantle crust",
+        "solar wind implantation volatile regolith gardening",
+        "Artemis Gateway cislunar crewed landing exploration",
+        "telescope lunar farside radio quiet astronomy",
+    ],
+    "mars": [
+        "Mars surface geology geochemistry mineralogy basalt",
+        "Curiosity Perseverance rover instrument MOXIE sample tube",
+        "Mars Reconnaissance Orbiter MAVEN atmosphere climate",
+        "Ingenuity helicopter drone aerial flight altitude",
+        "ancient lake river delta sediment habitability",
+        "methane atmospheric chemistry photochemistry oxidant",
+        "dust storm global regional opacity solar panel",
+        "InSight seismometer marsquake interior structure",
+        "Phobos Deimos moon orbit tidal evolution",
+        "terraforming colonisation human habitat pressure",
+    ],
+    "biology": [
+        "organism species taxonomy evolution genetics mutation",
+        "cell membrane protein DNA RNA chromosome gene expression",
+        "ecosystem ecology biodiversity conservation habitat niche",
+        "photosynthesis respiration metabolism enzyme catalyst",
+        "virus bacteria pathogen infection immune system antibody",
+        "anatomy physiology neural brain neuroscience synapse",
+        "fossil paleontology evolutionary adaptation selection",
+        "bioinformatics genomics proteomics sequencing phylogeny",
+        "microbiology microbiome gut flora culture medium",
+        "clinical trial drug therapy diagnosis treatment",
+    ],
+    "computer": [
+        "algorithm data structure complexity sorting search",
+        "machine learning neural network deep learning training",
+        "database query SQL NoSQL retrieval information system",
+        "network protocol TCP internet distributed computing cloud",
+        "software engineering architecture design pattern testing",
+        "artificial intelligence knowledge representation reasoning",
+        "natural language processing text mining semantic parsing",
+        "computer vision image recognition object detection",
+        "cybersecurity cryptography encryption vulnerability",
+        "operating system kernel scheduler memory management",
+    ],
+    "earth": [
+        "geophysics seismology earthquake fault tectonic plate",
+        "climate change carbon dioxide greenhouse warming",
+        "ocean current thermohaline circulation salinity",
+        "atmospheric science troposphere stratosphere ozone",
+        "remote sensing satellite land cover vegetation index",
+        "hydrology watershed river basin flood precipitation",
+        "soil erosion sediment geomorphology landscape",
+        "mineralogy crystallography ore deposit mining",
+        "geodesy GPS reference frame coordinate survey",
+        "environmental impact pollution remediation ecology",
+    ],
+}
+
+
+def _get_domain_seeds(concept_map_title: str, concept_map_root: str = "") -> list[str]:
+    """
+    Return domain seed sentences matching the map's subject domain.
+
+    Searches the title and root for keywords from _DOMAIN_SEEDS.
+    Multiple domains may match (e.g. 'Earth Science and Space').
+    Always returns at least the 'space' seeds as a default.
+    """
+    combined = (concept_map_title + " " + concept_map_root).lower()
+    seeds: list[str] = []
+    matched: set[str] = set()
+    for key, texts in _DOMAIN_SEEDS.items():
+        if key in combined and key not in matched:
+            seeds.extend(texts)
+            matched.add(key)
+    # Default fallback: always include space seeds for academic maps
+    if "space" not in matched:
+        seeds.extend(_DOMAIN_SEEDS["space"])
+    return seeds
+
+# ---------------------------------------------------------------------------
+# Stopwords
+# ---------------------------------------------------------------------------
+
+_BASE_STOPWORDS: frozenset[str] = frozenset({
+    "a", "an", "the", "and", "or", "but", "in", "on", "at", "to", "for",
+    "of", "with", "by", "from", "is", "are", "was", "were", "be", "been",
+    "being", "have", "has", "had", "do", "does", "did", "will", "would",
+    "could", "should", "may", "might", "shall", "can", "this", "that",
+    "these", "those", "it", "its", "as", "up", "out", "about", "into",
+    "through", "during", "before", "after", "above", "below", "between",
+    "each", "than", "so", "if", "not", "no", "nor", "yet", "both", "either",
+    "also", "just", "more", "most", "such", "only", "own", "same", "then",
+    "when", "where", "which", "while", "who", "how", "all", "any", "few",
+    "other", "some", "what", "their", "they", "them", "we", "our", "you",
+    "your", "he", "she", "his", "her", "my", "me", "him", "us", "new",
+    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+    "ten", "http", "www", "com", "org", "net", "edu", "gov",
+    "including", "provides", "offers", "based", "information", "services",
+    "company", "products", "manufacturer", "manufacturers", "supplier",
+    "suppliers", "located", "includes", "featuring", "featuring", "various",
+    "general", "website", "site", "page", "online",
+})
+
+_NUMERIC_PATTERN = re.compile(r"^\\d+$")
+
+
+def tokenise(text: str, stopwords: frozenset[str] = _BASE_STOPWORDS) -> list[str]:
+    """Tokeniza un texto en palabras alfanuméricas de 3+ caracteres, filtrando stopwords y números.
+
+    Args:
+        text: Texto de entrada a tokenizar.
+        stopwords: Conjunto de palabras a ignorar.
+
+    Returns:
+        Lista de tokens limpios en minúsculas.
+    """
+    tokens = re.findall(r"[a-zA-Z0-9]{3,}", text.lower())
+    return [
+        t for t in tokens
+        if t not in stopwords
+        and not _NUMERIC_PATTERN.match(t)   # strip numeric IDs
+    ]
+
+
+def clean_text(text: str) -> str:
+    """Elimina tokens puramente numéricos de un texto.
+
+    Args:
+        text: Texto de entrada.
+
+    Returns:
+        Texto con los tokens numéricos eliminados.
+    """
+    tokens = text.split()
+    clean = [t for t in tokens if not _NUMERIC_PATTERN.match(t.strip(".,;:()"))]
+    return " ".join(clean)
+
+
+# ===========================================================================
+# 1. ConceptMap
+# ===========================================================================
+
+
+@dataclass
+class ConceptNode:
+    """Nodo del mapa conceptual con sus vecinos y etiquetas de arcos.
+
+    Attributes:
+        label: Etiqueta del concepto.
+        neighbors: Lista de etiquetas de nodos adyacentes.
+        link_labels: Lista de etiquetas de los arcos hacia los vecinos.
+    """
+    label: str
+    neighbors: list[str] = field(default_factory=list)
+    link_labels: list[str] = field(default_factory=list)
+
+
+class ConceptMap:
+    """Grafo de mapa conceptual con nodos (conceptos) y arcos (relaciones etiquetadas).
+
+    Attributes:
+        title: Título del mapa.
+        nodes: Diccionario de etiqueta → ConceptNode.
+        edges: Lista de tripletas (src, link, dst).
+    """
+
+    def __init__(self, title: str = ""):
+        """Inicializa un mapa conceptual vacío.
+
+        Args:
+            title: Título descriptivo del mapa.
+        """
+        self.title = title
+        self.nodes: dict[str, ConceptNode] = {}
+        self.edges: list[tuple[str, str, str]] = []   # (src, link, dst)
+        self._root: Optional[str] = None
+
+    # ------------------------------------------------------------------
+    # Graph construction
+
+    def add_concept(self, label: str) -> None:
+        """Agrega un concepto al mapa si no existe todavía.
+
+        Args:
+            label: Etiqueta del concepto a agregar.
+        """
+        label = label.strip()
+        if label not in self.nodes:
+            self.nodes[label] = ConceptNode(label=label)
+
+    def add_relation(self, src: str, link: str, dst: str) -> None:
+        """Agrega una relación dirigida entre dos conceptos.
+
+        Crea automáticamente los nodos src y dst si no existen y
+        registra la adyacencia bidireccional en ambos nodos.
+
+        Args:
+            src: Etiqueta del concepto origen.
+            link: Etiqueta del arco (verbo o frase de relación).
+            dst: Etiqueta del concepto destino.
+        """
+        for concept in (src, dst):
+            self.add_concept(concept)
+        self.nodes[src].neighbors.append(dst)
+        self.nodes[src].link_labels.append(link)
+        self.nodes[dst].neighbors.append(src)
+        self.edges.append((src, link, dst))
+
+    def set_root(self, label: str) -> None:
+        """Mark label as the topical root of the map."""
+        self.add_concept(label)
+        self._root = label
+
+    # ------------------------------------------------------------------
+    # Topological analysis
+
+    def topological_weights(self) -> dict[str, float]:
+        """Calcula pesos topológicos para cada nodo combinando grado y distancia a la raíz.
+
+        El peso final es el promedio de:
+          - deg_score: grado normalizado del nodo.
+          - dist_score: proximidad a la raíz (1 − distancia normalizada).
+
+        Returns:
+            Diccionario {etiqueta: peso} con valores en [0, 1].
+        """
+        if not self.nodes:
+            return {}
+
+        degree: dict[str, int] = defaultdict(int)
+        for src, _, dst in self.edges:
+            degree[src] += 1
+            degree[dst] += 1
+        max_deg = max(degree.values()) if degree else 1
+
+        root = self._root or next(iter(self.nodes))
+        dist: dict[str, float] = {root: 0.0}
+        queue = [root]
+        while queue:
+            cur = queue.pop(0)
+            for nb in self.nodes[cur].neighbors:
+                if nb not in dist:
+                    dist[nb] = dist[cur] + 1.0
+                    queue.append(nb)
+        max_dist = max(dist.values(), default=1.0) or 1.0
+
+        weights: dict[str, float] = {}
+        for label in self.nodes:
+            deg_score  = degree.get(label, 0) / max_deg
+            dist_score = 1.0 - dist.get(label, max_dist) / (max_dist + 1)
+            weights[label] = 0.5 * deg_score + 0.5 * dist_score
+        return weights
+
+    def term_weights(
+        self,
+        focus_concepts: Optional[list[str]] = None,
+        focus_multiplier: float = 2.0,
+    ) -> dict[str, float]:
+        """Calcula pesos normalizados para cada token del mapa, basados en topología.
+
+        Acumula el peso topológico del nodo en sus tokens de etiqueta (peso completo)
+        y en los tokens de sus arcos (30 % del peso). Los conceptos en focus_concepts
+        reciben un multiplicador adicional.
+
+        Args:
+            focus_concepts: Conceptos a enfatizar.
+            focus_multiplier: Factor multiplicador para conceptos en foco.
+
+        Returns:
+            Diccionario {token: peso_normalizado}.
+        """
+        topo      = self.topological_weights()
+        weights:  dict[str, float] = defaultdict(float)
+        focus_set = set(focus_concepts or [])
+
+        for label, node in self.nodes.items():
+            base = topo.get(label, 0.1)
+            if label in focus_set:
+                base *= focus_multiplier
+            for tok in tokenise(label):
+                weights[tok] += base
+            for link in node.link_labels:
+                for tok in tokenise(link):
+                    weights[tok] += base * 0.3
+
+        total = sum(weights.values()) or 1.0
+        return {t: w / total for t, w in weights.items()}
+
+    def as_pseudo_documents(self) -> list[str]:
+        """Genera una lista de pseudo-documentos a partir del mapa para BERTopic.
+
+        Incluye el título, cada etiqueta de nodo, cada tripleta "src link dst"
+        y las frases semilla de dominio correspondientes al mapa.
+
+        Returns:
+            Lista de strings que representan el contenido del mapa.
+        """
+        docs: list[str] = []
+        if self.title:
+            docs.append(self.title)
+        for label in self.nodes:
+            docs.append(label)
+        for src, link, dst in self.edges:
+            docs.append(f"{src} {link} {dst}")
+        root = self._root or ""
+        docs.extend(_get_domain_seeds(self.title, root))
+        return docs
+
+    def domain_context_tokens(self, top_n: int = 6) -> list[str]:
+        """Retorna los tokens más representativos del mapa según sus pesos.
+
+        Args:
+            top_n: Cantidad de tokens a retornar.
+
+        Returns:
+            Lista de tokens ordenados por peso descendente.
+        """
+        weights = self.term_weights()
+        ranked = sorted(weights.items(), key=lambda x: -x[1])
+        return [t for t, _ in ranked[:top_n]]
+
+    def concept_bigrams(self, top_n: int = 6) -> list[str]:
+        """Retorna los conceptos multi-palabra mejor rankeados topológicamente.
+
+        Solo considera etiquetas que contengan 2+ tokens al tokenizar.
+
+        Args:
+            top_n: Número máximo de conceptos a retornar.
+
+        Returns:
+            Lista de etiquetas multi-palabra ordenadas por peso topológico.
+        """
+        topo   = self.topological_weights()
+        scored = []
+        for label in self.nodes:
+            parts = tokenise(label)
+            if len(parts) >= 2:           # only multi-word concepts
+                w = topo.get(label, 0.0)
+                scored.append((w, label))
+        scored.sort(reverse=True)
+        return [label for _, label in scored[:top_n]]
+
+    # ------------------------------------------------------------------
+    # Serialisation
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "ConceptMap":
+        """Construye un ConceptMap a partir de un diccionario serializado.
+
+        Args:
+            data: Diccionario con claves opcionales "title", "concepts",
+                  "relations" (lista de {src, link, dst}) y "root".
+
+        Returns:
+            Instancia de ConceptMap poblada.
+        """
+        cm = cls(title=data.get("title", ""))
+        for c in data.get("concepts", []):
+            cm.add_concept(c)
+        for r in data.get("relations", []):
+            cm.add_relation(r["src"], r["link"], r["dst"])
+        if "root" in data:
+            cm.set_root(data["root"])
+        return cm
+
+    @classmethod
+    def from_json_file(cls, path: str) -> "ConceptMap":
+        """Carga un ConceptMap desde un archivo JSON en disco.
+
+        Args:
+            path: Ruta al archivo JSON serializado.
+
+        Returns:
+            Instancia de ConceptMap cargada desde el archivo.
+        """
+        with open(path, "r", encoding="utf-8") as fh:
+            return cls.from_dict(json.load(fh))
+
+
+# ===========================================================================
+# 2. EmbeddingEngine
+# ===========================================================================
+
+
+class EmbeddingEngine:
+    """Motor de embeddings basado en SBERT (all-MiniLM-L6-v2, 384 dim).
+
+    Attributes:
+        random_state: Semilla para reproducibilidad.
+    """
+
+    def __init__(self, random_state: int = 42):
+        """Inicializa el motor de embeddings.
+
+        Args:
+            random_state: Semilla aleatoria para reproducibilidad.
+        """
+        self.random_state = random_state
+        self._sbert       = None
+        self._is_fitted   = False
+
+    # ------------------------------------------------------------------
+    # Public API
+
+    def fit(self, texts: list[str] = ()) -> "EmbeddingEngine":
+        """Carga el modelo SBERT en memoria. Debe llamarse antes de embed().
+
+        Args:
+            texts: Ignorado; solo presente por compatibilidad de interfaz.
+
+        Returns:
+            La instancia actual (para encadenamiento).
+        """
+        self._fit_sbert()
+        self._is_fitted = True
+        return self
+
+    def embed(self, texts: list[str]) -> np.ndarray:
+        """Genera embeddings normalizados para una lista de textos.
+
+        Args:
+            texts: Lista de strings a embeddear.
+
+        Returns:
+            Array de shape (N, 384) con embeddings normalizados en float64.
+
+        Raises:
+            RuntimeError: Si fit() no fue llamado previamente.
+        """
+        if not self._is_fitted:
+            raise RuntimeError("Call fit() before embed().")
+        if not texts:
+            return np.zeros((0, self.dim))
+        return self._embed_sbert(texts)
+
+    def fit_embed(self, texts: list[str]) -> np.ndarray:
+        """Atajo que llama a fit() y luego embed() en una sola llamada.
+
+        Args:
+            texts: Lista de strings a embeddear.
+
+        Returns:
+            Array de shape (N, 384) con embeddings normalizados.
+        """
+        return self.fit(texts).embed(texts)
+
+    def refit(self, all_texts: list[str] = ()) -> "EmbeddingEngine":
+        """No-op: los pesos de SBERT son fijos, no requiere re-entrenamiento.
+
+        Args:
+            all_texts: Ignorado.
+
+        Returns:
+            La instancia actual.
+        """
+        return self
+
+    @property
+    def dim(self) -> int:
+        return 384
+
+    # ------------------------------------------------------------------
+    # Private
+
+    def _fit_sbert(self) -> None:
+        try:
+            from sentence_transformers import SentenceTransformer
+            self._sbert = SentenceTransformer("all-MiniLM-L6-v2")
+        except Exception as exc:
+            raise RuntimeError(
+                "sentence-transformers unavailable or model download failed."
+            ) from exc
+
+    def _embed_sbert(self, texts: list[str]) -> np.ndarray:
+        return self._sbert.encode(
+            texts,
+            batch_size=64,
+            show_progress_bar=False,
+            normalize_embeddings=True,
+        ).astype(np.float64)
+`;
+const _SECTIONS = {'ut':[1,195],'cn':[196,208],'cm':[209,435],'ee':[436,531]};
+
+function _hlLine(line){
+  const p=_PALETTES[_activePalette]||_PALETTES.A;
+  const CMT='#56d364';
+  let s=line;
+  s=s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const cmtM=s.match(/(#.*)$/);
+  if(cmtM){const ci=s.lastIndexOf(cmtM[0]);return s.slice(0,ci)+'<span style="color:'+CMT+';font-style:italic">'+s.slice(ci)+'</span>';}
+  if(/^\s*"""/.test(line)||/"""\s*$/.test(line)){
+    s=s.replace(/("""|""".*?""")/g,'<span style="color:'+CMT+';font-style:italic">$1</span>');
+    return '<span style="color:'+CMT+';font-style:italic">'+s+'</span>';
+  }
+  s=s.replace(/(""".*?""")/g,'<span style="color:'+CMT+';font-style:italic">$1</span>');
+  s=s.replace(/("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/g,'<span style="color:'+p.str+'">$1</span>');
+  s=s.replace(/^(\s*)(@[\w.]+)/,'$1<span style="color:'+p.dec+'">$2</span>');
+  s=s.replace(/\b(class)\s+([\w]+)/,'<span style="color:'+p.kw+'">$1</span> <span style="color:'+p.cls+'">$2</span>');
+  s=s.replace(/\b(def)\s+([\w]+)/,'<span style="color:'+p.kw+'">$1</span> <span style="color:'+p.fn+'">$2</span>');
+  s=s.replace(/\b(from|import|return|if|else|elif|for|while|in|not|and|or|is|None|True|False|lambda|with|as|try|except|raise|pass|break|continue|yield|async|await|global|nonlocal|del|assert|finally|self|cls)\b/g,'<span style="color:'+p.kw+'">$1</span>');
+  s=s.replace(/\b(print|len|range|list|dict|set|str|int|float|bool|type|isinstance|hasattr|getattr|setattr|any|all|sum|max|min|enumerate|zip|map|filter|sorted|reversed|open|super|property|staticmethod|classmethod|dataclass|field|Optional|defaultdict)\b/g,'<span style="color:'+p.bi+'">$1</span>');
+  s=s.replace(/\b(\d+\.?\d*)\b/g,'<span style="color:'+p.num+'">$1</span>');
+  return s;
+}
+
+function _buildCodeView(){
+  const pre=document.getElementById('core-code-pre');
+  if(!pre) return;
+  const p=_PALETTES[_activePalette]||_PALETTES.A;
+  pre.style.color=p.base;
+  const lines=_RAW_CODE.split('\n');
+  const frags=[];
+  for(let i=0;i<lines.length;i++){
+    frags.push('<span class="cl" id="cl'+(i+1)+'">'+_hlLine(lines[i])+'</span>');
+  }
+  pre.innerHTML=frags.join('');
+}
+
+// ── SUB-TAB SWITCHING ──
+function showSubTab(panelId, subId, btn){
+  const panel = document.getElementById('panel-'+panelId);
+  panel.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  panel.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(panelId+'-'+subId).classList.add('active');
+  btn.classList.add('active');
+  if(panelId==='core'){
+    const ls=parseInt(btn.dataset.ls||0), le=parseInt(btn.dataset.le||0);
+    const pre=document.getElementById('core-code-pre');
+    const pane=document.getElementById('core-code-pane');
+    if(!pre||!ls) return;
+    pre.querySelectorAll('.cl.hl-section').forEach(el=>el.classList.remove('hl-section'));
+    for(let i=ls;i<=le;i++){ const el=document.getElementById('cl'+i); if(el) el.classList.add('hl-section'); }
+    const first=document.getElementById('cl'+ls);
+    if(first){ const offset=first.offsetTop - pane.clientHeight*0.1; pre.scrollTo({top:Math.max(0,offset),behavior:'smooth'}); }
+  }
+}
+
+// ── DIVIDER DRAG ──
+function _initDivider(){
+  const div=document.getElementById('core-divider');
+  const lp=document.getElementById('core-code-pane');
+  const rp=document.getElementById('core-doc-pane');
+  if(!div||!lp||!rp) return;
+  let dragging=false, startX=0, startW=0;
+  div.addEventListener('mousedown',e=>{
+    dragging=true; startX=e.clientX; startW=lp.offsetWidth;
+    div.classList.add('dragging');
+    document.body.style.cursor='col-resize';
+    document.body.style.userSelect='none';
+  });
+  document.addEventListener('mousemove',e=>{
+    if(!dragging) return;
+    const delta=e.clientX-startX;
+    const newW=Math.max(160,Math.min(startW+delta, window.innerWidth*0.75));
+    lp.style.width=newW+'px';
+    lp.style.flex='none';
+  });
+  document.addEventListener('mouseup',()=>{
+    dragging=false;
+    div.classList.remove('dragging');
+    document.body.style.cursor='';
+    document.body.style.userSelect='';
+  });
+}
+
+
+// -- PALETTES --
+const _PALETTES = {
+  A:{kw:'#ff7b72',str:'#a5d6ff',cmt:'#56d364',dec:'#ffa657',fn:'#d2a8ff',cls:'#ffa657',num:'#79c0ff',bi:'#79c0ff',base:'#e6edf3'},
+  B:{kw:'#f92672',str:'#a8cc8c',cmt:'#56d364',dec:'#ae81ff',fn:'#a6e22e',cls:'#66d9e8',num:'#ae81ff',bi:'#66d9e8',base:'#f8f8f2'},
+  C:{kw:'#c792ea',str:'#c3e88d',cmt:'#56d364',dec:'#ffcb6b',fn:'#82aaff',cls:'#ffcb6b',num:'#f78c6c',bi:'#89ddff',base:'#a6accd'},
+};
+let _activePalette='A';
+
+function _setPalette(name,btn){
+  _activePalette=name;
+  document.querySelectorAll('.pal-btn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  _buildCodeView();
+  ['enc','exp','corp'].forEach(p=>_buildSplit(p));
+  const activeBtn=document.querySelector('#panel-core .sub-tab.active');
+  if(activeBtn){
+    const ls=parseInt(activeBtn.dataset.ls||0),le=parseInt(activeBtn.dataset.le||0);
+    if(ls){
+      document.getElementById('core-code-pre').querySelectorAll('.cl.hl-section').forEach(el=>el.classList.remove('hl-section'));
+      for(let i=ls;i<=le;i++){const el=document.getElementById('cl'+i);if(el)el.classList.add('hl-section');}
+    }
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+  _buildCodeView();
+  _initDivider();
+  ['enc','exp','corp'].forEach(p=>{_buildSplit(p);_initSplitDivider(p);});
+  // trigger first sub-tab for core
+  const firstBtn=document.querySelector('#panel-core .sub-tab.active');
+  if(firstBtn) showSubTab('core','cn',firstBtn);
+  // trigger first active sub-tab for each split panel
+  showSubTabG('encoders','enc-over',document.querySelector('#panel-encoders .sub-tab.active'));
+  showSubTabG('explorer','exp-cfg',document.querySelector('#panel-explorer .sub-tab.active'));
+  showSubTabG('corpus','corp-cc',document.querySelector('#panel-corpus .sub-tab.active'));
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+{
+  "map_name": "Planet Mars",
+  "known_map": "PlanetMars",
+  "timestamp": "2026-08-31T15:35:48",
+  "fast_mode": false,
+  "best_enc": "path_aware",
+  "best_configs": {
+    "node_label": {
+      "score": 0.5741,
+      "focus": 0.2982,
+      "coh": 0.8501,
+      "params": {
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1
+      }
+    },
+    "relation_aware": {
+      "score": 0.5859,
+      "focus": 0.3065,
+      "coh": 0.8653,
+      "params": {
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 8,
+        "min_cluster_size": 2,
+        "min_samples": 1
+      }
+    },
+    "path_aware": {
+      "score": 0.5885,
+      "focus": 0.3053,
+      "coh": 0.8717,
+      "params": {
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1
+      }
+    },
+    "hybrid": {
+      "score": 0.5739,
+      "focus": 0.3176,
+      "coh": 0.8302,
+      "params": {
+        "domain_category_min_fraction": 0.2,
+        "n_output_topics": 8,
+        "min_cluster_size": 2,
+        "min_samples": 1
+      }
+    }
+  },
+  "concept_map": {
+    "title": "Planet Mars",
+    "root": "Planet Mars",
+    "concepts": [
+      "Rocky, Terrestrial Planet",
+      "Relatively Small with Diameter of ~ 6800 km",
+      "Relatively Distant from Sun (~1.5 AU)",
+      "Loss of Internal Heat",
+      "Valley Networks",
+      "Much Liquid Water at and near Surface in the Past",
+      "Huge Channels",
+      "Planet Mars",
+      "Great Diversity of Terrain Types",
+      "No Present Plate Tectonic Activity",
+      "Possible Extant Volcanism",
+      "Huge Canyons",
+      "Ubiquitous Dunes",
+      "Impact Craters",
+      "Tectonic Features",
+      "Shield Volcanoes & Lava Plains",
+      "Red Desert Planet",
+      "Search for Evidence of Life",
+      "Neighbor Jupiter",
+      "Earth-like Seasons with Axial Tilt of 25.2 degrees",
+      "Thin but Dynamic Atmosphere",
+      "Large Seasonal & Small Permanent Polar Caps",
+      "Ancient Magnetic Field",
+      "Earth-like Day of 24.6 hours",
+      "Revolution Period of 1.88 Years",
+      "Differentiated Interior",
+      "4.5 Billion Year History",
+      "Neighbor Earth",
+      "Mainly Carbon Dioxide"
+    ],
+    "relations": [
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "is",
+        "dst": "Relatively Small with Diameter of ~ 6800 km"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "is",
+        "dst": "Relatively Distant from Sun (~1.5 AU)"
+      },
+      {
+        "src": "Relatively Distant from Sun (~1.5 AU)",
+        "link": "speeds up",
+        "dst": "Loss of Internal Heat"
+      },
+      {
+        "src": "Relatively Small with Diameter of ~ 6800 km",
+        "link": "speeds up",
+        "dst": "Loss of Internal Heat"
+      },
+      {
+        "src": "Valley Networks",
+        "link": "suggest",
+        "dst": "Much Liquid Water at and near Surface in the Past"
+      },
+      {
+        "src": "Huge Channels",
+        "link": "suggest",
+        "dst": "Much Liquid Water at and near Surface in the Past"
+      },
+      {
+        "src": "Planet Mars",
+        "link": "is a",
+        "dst": "Rocky, Terrestrial Planet"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "reveal",
+        "dst": "No Present Plate Tectonic Activity"
+      },
+      {
+        "src": "Loss of Internal Heat",
+        "link": "is consistent with",
+        "dst": "No Present Plate Tectonic Activity"
+      },
+      {
+        "src": "Loss of Internal Heat",
+        "link": "may still permit",
+        "dst": "Possible Extant Volcanism"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Valley Networks"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Huge Canyons"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Ubiquitous Dunes"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Impact Craters"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Tectonic Features"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Huge Channels"
+      },
+      {
+        "src": "Great Diversity of Terrain Types",
+        "link": "include",
+        "dst": "Shield Volcanoes & Lava Plains"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "is today a",
+        "dst": "Red Desert Planet"
+      },
+      {
+        "src": "Much Liquid Water at and near Surface in the Past",
+        "link": "motivates",
+        "dst": "Search for Evidence of Life"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "unlike",
+        "dst": "Neighbor Jupiter"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Earth-like Seasons with Axial Tilt of 25.2 degrees"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Great Diversity of Terrain Types"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Thin but Dynamic Atmosphere"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Large Seasonal & Small Permanent Polar Caps"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Ancient Magnetic Field"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Earth-like Day of 24.6 hours"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Revolution Period of 1.88 Years"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "Differentiated Interior"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "has",
+        "dst": "4.5 Billion Year History"
+      },
+      {
+        "src": "Rocky, Terrestrial Planet",
+        "link": "like",
+        "dst": "Neighbor Earth"
+      },
+      {
+        "src": "Thin but Dynamic Atmosphere",
+        "link": "composed of",
+        "dst": "Mainly Carbon Dioxide"
+      },
+      {
+        "src": "Large Seasonal & Small Permanent Polar Caps",
+        "link": "composed of",
+        "dst": "Mainly Carbon Dioxide"
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+
+
+=== CRAWL INICIADO 2026-09-24T18:16:12.251424 ===
+=== Dataset: Visualización de Datos ===
+
+── Root: Data_visualization ──
+[18:16:12]   📁 DataViz  (depth=0)
+[18:16:13]   ✅ 'DataViz' completado: 0 artículos nuevos
+
+── Root: Information_visualization ──
+[18:16:13]   📁 DataViz/InfoViz  (depth=0)
+[18:16:14]   ✅ 'DataViz/InfoViz' completado: 0 artículos nuevos
+
+── Root: Scientific_visualization ──
+[18:16:14]   📁 DataViz/Scientific  (depth=0)
+[18:16:40]   📁 DataViz/Scientific/Data and information visualization  (depth=1)
+[18:17:11]      ✅ 50 artículos en 'DataViz/Scientific'
+[18:17:20]   📁 DataViz/Scientific/Flow visualization  (depth=1)
+[18:17:24]   📁 DataViz/Scientific/Data and information visualization/Data and information visualization software  (depth=2)
+[18:18:10]      ✅ 100 artículos en 'DataViz/Scientific'
+[18:18:48]   📁 DataViz/Scientific/Data and information visualization/Data and information visualization experts  (depth=2)
+[18:19:04]      ✅ 150 artículos en 'DataViz/Scientific'
+[18:19:04]   ✅ 'DataViz/Scientific' completado: 150 artículos nuevos
+
+── Root: Statistical_graphics ──
+[18:19:04]   📁 DataViz/Charts/Statistical  (depth=0)
+[18:19:05]      ⚠ Categoría no existe: Statistical_graphics — saltando
+[18:19:05]   ✅ 'DataViz/Charts/Statistical' completado: 0 artículos nuevos
+
+── Root: Statistical_charts_and_diagrams ──
+[18:19:05]   📁 DataViz/Charts/Statistical  (depth=0)
+[18:20:00]      ✅ 50 artículos en 'DataViz/Charts/Statistical'
+[18:20:54]      ✅ 100 artículos en 'DataViz/Charts/Statistical'
+[18:21:19]   📁 DataViz/Charts/Statistical/Financial charts  (depth=1)
+[18:21:31]   ✅ 'DataViz/Charts/Statistical' completado: 132 artículos nuevos
+
+── Root: Diagram ──
+[18:21:31]   📁 DataViz/Charts/Diagrams  (depth=0)
+[18:21:32]      ⚠ Categoría no existe: Diagram — saltando
+[18:21:32]   ✅ 'DataViz/Charts/Diagrams' completado: 0 artículos nuevos
+
+── Root: Infographics ──
+[18:21:32]   📁 DataViz/Infographics  (depth=0)
+[18:22:27]      ✅ 50 artículos en 'DataViz/Infographics'
+[18:23:21]   📁 DataViz/Infographics/Charts  (depth=1)
+[18:23:23]      ✅ 100 artículos en 'DataViz/Infographics'
+[18:23:55]   📁 DataViz/Infographics/Coats of arms  (depth=1)
+[18:24:05]   📁 DataViz/Infographics/Diagrams  (depth=1)
+[18:24:20]      ✅ 150 artículos en 'DataViz/Infographics'
+[18:24:20]   ✅ 'DataViz/Infographics' completado: 150 artículos nuevos
+
+── Root: Cartography ──
+[18:24:20]   📁 DataViz/Maps/Cartography  (depth=0)
+[18:25:17]      ✅ 50 artículos en 'DataViz/Maps/Cartography'
+[18:26:14]      ✅ 100 artículos en 'DataViz/Maps/Cartography'
+[18:27:09]      ✅ 150 artículos en 'DataViz/Maps/Cartography'
+[18:27:09]   ✅ 'DataViz/Maps/Cartography' completado: 150 artículos nuevos
+
+── Root: Geographic_information_systems ──
+[18:27:09]   📁 DataViz/Maps/GIS  (depth=0)
+[18:28:05]      ✅ 50 artículos en 'DataViz/Maps/GIS'
+[18:28:47]   📁 DataViz/Maps/GIS/Applications of geographic information systems  (depth=1)
+[18:28:59]      ✅ 100 artículos en 'DataViz/Maps/GIS'
+[18:29:13]   📁 DataViz/Maps/GIS/Digital elevation models  (depth=1)
+[18:29:24]   📁 DataViz/Maps/GIS/Distributed Geographic Information Systems  (depth=1)
+[18:29:27]   📁 DataViz/Maps/GIS/Geographical databases  (depth=1)
+[18:29:51]   📁 DataViz/Maps/GIS/GIS file formats  (depth=1)
+[18:29:57]      ✅ 150 artículos en 'DataViz/Maps/GIS'
+[18:29:57]   ✅ 'DataViz/Maps/GIS' completado: 150 artículos nuevos
+
+── Root: Thematic_maps ──
+[18:29:57]   📁 DataViz/Maps/Thematic  (depth=0)
+[18:30:08]   📁 DataViz/Maps/Thematic/Thematic maps of the United Kingdom  (depth=1)
+[18:30:10]   ✅ 'DataViz/Maps/Thematic' completado: 10 artículos nuevos
+
+── Root: Information_design ──
+[18:30:10]   📁 DataViz/Design  (depth=0)
+[18:30:11]      ⚠ Categoría no existe: Information_design — saltando
+[18:30:11]   ✅ 'DataViz/Design' completado: 0 artículos nuevos
+
+── Root: Human-computer_interaction ──
+[18:30:11]   📁 DataViz/HCI  (depth=0)
+[18:30:12]   ✅ 'DataViz/HCI' completado: 0 artículos nuevos
+
+── Root: Visual_analytics ──
+[18:30:12]   📁 DataViz/Analytics  (depth=0)
+[18:30:13]      ⚠ Categoría no existe: Visual_analytics — saltando
+[18:30:13]   ✅ 'DataViz/Analytics' completado: 0 artículos nuevos
+
+── Root: User_interface ──
+[18:30:13]   📁 DataViz/UI  (depth=0)
+[18:30:13]      ⚠ Categoría no existe: User_interface — saltando
+[18:30:13]   ✅ 'DataViz/UI' completado: 0 artículos nuevos
+
+── Root: Data_visualization_software ──
+[18:30:13]   📁 DataViz/Tools  (depth=0)
+[18:30:14]      ⚠ Categoría no existe: Data_visualization_software — saltando
+[18:30:14]   ✅ 'DataViz/Tools' completado: 0 artículos nuevos
+
+── Root: Plotting_software ──
+[18:30:14]   📁 DataViz/Tools/Plotting  (depth=0)
+[18:31:07]   📁 DataViz/Tools/Plotting/Free plotting software  (depth=1)
+[18:31:11]      ✅ 50 artículos en 'DataViz/Tools/Plotting'
+[18:31:27]   ✅ 'DataViz/Tools/Plotting' completado: 65 artículos nuevos
+
+── Root: Business_intelligence_software ──
+[18:31:27]   📁 DataViz/Tools/BI  (depth=0)
+[18:31:57]   📁 DataViz/Tools/BI/Wikipedians who use Power BI  (depth=1)
+[18:31:58]   ✅ 'DataViz/Tools/BI' completado: 25 artículos nuevos
+
+── Root: Exploratory_data_analysis ──
+[18:31:58]   📁 DataViz/DataScience/EDA  (depth=0)
+[18:32:10]   📁 DataViz/DataScience/EDA/Cluster analysis  (depth=1)
+[18:32:36]   📁 DataViz/DataScience/EDA/Dimension reduction  (depth=1)
+[18:32:57]      ✅ 50 artículos en 'DataViz/DataScience/EDA'
+[18:33:33]   📁 DataViz/DataScience/EDA/Cluster analysis/Cluster analysis algorithms  (depth=2)
+[18:33:56]      ✅ 100 artículos en 'DataViz/DataScience/EDA'
+[18:34:19]   📁 DataViz/DataScience/EDA/Cluster analysis/Clustering criteria  (depth=2)
+[18:34:40]   📁 DataViz/DataScience/EDA/Dimension reduction/Factor analysis  (depth=2)
+[18:34:56]      ✅ 150 artículos en 'DataViz/DataScience/EDA'
+[18:34:56]   ✅ 'DataViz/DataScience/EDA' completado: 150 artículos nuevos
+
+── Root: Multivariate_statistics ──
+[18:34:56]   📁 DataViz/DataScience/Multivariate  (depth=0)
+[18:35:27]   📁 DataViz/DataScience/Multivariate/Analysis of variance  (depth=1)
+[18:35:56]      ✅ 50 artículos en 'DataViz/DataScience/Multivariate'
+[18:36:36]   📁 DataViz/DataScience/Multivariate/Comparison of assessments  (depth=1)
+[18:36:54]      ✅ 100 artículos en 'DataViz/DataScience/Multivariate'
+[18:36:57]   📁 DataViz/DataScience/Multivariate/Multiple comparisons  (depth=1)
+[18:37:21]   📁 DataViz/DataScience/Multivariate/Covariance and correlation  (depth=1)
+[18:37:55]      ✅ 150 artículos en 'DataViz/DataScience/Multivariate'
+[18:37:55]   ✅ 'DataViz/DataScience/Multivariate' completado: 150 artículos nuevos
+
+── Root: Data_science ──
+[18:37:55]   📁 DataViz/DataScience  (depth=0)
+[18:38:24]   📁 DataViz/DataScience/Data scientists  (depth=1)
+[18:38:51]      ✅ 50 artículos en 'DataViz/DataScience'
+[18:39:33]   📁 DataViz/DataScience/Data scientists/Women data scientists  (depth=2)
+[18:39:46]      ✅ 100 artículos en 'DataViz/DataScience'
+[18:39:58]   📁 DataViz/DataScience/Data scientists/American data scientists  (depth=2)
+[18:40:42]      ✅ 150 artículos en 'DataViz/DataScience'
+[18:40:42]   ✅ 'DataViz/DataScience' completado: 150 artículos nuevos
+
+── Root: Graphical_perception ──
+[18:40:42]   📁 DataViz/Perception  (depth=0)
+[18:40:43]      ⚠ Categoría no existe: Graphical_perception — saltando
+[18:40:43]   ✅ 'DataViz/Perception' completado: 0 artículos nuevos
+
+── Root: Color_theory ──
+[18:40:43]   📁 DataViz/Perception/Color  (depth=0)
+[18:40:44]      ⚠ Categoría no existe: Color_theory — saltando
+[18:40:44]   ✅ 'DataViz/Perception/Color' completado: 0 artículos nuevos
+
+── Root: Computer_graphics ──
+[18:40:44]   📁 DataViz/ComputerGraphics  (depth=0)
+[18:41:40]      ✅ 50 artículos en 'DataViz/ComputerGraphics'
+[18:42:35]      ✅ 100 artículos en 'DataViz/ComputerGraphics'
+[18:43:32]      ✅ 150 artículos en 'DataViz/ComputerGraphics'
+[18:43:32]   ✅ 'DataViz/ComputerGraphics' completado: 150 artículos nuevos
+
+── Root: 3D_computer_graphics ──
+[18:43:32]   📁 DataViz/ComputerGraphics/3D  (depth=0)
+[18:44:29]      ✅ 50 artículos en 'DataViz/ComputerGraphics/3D'
+[18:45:25]      ✅ 100 artículos en 'DataViz/ComputerGraphics/3D'
+[18:46:04]   📁 DataViz/ComputerGraphics/3D/3D artists  (depth=1)
+[18:46:21]      ✅ 150 artículos en 'DataViz/ComputerGraphics/3D'
+[18:46:21]   ✅ 'DataViz/ComputerGraphics/3D' completado: 150 artículos nuevos
+
+── Root: Graph_drawing ──
+[18:46:21]   📁 DataViz/Graphs/Drawing  (depth=0)
+[18:46:58]   📁 DataViz/Graphs/Drawing/Graph drawing people  (depth=1)
+[18:47:17]      ✅ 50 artículos en 'DataViz/Graphs/Drawing'
+[18:47:29]   📁 DataViz/Graphs/Drawing/Graph drawing software  (depth=1)
+[18:47:58]   📁 DataViz/Graphs/Drawing/Planar graphs  (depth=1)
+[18:48:13]      ✅ 100 artículos en 'DataViz/Graphs/Drawing'
+[18:49:07]      ✅ 150 artículos en 'DataViz/Graphs/Drawing'
+[18:49:07]   ✅ 'DataViz/Graphs/Drawing' completado: 150 artículos nuevos
+
+── Root: Network_visualization ──
+[18:49:07]   📁 DataViz/Graphs/Networks  (depth=0)
+[18:49:08]      ⚠ Categoría no existe: Network_visualization — saltando
+[18:49:08]   ✅ 'DataViz/Graphs/Networks' completado: 0 artículos nuevos

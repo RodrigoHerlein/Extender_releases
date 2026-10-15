@@ -1,0 +1,410 @@
+
+
+=== CRAWL INICIADO 2026-10-06T12:52:10.440352 ===
+=== Dataset: Vinos ===
+
+── Root: Wine ──
+[12:52:10]   📁 Wine  (depth=0)
+[12:52:54]   📁 Wine/Wine by location  (depth=1)
+[12:52:58]   📁 Wine/Wine-related lists  (depth=1)
+[12:53:09]      ✅ 50 artículos en 'Wine'
+[12:54:04]      ✅ 100 artículos en 'Wine'
+[12:54:04]   ✅ 'Wine' completado: 100 artículos nuevos
+
+── Root: Winemaking ──
+[12:54:04]   📁 Wine/Winemaking  (depth=0)
+[12:54:53]   📁 Wine/Winemaking/Winemakers  (depth=1)
+[12:55:02]      ✅ 50 artículos en 'Wine/Winemaking'
+[12:55:08]   📁 Wine/Winemaking/Wedding at Cana  (depth=1)
+[12:55:25]   📁 Wine/Winemaking/Winemakers/Women winemakers  (depth=2)
+[12:55:51]   📁 Wine/Winemaking/Winemakers/American winemakers  (depth=2)
+[12:56:08]      ✅ 100 artículos en 'Wine/Winemaking'
+[12:56:08]   ✅ 'Wine/Winemaking' completado: 100 artículos nuevos
+
+── Root: Viticulture ──
+[12:56:08]   📁 Wine/Viticulture  (depth=0)
+[12:57:07]      ✅ 50 artículos en 'Wine/Viticulture'
+[12:57:16]   📁 Wine/Viticulture/Grape diseases  (depth=1)
+[12:57:21]   📁 Wine/Viticulture/Grape varieties  (depth=1)
+[12:57:44]   📁 Wine/Viticulture/Grape pests  (depth=1)
+[12:57:48]   📁 Wine/Viticulture/Vineyards  (depth=1)
+[12:58:09]      ✅ 100 artículos en 'Wine/Viticulture'
+[12:58:09]   ✅ 'Wine/Viticulture' completado: 100 artículos nuevos
+
+── Root: Enology ──
+[12:58:09]   📁 Wine/Enology  (depth=0)
+[12:58:10]      ⚠ No existe: Enology
+[12:58:10]   ✅ 'Wine/Enology' completado: 0 artículos nuevos
+
+── Root: Grape_varieties ──
+[12:58:10]   📁 Wine/Grapes  (depth=0)
+[12:58:13]   📁 Wine/Grapes/Grape varieties by country  (depth=1)
+[12:58:14]   📁 Wine/Grapes/Hybrid grape varieties  (depth=1)
+[12:59:08]      ✅ 50 artículos en 'Wine/Grapes'
+[12:59:40]   📁 Wine/Grapes/Table grape varieties  (depth=1)
+[13:00:04]      ✅ 100 artículos en 'Wine/Grapes'
+[13:00:04]   ✅ 'Wine/Grapes' completado: 100 artículos nuevos
+
+── Root: Red_wine_grape_varieties ──
+[13:00:04]   📁 Wine/Grapes/Red  (depth=0)
+[13:01:01]      ✅ 50 artículos en 'Wine/Grapes/Red'
+[13:01:54]      ✅ 100 artículos en 'Wine/Grapes/Red'
+[13:01:54]   ✅ 'Wine/Grapes/Red' completado: 100 artículos nuevos
+
+── Root: White_wine_grape_varieties ──
+[13:01:54]   📁 Wine/Grapes/White  (depth=0)
+[13:02:49]      ✅ 50 artículos en 'Wine/Grapes/White'
+[13:03:41]      ✅ 100 artículos en 'Wine/Grapes/White'
+[13:03:41]   ✅ 'Wine/Grapes/White' completado: 100 artículos nuevos
+
+── Root: Cabernet_Sauvignon ──
+[13:03:41]   📁 Wine/Grapes/CabSauv  (depth=0)
+[13:03:42]      ⚠ No existe: Cabernet_Sauvignon
+[13:03:42]   ✅ 'Wine/Grapes/CabSauv' completado: 0 artículos nuevos
+
+── Root: Merlot ──
+[13:03:42]   📁 Wine/Grapes/Merlot  (depth=0)
+[13:03:43]      ⚠ No existe: Merlot
+[13:03:43]   ✅ 'Wine/Grapes/Merlot' completado: 0 artículos nuevos
+
+── Root: Chardonnay ──
+[13:03:43]   📁 Wine/Grapes/Chardonnay  (depth=0)
+[13:03:44]      ⚠ No existe: Chardonnay
+[13:03:44]   ✅ 'Wine/Grapes/Chardonnay' completado: 0 artículos nuevos
+
+── Root: Pinot_noir ──
+[13:03:44]   📁 Wine/Grapes/PinotNoir  (depth=0)
+[13:03:44]      ⚠ No existe: Pinot_noir
+[13:03:44]   ✅ 'Wine/Grapes/PinotNoir' completado: 0 artículos nuevos
+
+── Root: Sauvignon_blanc ──
+[13:03:44]   📁 Wine/Grapes/SauvBlanc  (depth=0)
+[13:03:45]      ⚠ No existe: Sauvignon_blanc
+[13:03:45]   ✅ 'Wine/Grapes/SauvBlanc' completado: 0 artículos nuevos
+
+── Root: Riesling ──
+[13:03:45]   📁 Wine/Grapes/Riesling  (depth=0)
+[13:03:46]      ⚠ No existe: Riesling
+[13:03:46]   ✅ 'Wine/Grapes/Riesling' completado: 0 artículos nuevos
+
+── Root: Syrah ──
+[13:03:46]   📁 Wine/Grapes/Syrah  (depth=0)
+[13:03:47]      ⚠ No existe: Syrah
+[13:03:47]   ✅ 'Wine/Grapes/Syrah' completado: 0 artículos nuevos
+
+── Root: Malbec ──
+[13:03:47]   📁 Wine/Grapes/Malbec  (depth=0)
+[13:03:47]      ⚠ No existe: Malbec
+[13:03:47]   ✅ 'Wine/Grapes/Malbec' completado: 0 artículos nuevos
+
+── Root: Tempranillo ──
+[13:03:47]   📁 Wine/Grapes/Tempranillo  (depth=0)
+[13:03:48]      ⚠ No existe: Tempranillo
+[13:03:48]   ✅ 'Wine/Grapes/Tempranillo' completado: 0 artículos nuevos
+
+── Root: Nebbiolo ──
+[13:03:48]   📁 Wine/Grapes/Nebbiolo  (depth=0)
+[13:03:49]      ⚠ No existe: Nebbiolo
+[13:03:49]   ✅ 'Wine/Grapes/Nebbiolo' completado: 0 artículos nuevos
+
+── Root: Sangiovese ──
+[13:03:49]   📁 Wine/Grapes/Sangiovese  (depth=0)
+[13:03:50]      ⚠ No existe: Sangiovese
+[13:03:50]   ✅ 'Wine/Grapes/Sangiovese' completado: 0 artículos nuevos
+
+── Root: Wine_regions ──
+[13:03:50]   📁 Wine/Regions  (depth=0)
+[13:04:03]   📁 Wine/Regions/Wine regions by country  (depth=1)
+[13:04:04]   📁 Wine/Regions/Wine region stubs  (depth=1)
+[13:04:47]      ✅ 50 artículos en 'Wine/Regions'
+[13:05:18]   📁 Wine/Regions/Wine regions by country/Wine regions of Argentina  (depth=2)
+[13:05:43]   📁 Wine/Regions/Wine regions by country/Wine regions of Australia  (depth=2)
+[13:05:45]      ✅ 100 artículos en 'Wine/Regions'
+[13:05:45]   ✅ 'Wine/Regions' completado: 100 artículos nuevos
+
+── Root: French_wine ──
+[13:05:45]   📁 Wine/Regions/France  (depth=0)
+[13:06:40]      ✅ 50 artículos en 'Wine/Regions/France'
+[13:06:55]   📁 Wine/Regions/France/French wine AOCs  (depth=1)
+[13:07:17]   📁 Wine/Regions/France/Champagne (wine)  (depth=1)
+[13:07:36]   📁 Wine/Regions/France/French winemakers  (depth=1)
+[13:07:50]      ✅ 100 artículos en 'Wine/Regions/France'
+[13:07:50]   ✅ 'Wine/Regions/France' completado: 100 artículos nuevos
+
+── Root: Italian_wine ──
+[13:07:50]   📁 Wine/Regions/Italy  (depth=0)
+[13:08:24]   📁 Wine/Regions/Italy/Wine grape varieties of Italy  (depth=1)
+[13:08:51]      ✅ 50 artículos en 'Wine/Regions/Italy'
+[13:09:28]   📁 Wine/Regions/Italy/Italian DOC  (depth=1)
+[13:09:46]      ✅ 100 artículos en 'Wine/Regions/Italy'
+[13:09:46]   ✅ 'Wine/Regions/Italy' completado: 100 artículos nuevos
+
+── Root: Spanish_wine ──
+[13:09:46]   📁 Wine/Regions/Spain  (depth=0)
+[13:10:05]   📁 Wine/Regions/Spain/Wineries of Spain  (depth=1)
+[13:10:44]      ✅ 50 artículos en 'Wine/Regions/Spain'
+[13:10:44]   📁 Wine/Regions/Spain/Spanish winemakers  (depth=1)
+[13:10:52]   📁 Wine/Regions/Spain/Grape varieties of Spain  (depth=1)
+[13:11:35]   📁 Wine/Regions/Spain/Sherry  (depth=1)
+[13:11:39]      ✅ 100 artículos en 'Wine/Regions/Spain'
+[13:11:39]   ✅ 'Wine/Regions/Spain' completado: 100 artículos nuevos
+
+── Root: Argentine_wine ──
+[13:11:39]   📁 Wine/Regions/Argentina  (depth=0)
+[13:11:46]   📁 Wine/Regions/Argentina/Argentine winemakers  (depth=1)
+[13:11:52]   📁 Wine/Regions/Argentina/Wine regions of Argentina  (depth=1)
+[13:11:53]   📁 Wine/Regions/Argentina/Wineries of Argentina  (depth=1)
+[13:12:04]   📁 Wine/Regions/Argentina/Wineries of Argentina/Mendoza winery  (depth=2)
+[13:12:06]   ✅ 'Wine/Regions/Argentina' completado: 20 artículos nuevos
+
+── Root: Chilean_wine ──
+[13:12:06]   📁 Wine/Regions/Chile  (depth=0)
+[13:12:10]   📁 Wine/Regions/Chile/Wine regions of Chile  (depth=1)
+[13:12:20]   📁 Wine/Regions/Chile/Wineries of Chile  (depth=1)
+[13:12:42]   ✅ 'Wine/Regions/Chile' completado: 29 artículos nuevos
+
+── Root: American_wine ──
+[13:12:42]   📁 Wine/Regions/USA  (depth=0)
+[13:12:58]   📁 Wine/Regions/USA/American people in the wine industry  (depth=1)
+[13:13:39]      ✅ 50 artículos en 'Wine/Regions/USA'
+[13:14:05]   📁 Wine/Regions/USA/Wine festivals in the United States  (depth=1)
+[13:14:23]   📁 Wine/Regions/USA/Wine regions of the United States  (depth=1)
+[13:14:26]   📁 Wine/Regions/USA/Wineries of the United States  (depth=1)
+[13:14:31]   📁 Wine/Regions/USA/American people in the wine industry/Gallo family  (depth=2)
+[13:14:39]   📁 Wine/Regions/USA/American people in the wine industry/American sommeliers  (depth=2)
+[13:14:43]      ✅ 100 artículos en 'Wine/Regions/USA'
+[13:14:43]   ✅ 'Wine/Regions/USA' completado: 100 artículos nuevos
+
+── Root: Australian_wine ──
+[13:14:43]   📁 Wine/Regions/Australia  (depth=0)
+[13:15:27]   📁 Wine/Regions/Australia/Australian wine critics  (depth=1)
+[13:15:36]   📁 Wine/Regions/Australia/Australian winemakers  (depth=1)
+[13:15:40]      ✅ 50 artículos en 'Wine/Regions/Australia'
+[13:16:35]      ✅ 100 artículos en 'Wine/Regions/Australia'
+[13:16:35]   ✅ 'Wine/Regions/Australia' completado: 100 artículos nuevos
+
+── Root: German_wine ──
+[13:16:35]   📁 Wine/Regions/Germany  (depth=0)
+[13:17:16]   📁 Wine/Regions/Germany/German Wine Queens  (depth=1)
+[13:17:29]   📁 Wine/Regions/Germany/German winemakers  (depth=1)
+[13:17:34]      ✅ 50 artículos en 'Wine/Regions/Germany'
+[13:17:37]   📁 Wine/Regions/Germany/Vineyards of Germany  (depth=1)
+[13:17:53]   📁 Wine/Regions/Germany/Wine regions of Germany  (depth=1)
+[13:18:33]   📁 Wine/Regions/Germany/Wineries of Germany  (depth=1)
+[13:18:37]      ✅ 100 artículos en 'Wine/Regions/Germany'
+[13:18:37]   ✅ 'Wine/Regions/Germany' completado: 100 artículos nuevos
+
+── Root: Portuguese_wine ──
+[13:18:37]   📁 Wine/Regions/Portugal  (depth=0)
+[13:18:52]   📁 Wine/Regions/Portugal/Madeira wine  (depth=1)
+[13:19:00]   📁 Wine/Regions/Portugal/Port wine  (depth=1)
+[13:19:23]   📁 Wine/Regions/Portugal/Wine regions of Portugal  (depth=1)
+[13:19:40]      ✅ 50 artículos en 'Wine/Regions/Portugal'
+[13:20:27]   📁 Wine/Regions/Portugal/Wineries of Portugal  (depth=1)
+[13:20:31]   ✅ 'Wine/Regions/Portugal' completado: 94 artículos nuevos
+
+── Root: South_African_wine ──
+[13:20:31]   📁 Wine/Regions/SouthAfrica  (depth=0)
+[13:20:45]   📁 Wine/Regions/SouthAfrica/South African winemakers  (depth=1)
+[13:20:55]   📁 Wine/Regions/SouthAfrica/Wine regions of South Africa  (depth=1)
+[13:21:04]   📁 Wine/Regions/SouthAfrica/Wineries of South Africa  (depth=1)
+[13:21:25]   📁 Wine/Regions/SouthAfrica/South African winemakers/Hattingh family  (depth=2)
+[13:21:31]      ✅ 50 artículos en 'Wine/Regions/SouthAfrica'
+[13:21:31]   📁 Wine/Regions/SouthAfrica/Wine regions of South Africa/Elgin, Western Cape  (depth=2)
+[13:21:49]   ✅ 'Wine/Regions/SouthAfrica' completado: 65 artículos nuevos
+
+── Root: New_Zealand_wine ──
+[13:21:49]   📁 Wine/Regions/NewZealand  (depth=0)
+[13:21:56]   📁 Wine/Regions/NewZealand/New Zealand winemakers  (depth=1)
+[13:22:15]   📁 Wine/Regions/NewZealand/Wine regions of New Zealand  (depth=1)
+[13:22:34]   📁 Wine/Regions/NewZealand/Wineries of New Zealand  (depth=1)
+[13:22:48]   📁 Wine/Regions/NewZealand/Wine regions of New Zealand/Auckland wine region  (depth=2)
+[13:22:51]      ✅ 50 artículos en 'Wine/Regions/NewZealand'
+[13:22:52]   📁 Wine/Regions/NewZealand/Wine regions of New Zealand/Central Otago wine region  (depth=2)
+[13:22:55]   📁 Wine/Regions/NewZealand/Wine regions of New Zealand/Marlborough wine region  (depth=2)
+[13:22:59]   ✅ 'Wine/Regions/NewZealand' completado: 54 artículos nuevos
+
+── Root: Wine_regions_of_France ──
+[13:22:59]   📁 Wine/Regions/France/Regions  (depth=0)
+[13:23:38]   📁 Wine/Regions/France/Regions/Alsace wine  (depth=1)
+[13:23:48]   📁 Wine/Regions/France/Regions/Bordeaux wine  (depth=1)
+[13:23:59]      ✅ 50 artículos en 'Wine/Regions/France/Regions'
+[13:24:11]   📁 Wine/Regions/France/Regions/Burgundy wine  (depth=1)
+[13:24:24]   📁 Wine/Regions/France/Regions/Champagne wine region  (depth=1)
+[13:24:31]   📁 Wine/Regions/France/Regions/Languedoc  (depth=1)
+[13:24:59]      ✅ 100 artículos en 'Wine/Regions/France/Regions'
+[13:24:59]   ✅ 'Wine/Regions/France/Regions' completado: 100 artículos nuevos
+
+── Root: Wine_regions_of_Italy ──
+[13:24:59]   📁 Wine/Regions/Italy/Regions  (depth=0)
+[13:26:06]      ✅ 50 artículos en 'Wine/Regions/Italy/Regions'
+[13:26:24]   📁 Wine/Regions/Italy/Regions/Wines of Abruzzo  (depth=1)
+[13:26:27]   📁 Wine/Regions/Italy/Regions/Wines of Apulia  (depth=1)
+[13:26:31]   📁 Wine/Regions/Italy/Regions/Wines of Basilicata  (depth=1)
+[13:26:32]   📁 Wine/Regions/Italy/Regions/Wines of Campania  (depth=1)
+[13:26:36]   📁 Wine/Regions/Italy/Regions/Cinque Terre  (depth=1)
+[13:26:44]   📁 Wine/Regions/Italy/Regions/Mount Etna  (depth=1)
+[13:27:11]      ✅ 100 artículos en 'Wine/Regions/Italy/Regions'
+[13:27:11]   ✅ 'Wine/Regions/Italy/Regions' completado: 100 artículos nuevos
+
+── Root: Red_wine ──
+[13:27:11]   📁 Wine/Types/Red  (depth=0)
+[13:27:15]   📁 Wine/Types/Red/Noble rot wines  (depth=1)
+[13:27:24]   ✅ 'Wine/Types/Red' completado: 10 artículos nuevos
+
+── Root: White_wine ──
+[13:27:24]   📁 Wine/Types/White  (depth=0)
+[13:27:25]      ⚠ No existe: White_wine
+[13:27:25]   ✅ 'Wine/Types/White' completado: 0 artículos nuevos
+
+── Root: Rosé_wine ──
+[13:27:25]   📁 Wine/Types/Rose  (depth=0)
+[13:27:26]      ⚠ No existe: Rosé_wine
+[13:27:26]   ✅ 'Wine/Types/Rose' completado: 0 artículos nuevos
+
+── Root: Sparkling_wine ──
+[13:27:26]   📁 Wine/Types/Sparkling  (depth=0)
+[13:27:26]      ⚠ No existe: Sparkling_wine
+[13:27:26]   ✅ 'Wine/Types/Sparkling' completado: 0 artículos nuevos
+
+── Root: Champagne_(wine_region) ──
+[13:27:26]   📁 Wine/Types/Sparkling/Champagne  (depth=0)
+[13:27:27]      ⚠ No existe: Champagne_(wine_region)
+[13:27:27]   ✅ 'Wine/Types/Sparkling/Champagne' completado: 0 artículos nuevos
+
+── Root: Fortified_wine ──
+[13:27:27]   📁 Wine/Types/Fortified  (depth=0)
+[13:27:55]   📁 Wine/Types/Fortified/Aromatised wine  (depth=1)
+[13:27:59]   📁 Wine/Types/Fortified/Madeira wine  (depth=1)
+[13:28:00]   📁 Wine/Types/Fortified/Mistelle  (depth=1)
+[13:28:05]   📁 Wine/Types/Fortified/Port wine  (depth=1)
+[13:28:06]   📁 Wine/Types/Fortified/Sherry  (depth=1)
+[13:28:20]   📁 Wine/Types/Fortified/Aromatised wine/Vermouth  (depth=2)
+[13:28:30]   ✅ 'Wine/Types/Fortified' completado: 49 artículos nuevos
+
+── Root: Dessert_wine ──
+[13:28:30]   📁 Wine/Types/Dessert  (depth=0)
+[13:28:42]   📁 Wine/Types/Dessert/Madeira wine  (depth=1)
+[13:28:43]   📁 Wine/Types/Dessert/Port wine  (depth=1)
+[13:28:44]   📁 Wine/Types/Dessert/Sherry  (depth=1)
+[13:28:45]   ✅ 'Wine/Types/Dessert' completado: 10 artículos nuevos
+
+── Root: Natural_wine ──
+[13:28:45]   📁 Wine/Types/Natural  (depth=0)
+[13:28:46]      ⚠ No existe: Natural_wine
+[13:28:46]   ✅ 'Wine/Types/Natural' completado: 0 artículos nuevos
+
+── Root: Organic_wine ──
+[13:28:46]   📁 Wine/Types/Organic  (depth=0)
+[13:28:47]      ⚠ No existe: Organic_wine
+[13:28:47]   ✅ 'Wine/Types/Organic' completado: 0 artículos nuevos
+
+── Root: Wine_tasting ──
+[13:28:47]   📁 Wine/Tasting  (depth=0)
+[13:29:24]   📁 Wine/Tasting/Bacchanalian fraternities  (depth=1)
+[13:29:28]   📁 Wine/Tasting/Cup-bearers  (depth=1)
+[13:29:41]   📁 Wine/Tasting/Wine museums  (depth=1)
+[13:29:46]      ✅ 50 artículos en 'Wine/Tasting'
+[13:30:07]   📁 Wine/Tasting/Cup-bearers/Ganymede (mythology)  (depth=2)
+[13:30:16]   📁 Wine/Tasting/Cup-bearers/Pinkernai  (depth=2)
+[13:30:22]   📁 Wine/Tasting/Cup-bearers/Sargon of Akkad  (depth=2)
+[13:30:47]      ✅ 100 artículos en 'Wine/Tasting'
+[13:30:47]   ✅ 'Wine/Tasting' completado: 100 artículos nuevos
+
+── Root: Wine_and_food_matching ──
+[13:30:47]   📁 Wine/Pairing  (depth=0)
+[13:30:48]      ⚠ No existe: Wine_and_food_matching
+[13:30:48]   ✅ 'Wine/Pairing' completado: 0 artículos nuevos
+
+── Root: Wine_sommelier ──
+[13:30:48]   📁 Wine/Tasting/Sommelier  (depth=0)
+[13:30:49]      ⚠ No existe: Wine_sommelier
+[13:30:49]   ✅ 'Wine/Tasting/Sommelier' completado: 0 artículos nuevos
+
+── Root: Wine_label ──
+[13:30:49]   📁 Wine/Tasting/Labels  (depth=0)
+[13:30:50]      ⚠ No existe: Wine_label
+[13:30:50]   ✅ 'Wine/Tasting/Labels' completado: 0 artículos nuevos
+
+── Root: Wine_rating ──
+[13:30:50]   📁 Wine/Tasting/Ratings  (depth=0)
+[13:30:51]      ⚠ No existe: Wine_rating
+[13:30:51]   ✅ 'Wine/Tasting/Ratings' completado: 0 artículos nuevos
+
+── Root: Fermentation_in_winemaking ──
+[13:30:51]   📁 Wine/Winemaking/Fermentation  (depth=0)
+[13:30:51]      ⚠ No existe: Fermentation_in_winemaking
+[13:30:51]   ✅ 'Wine/Winemaking/Fermentation' completado: 0 artículos nuevos
+
+── Root: Aging_of_wine ──
+[13:30:51]   📁 Wine/Winemaking/Aging  (depth=0)
+[13:30:52]      ⚠ No existe: Aging_of_wine
+[13:30:52]   ✅ 'Wine/Winemaking/Aging' completado: 0 artículos nuevos
+
+── Root: Oak_(wine) ──
+[13:30:52]   📁 Wine/Winemaking/Oak  (depth=0)
+[13:30:53]      ⚠ No existe: Oak_(wine)
+[13:30:53]   ✅ 'Wine/Winemaking/Oak' completado: 0 artículos nuevos
+
+── Root: Wine_cellar ──
+[13:30:53]   📁 Wine/Winemaking/Cellar  (depth=0)
+[13:30:54]      ⚠ No existe: Wine_cellar
+[13:30:54]   ✅ 'Wine/Winemaking/Cellar' completado: 0 artículos nuevos
+
+── Root: Harvesting_(wine) ──
+[13:30:54]   📁 Wine/Winemaking/Harvest  (depth=0)
+[13:30:54]      ⚠ No existe: Harvesting_(wine)
+[13:30:54]   ✅ 'Wine/Winemaking/Harvest' completado: 0 artículos nuevos
+
+── Root: Terroir ──
+[13:30:54]   📁 Wine/Viticulture/Terroir  (depth=0)
+[13:30:55]      ⚠ No existe: Terroir
+[13:30:55]   ✅ 'Wine/Viticulture/Terroir' completado: 0 artículos nuevos
+
+── Root: Appellation ──
+[13:30:55]   📁 Wine/Appellations  (depth=0)
+[13:30:56]      ⚠ No existe: Appellation
+[13:30:56]   ✅ 'Wine/Appellations' completado: 0 artículos nuevos
+
+── Root: Denominación_de_origen ──
+[13:30:56]   📁 Wine/Appellations/Spain  (depth=0)
+[13:30:57]      ⚠ No existe: Denominación_de_origen
+[13:30:57]   ✅ 'Wine/Appellations/Spain' completado: 0 artículos nuevos
+
+── Root: Appellation_d'origine_contrôlée ──
+[13:30:57]   📁 Wine/Appellations/France  (depth=0)
+[13:30:57]      ⚠ No existe: Appellation_d'origine_contrôlée
+[13:30:57]   ✅ 'Wine/Appellations/France' completado: 0 artículos nuevos
+
+── Root: Wine_culture ──
+[13:30:57]   📁 Wine/Culture  (depth=0)
+[13:31:05]   📁 Wine/Culture/Deities of wine and beer  (depth=1)
+[13:31:51]   📁 Wine/Culture/Wine-related events  (depth=1)
+[13:31:59]      ✅ 50 artículos en 'Wine/Culture'
+[13:32:08]   📁 Wine/Culture/Wine museums  (depth=1)
+[13:32:09]   📁 Wine/Culture/Wine tasting  (depth=1)
+[13:32:10]   📁 Wine/Culture/Deities of wine and beer/Dionysus  (depth=2)
+[13:32:40]   📁 Wine/Culture/Deities of wine and beer/Nephthys  (depth=2)
+[13:32:55]   📁 Wine/Culture/Deities of wine and beer/Silenus  (depth=2)
+[13:33:01]      ✅ 100 artículos en 'Wine/Culture'
+[13:33:01]   ✅ 'Wine/Culture' completado: 100 artículos nuevos
+
+── Root: Wine_economics ──
+[13:33:01]   📁 Wine/Economics  (depth=0)
+[13:33:01]      ⚠ No existe: Wine_economics
+[13:33:01]   ✅ 'Wine/Economics' completado: 0 artículos nuevos
+
+── Root: Wine_tourism ──
+[13:33:01]   📁 Wine/Culture/Tourism  (depth=0)
+[13:33:02]      ⚠ No existe: Wine_tourism
+[13:33:02]   ✅ 'Wine/Culture/Tourism' completado: 0 artículos nuevos
+
+── Root: Wine_law ──
+[13:33:02]   📁 Wine/Law  (depth=0)
+[13:33:03]      ⚠ No existe: Wine_law
+[13:33:03]   ✅ 'Wine/Law' completado: 0 artículos nuevos
+
+── Root: Wine_list ──
+[13:33:03]   📁 Wine/Culture/Lists  (depth=0)
+[13:33:04]      ⚠ No existe: Wine_list
+[13:33:04]   ✅ 'Wine/Culture/Lists' completado: 0 artículos nuevos

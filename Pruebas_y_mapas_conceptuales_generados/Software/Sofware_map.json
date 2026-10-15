@@ -1,0 +1,126 @@
+{
+  "title": "Custom",
+  "root": "Operating System",
+  "concepts": [
+    "Operating System",
+    "Application",
+    "Programming Language",
+    "Database",
+    "Security"
+  ],
+  "relations": [
+    {
+      "src": "Operating System",
+      "link": "executes",
+      "dst": "Application"
+    },
+    {
+      "src": "Application",
+      "link": "written in",
+      "dst": "Programming Language"
+    },
+    {
+      "src": "Application",
+      "link": "uses",
+      "dst": "Database"
+    },
+    {
+      "src": "Application",
+      "link": "requires",
+      "dst": "Security"
+    }
+  ],
+  "config": {
+    "path_max_depth": 12,
+    "path_max_paths_per_node": 10,
+    "hybrid_window_k": 2,
+    "n_aspects": 4,
+    "top_k_per_aspect": 100,
+    "min_aspect_sim": 0.1,
+    "min_doc_relevance": 0.05,
+    "umap_n_neighbors": 20,
+    "umap_n_components": 10,
+    "n_output_topics": 6,
+    "min_cluster_size": 3,
+    "min_samples": 1,
+    "min_nr_topics": 3,
+    "max_nr_topics": 12,
+    "focus_weight": 0.45,
+    "specificity_weight": 0.35,
+    "quality_weight": 0.2,
+    "min_coherence": 0.15,
+    "max_topic_fraction": 0.4,
+    "min_output_focus": 0.02,
+    "domain_category_min_fraction": 0.15,
+    "exclude_category_max_fraction": 0.3,
+    "domain_category_penalty": 0.05,
+    "__encoder": "path_aware",
+    "__domain_kw": "",
+    "__exclude_kw": ""
+  },
+  "events": [
+    {
+      "ts": "2026-09-07T18:33:48.654Z",
+      "epochId": 1,
+      "type": "arc",
+      "icon": "🔗",
+      "text": "Application —[requires]→ Security"
+    },
+    {
+      "ts": "2026-09-07T18:33:41.382Z",
+      "epochId": 1,
+      "type": "arc",
+      "icon": "🔗",
+      "text": "Application —[uses]→ Database"
+    },
+    {
+      "ts": "2026-09-07T18:33:34.703Z",
+      "epochId": 1,
+      "type": "arc",
+      "icon": "🔗",
+      "text": "Application —[written in]→ Programming Language"
+    },
+    {
+      "ts": "2026-09-07T18:33:20.400Z",
+      "epochId": 1,
+      "type": "arc",
+      "icon": "🔗",
+      "text": "Operating System —[executes]→ Application"
+    },
+    {
+      "ts": "2026-09-07T18:33:07.280Z",
+      "epochId": 1,
+      "type": "node",
+      "icon": "➕",
+      "text": "Nodo agregado: \"Security\""
+    },
+    {
+      "ts": "2026-09-07T18:33:05.065Z",
+      "epochId": 1,
+      "type": "node",
+      "icon": "➕",
+      "text": "Nodo agregado: \"Database\""
+    },
+    {
+      "ts": "2026-09-07T18:33:01.552Z",
+      "epochId": 1,
+      "type": "node",
+      "icon": "➕",
+      "text": "Nodo agregado: \"Programming Language\""
+    },
+    {
+      "ts": "2026-09-07T18:32:54.919Z",
+      "epochId": 1,
+      "type": "node",
+      "icon": "➕",
+      "text": "Nodo agregado: \"Application\""
+    },
+    {
+      "ts": "2026-09-07T18:32:47.647Z",
+      "epochId": 1,
+      "type": "node",
+      "icon": "🌟",
+      "text": "Raíz agregada: \"Operating System\""
+    }
+  ]
+}

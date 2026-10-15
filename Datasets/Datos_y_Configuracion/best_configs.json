@@ -1,0 +1,786 @@
+{
+  "AeroCapture": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.6896,
+        "p10": 0.8,
+        "rec_ret": 0.828,
+        "rec_fin": 0.714,
+        "prec_fin": 0.349
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7411,
+        "p10": 1.0,
+        "rec_ret": 0.828,
+        "rec_fin": 0.663,
+        "prec_fin": 0.383
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7329,
+        "p10": 1.0,
+        "rec_ret": 0.855,
+        "rec_fin": 0.663,
+        "prec_fin": 0.315
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7313,
+        "p10": 0.9,
+        "rec_ret": 0.906,
+        "rec_fin": 0.707,
+        "prec_fin": 0.34
+      }
+    }
+  },
+  "BacterialCharacteristics": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.3277,
+        "p10": 0.1,
+        "rec_ret": 0.563,
+        "rec_fin": 0.473,
+        "prec_fin": 0.216
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.4613,
+        "p10": 0.3,
+        "rec_ret": 0.673,
+        "rec_fin": 0.493,
+        "prec_fin": 0.444
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.4594,
+        "p10": 0.4,
+        "rec_ret": 0.6,
+        "rec_fin": 0.55,
+        "prec_fin": 0.272
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.414,
+        "p10": 0.4,
+        "rec_ret": 0.51,
+        "rec_fin": 0.43,
+        "prec_fin": 0.315
+      }
+    }
+  },
+  "BacterialClassification": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.2951,
+        "p10": 0.1,
+        "rec_ret": 0.49,
+        "rec_fin": 0.403,
+        "prec_fin": 0.231
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.5385,
+        "p10": 0.5,
+        "rec_ret": 0.733,
+        "rec_fin": 0.467,
+        "prec_fin": 0.509
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.6739,
+        "p10": 0.7,
+        "rec_ret": 0.823,
+        "rec_fin": 0.743,
+        "prec_fin": 0.382
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.4869,
+        "p10": 0.3,
+        "rec_ret": 0.74,
+        "rec_fin": 0.637,
+        "prec_fin": 0.289
+      }
+    }
+  },
+  "ComparativePlanetology": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7426,
+        "p10": 0.8,
+        "rec_ret": 0.92,
+        "rec_fin": 0.776,
+        "prec_fin": 0.429
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7855,
+        "p10": 1.0,
+        "rec_ret": 0.906,
+        "rec_fin": 0.753,
+        "prec_fin": 0.392
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7619,
+        "p10": 1.0,
+        "rec_ret": 0.836,
+        "rec_fin": 0.729,
+        "prec_fin": 0.38
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7935,
+        "p10": 1.0,
+        "rec_ret": 0.89,
+        "rec_fin": 0.779,
+        "prec_fin": 0.409
+      }
+    }
+  },
+  "FungiCharacteristics": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.5123,
+        "p10": 0.3,
+        "rec_ret": 0.74,
+        "rec_fin": 0.693,
+        "prec_fin": 0.332
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.4167,
+        "p10": 0.2,
+        "rec_ret": 0.797,
+        "rec_fin": 0.397,
+        "prec_fin": 0.391
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.4983,
+        "p10": 0.2,
+        "rec_ret": 0.753,
+        "rec_fin": 0.657,
+        "prec_fin": 0.453
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.5337,
+        "p10": 0.3,
+        "rec_ret": 0.717,
+        "rec_fin": 0.627,
+        "prec_fin": 0.561
+      }
+    }
+  },
+  "Moon": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.6386,
+        "p10": 0.5,
+        "rec_ret": 0.903,
+        "rec_fin": 0.746,
+        "prec_fin": 0.421
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7702,
+        "p10": 0.9,
+        "rec_ret": 0.923,
+        "rec_fin": 0.766,
+        "prec_fin": 0.429
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8024,
+        "p10": 1.0,
+        "rec_ret": 0.906,
+        "rec_fin": 0.786,
+        "prec_fin": 0.427
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7823,
+        "p10": 0.9,
+        "rec_ret": 0.93,
+        "rec_fin": 0.829,
+        "prec_fin": 0.388
+      }
+    }
+  },
+  "PlanetMars": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.6277,
+        "p10": 0.5,
+        "rec_ret": 0.9,
+        "rec_fin": 0.749,
+        "prec_fin": 0.365
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7406,
+        "p10": 1.0,
+        "rec_ret": 0.853,
+        "rec_fin": 0.686,
+        "prec_fin": 0.321
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7455,
+        "p10": 1.0,
+        "rec_ret": 0.789,
+        "rec_fin": 0.709,
+        "prec_fin": 0.375
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.696,
+        "p10": 0.8,
+        "rec_ret": 0.893,
+        "rec_fin": 0.672,
+        "prec_fin": 0.379
+      }
+    }
+  },
+  "Rabbits": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8115,
+        "p10": 1.0,
+        "rec_ret": 0.962,
+        "rec_fin": 0.753,
+        "prec_fin": 0.466
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8033,
+        "p10": 1.0,
+        "rec_ret": 0.955,
+        "rec_fin": 0.743,
+        "prec_fin": 0.447
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8126,
+        "p10": 1.0,
+        "rec_ret": 0.952,
+        "rec_fin": 0.764,
+        "prec_fin": 0.465
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7888,
+        "p10": 1.0,
+        "rec_ret": 0.949,
+        "rec_fin": 0.726,
+        "prec_fin": 0.406
+      }
+    }
+  },
+  "Sleep": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8604,
+        "p10": 1.0,
+        "rec_ret": 0.966,
+        "rec_fin": 0.864,
+        "prec_fin": 0.54
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8464,
+        "p10": 1.0,
+        "rec_ret": 0.973,
+        "rec_fin": 0.82,
+        "prec_fin": 0.529
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8409,
+        "p10": 1.0,
+        "rec_ret": 0.918,
+        "rec_fin": 0.759,
+        "prec_fin": 0.648
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 10,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.8657,
+        "p10": 1.0,
+        "rec_ret": 0.949,
+        "rec_fin": 0.755,
+        "prec_fin": 0.747
+      }
+    }
+  },
+  "VirusCharacteristics": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.3431,
+        "p10": 0.1,
+        "rec_ret": 0.547,
+        "rec_fin": 0.493,
+        "prec_fin": 0.279
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.412,
+        "p10": 0.1,
+        "rec_ret": 0.783,
+        "rec_fin": 0.41,
+        "prec_fin": 0.512
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.7886,
+        "p10": 1.0,
+        "rec_ret": 0.85,
+        "rec_fin": 0.79,
+        "prec_fin": 0.408
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.15,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.6394,
+        "p10": 0.6,
+        "rec_ret": 0.837,
+        "rec_fin": 0.75,
+        "prec_fin": 0.335
+      }
+    }
+  },
+  "Bioinformaticbynati": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    }
+  },
+  "Volcanism": {
+    "node_label": {
+      "params": {
+        "encoder": "node_label",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "relation_aware": {
+      "params": {
+        "encoder": "relation_aware",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "path_aware": {
+      "params": {
+        "encoder": "path_aware",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    },
+    "hybrid": {
+      "params": {
+        "encoder": "hybrid",
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 3,
+        "min_samples": 1
+      },
+      "metrics": {
+        "score": 0.0,
+        "p10": 0.0,
+        "rec_ret": 0.0,
+        "rec_fin": 0.0
+      }
+    }
+  }
+}

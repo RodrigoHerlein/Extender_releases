@@ -1,0 +1,306 @@
+
+
+=== CRAWL INICIADO 2026-10-06T11:32:47.975917 ===
+=== Dataset: Computación Gráfica ===
+
+── Root: Computer_graphics ──
+[11:32:47]   📁 CG  (depth=0)
+[11:33:44]      ✅ 50 artículos en 'CG'
+[11:34:40]      ✅ 100 artículos en 'CG'
+[11:35:03]   ✅ 'CG' completado: 120 artículos nuevos
+
+── Root: 3D_computer_graphics ──
+[11:35:03]   📁 CG/3D  (depth=0)
+[11:35:59]      ✅ 50 artículos en 'CG/3D'
+[11:36:55]      ✅ 100 artículos en 'CG/3D'
+[11:37:18]   ✅ 'CG/3D' completado: 120 artículos nuevos
+
+── Root: Computer_graphics_(images) ──
+[11:37:18]   📁 CG/Images  (depth=0)
+[11:37:18]      ⚠ Categoría no existe: Computer_graphics_(images)
+[11:37:18]   ✅ 'CG/Images' completado: 0 artículos nuevos
+
+── Root: Computer_graphics_algorithms ──
+[11:37:18]   📁 CG/Algorithms  (depth=0)
+[11:38:05]   📁 CG/Algorithms/Anti-aliasing algorithms  (depth=1)
+[11:38:15]   📁 CG/Algorithms/Clipping (computer graphics)  (depth=1)
+[11:38:17]      ✅ 50 artículos en 'CG/Algorithms'
+[11:38:20]   📁 CG/Algorithms/Edge detection  (depth=1)
+[11:38:32]   📁 CG/Algorithms/Geometry processing  (depth=1)
+[11:38:54]   📁 CG/Algorithms/Global illumination algorithms  (depth=1)
+[11:39:03]   📁 CG/Algorithms/Image processing  (depth=1)
+[11:39:19]      ✅ 100 artículos en 'CG/Algorithms'
+[11:39:41]   ✅ 'CG/Algorithms' completado: 120 artículos nuevos
+
+── Root: Rendering_(computer_graphics) ──
+[11:39:41]   📁 CG/Rendering  (depth=0)
+[11:39:42]      ⚠ Categoría no existe: Rendering_(computer_graphics)
+[11:39:42]   ✅ 'CG/Rendering' completado: 0 artículos nuevos
+
+── Root: Ray_tracing_(graphics) ──
+[11:39:42]   📁 CG/Rendering/RayTracing  (depth=0)
+[11:39:50]   📁 CG/Rendering/RayTracing/Amiga raytracers  (depth=1)
+[11:40:07]   ✅ 'CG/Rendering/RayTracing' completado: 20 artículos nuevos
+
+── Root: Global_illumination ──
+[11:40:07]   📁 CG/Rendering/GlobalIllum  (depth=0)
+[11:40:08]      ⚠ Categoría no existe: Global_illumination
+[11:40:08]   ✅ 'CG/Rendering/GlobalIllum' completado: 0 artículos nuevos
+
+── Root: Shading ──
+[11:40:08]   📁 CG/Rendering/Shading  (depth=0)
+[11:40:35]   📁 CG/Rendering/Shading/Shading languages  (depth=1)
+[11:40:52]   ✅ 'CG/Rendering/Shading' completado: 37 artículos nuevos
+
+── Root: Texture_mapping ──
+[11:40:52]   📁 CG/Rendering/Textures  (depth=0)
+[11:41:08]   ✅ 'CG/Rendering/Textures' completado: 14 artículos nuevos
+
+── Root: Real-time_rendering ──
+[11:41:08]   📁 CG/Rendering/RealTime  (depth=0)
+[11:41:09]      ⚠ Categoría no existe: Real-time_rendering
+[11:41:09]   ✅ 'CG/Rendering/RealTime' completado: 0 artículos nuevos
+
+── Root: 3D_modeling ──
+[11:41:09]   📁 CG/Modeling/3D  (depth=0)
+[11:41:10]   ✅ 'CG/Modeling/3D' completado: 0 artículos nuevos
+
+── Root: Solid_modeling ──
+[11:41:10]   📁 CG/Modeling/Solid  (depth=0)
+[11:41:11]      ⚠ Categoría no existe: Solid_modeling
+[11:41:11]   ✅ 'CG/Modeling/Solid' completado: 0 artículos nuevos
+
+── Root: Mesh_generation ──
+[11:41:11]   📁 CG/Modeling/Mesh  (depth=0)
+[11:41:22]   📁 CG/Modeling/Mesh/Mesh generation people  (depth=1)
+[11:41:24]   📁 CG/Modeling/Mesh/Mesh generators  (depth=1)
+[11:41:36]   📁 CG/Modeling/Mesh/Triangulation (geometry)  (depth=1)
+[11:42:00]   ✅ 'CG/Modeling/Mesh' completado: 42 artículos nuevos
+
+── Root: Geometric_modeling ──
+[11:42:00]   📁 CG/Modeling/Geometric  (depth=0)
+[11:42:01]      ⚠ Categoría no existe: Geometric_modeling
+[11:42:01]   ✅ 'CG/Modeling/Geometric' completado: 0 artículos nuevos
+
+── Root: Procedural_generation ──
+[11:42:01]   📁 CG/Modeling/Procedural  (depth=0)
+[11:42:10]   📁 CG/Modeling/Procedural/Algorithmic art  (depth=1)
+[11:42:26]   📁 CG/Modeling/Procedural/Demoscene  (depth=1)
+[11:42:43]   📁 CG/Modeling/Procedural/Video games using procedural generation  (depth=1)
+[11:43:02]      ✅ 50 artículos en 'CG/Modeling/Procedural'
+[11:43:58]      ✅ 100 artículos en 'CG/Modeling/Procedural'
+[11:44:21]   ✅ 'CG/Modeling/Procedural' completado: 120 artículos nuevos
+
+── Root: Subdivision_surfaces ──
+[11:44:21]   📁 CG/Modeling/Subdivision  (depth=0)
+[11:44:22]      ⚠ Categoría no existe: Subdivision_surfaces
+[11:44:22]   ✅ 'CG/Modeling/Subdivision' completado: 0 artículos nuevos
+
+── Root: Computer_animation ──
+[11:44:22]   📁 CG/Animation  (depth=0)
+[11:45:19]      ✅ 50 artículos en 'CG/Animation'
+[11:45:33]   📁 CG/Animation/Animation software  (depth=1)
+[11:46:15]      ✅ 100 artículos en 'CG/Animation'
+[11:46:37]   ✅ 'CG/Animation' completado: 120 artículos nuevos
+
+── Root: Computer-generated_imagery ──
+[11:46:37]   📁 CG/Animation/CGI  (depth=0)
+[11:46:38]      ⚠ Categoría no existe: Computer-generated_imagery
+[11:46:38]   ✅ 'CG/Animation/CGI' completado: 0 artículos nuevos
+
+── Root: Motion_capture ──
+[11:46:38]   📁 CG/Animation/MotionCapture  (depth=0)
+[11:46:48]   📁 CG/Animation/MotionCapture/Motion capture actors  (depth=1)
+[11:46:49]   📁 CG/Animation/MotionCapture/Films using motion capture  (depth=1)
+[11:47:41]      ✅ 50 artículos en 'CG/Animation/MotionCapture'
+[11:48:43]      ✅ 100 artículos en 'CG/Animation/MotionCapture'
+[11:49:08]   ✅ 'CG/Animation/MotionCapture' completado: 120 artículos nuevos
+
+── Root: Skeletal_animation ──
+[11:49:08]   📁 CG/Animation/Skeletal  (depth=0)
+[11:49:09]      ⚠ Categoría no existe: Skeletal_animation
+[11:49:09]   ✅ 'CG/Animation/Skeletal' completado: 0 artículos nuevos
+
+── Root: Character_animation ──
+[11:49:09]   📁 CG/Animation/Character  (depth=0)
+[11:49:10]      ⚠ Categoría no existe: Character_animation
+[11:49:10]   ✅ 'CG/Animation/Character' completado: 0 artículos nuevos
+
+── Root: Physics_simulation ──
+[11:49:10]   📁 CG/Animation/Physics  (depth=0)
+[11:49:10]      ⚠ Categoría no existe: Physics_simulation
+[11:49:10]   ✅ 'CG/Animation/Physics' completado: 0 artículos nuevos
+
+── Root: Image_processing ──
+[11:49:10]   📁 CG/ImageProcessing  (depth=0)
+[11:50:07]      ✅ 50 artículos en 'CG/ImageProcessing'
+[11:51:03]      ✅ 100 artículos en 'CG/ImageProcessing'
+[11:51:24]   ✅ 'CG/ImageProcessing' completado: 120 artículos nuevos
+
+── Root: Digital_image ──
+[11:51:24]   📁 CG/ImageProcessing/Digital  (depth=0)
+[11:51:25]      ⚠ Categoría no existe: Digital_image
+[11:51:25]   ✅ 'CG/ImageProcessing/Digital' completado: 0 artículos nuevos
+
+── Root: Computer_vision ──
+[11:51:25]   📁 CG/Vision  (depth=0)
+[11:52:22]      ✅ 50 artículos en 'CG/Vision'
+[11:53:18]      ✅ 100 artículos en 'CG/Vision'
+[11:53:30]   📁 CG/Vision/3D imaging  (depth=1)
+[11:53:41]   ✅ 'CG/Vision' completado: 120 artículos nuevos
+
+── Root: Image_segmentation ──
+[11:53:41]   📁 CG/Vision/Segmentation  (depth=0)
+[11:54:11]   ✅ 'CG/Vision/Segmentation' completado: 25 artículos nuevos
+
+── Root: Graphics_processing_unit ──
+[11:54:11]   📁 CG/Hardware/GPU  (depth=0)
+[11:54:11]      ⚠ Categoría no existe: Graphics_processing_unit
+[11:54:11]   ✅ 'CG/Hardware/GPU' completado: 0 artículos nuevos
+
+── Root: Graphics_hardware ──
+[11:54:11]   📁 CG/Hardware  (depth=0)
+[11:54:58]   📁 CG/Hardware/Graphics chips  (depth=1)
+[11:55:09]      ✅ 50 artículos en 'CG/Hardware'
+[11:55:58]   📁 CG/Hardware/Graphics hardware companies  (depth=1)
+[11:56:05]      ✅ 100 artículos en 'CG/Hardware'
+[11:56:27]   ✅ 'CG/Hardware' completado: 120 artículos nuevos
+
+── Root: OpenGL ──
+[11:56:27]   📁 CG/APIs/OpenGL  (depth=0)
+[11:57:08]   📁 CG/APIs/OpenGL/WebGL  (depth=1)
+[11:57:25]   ✅ 'CG/APIs/OpenGL' completado: 49 artículos nuevos
+
+── Root: DirectX ──
+[11:57:25]   📁 CG/APIs/DirectX  (depth=0)
+[11:58:02]   ✅ 'CG/APIs/DirectX' completado: 32 artículos nuevos
+
+── Root: Vulkan_(API) ──
+[11:58:02]   📁 CG/APIs/Vulkan  (depth=0)
+[11:58:06]   📁 CG/APIs/Vulkan/Game engines that support Vulkan (API)  (depth=1)
+[11:58:23]   ✅ 'CG/APIs/Vulkan' completado: 16 artículos nuevos
+
+── Root: Shader ──
+[11:58:23]   📁 CG/APIs/Shaders  (depth=0)
+[11:58:24]      ⚠ Categoría no existe: Shader
+[11:58:24]   ✅ 'CG/APIs/Shaders' completado: 0 artículos nuevos
+
+── Root: 2D_computer_graphics ──
+[11:58:24]   📁 CG/2D  (depth=0)
+[11:58:24]      ⚠ Categoría no existe: 2D_computer_graphics
+[11:58:24]   ✅ 'CG/2D' completado: 0 artículos nuevos
+
+── Root: Vector_graphics ──
+[11:58:24]   📁 CG/2D/Vector  (depth=0)
+[11:58:51]   📁 CG/2D/Vector/Vector graphics editors  (depth=1)
+[11:59:23]      ✅ 50 artículos en 'CG/2D/Vector'
+[11:59:43]   📁 CG/2D/Vector/Vector graphics file formats  (depth=1)
+[11:59:53]   📁 CG/2D/Vector/PDF software  (depth=1)
+[12:00:20]      ✅ 100 artículos en 'CG/2D/Vector'
+[12:00:22]   📁 CG/2D/Vector/PDF standards  (depth=1)
+[12:00:28]   📁 CG/2D/Vector/Scalable Vector Graphics  (depth=1)
+[12:00:44]   📁 CG/2D/Vector/Video games with vector graphics  (depth=1)
+[12:00:46]   ✅ 'CG/2D/Vector' completado: 120 artículos nuevos
+
+── Root: Raster_graphics ──
+[12:00:46]   📁 CG/2D/Raster  (depth=0)
+[12:00:48]   📁 CG/2D/Raster/Raster graphics editors  (depth=1)
+[12:01:48]      ✅ 50 artículos en 'CG/2D/Raster'
+[12:02:24]   📁 CG/2D/Raster/Raster graphics file formats  (depth=1)
+[12:02:45]      ✅ 100 artículos en 'CG/2D/Raster'
+[12:02:54]   📁 CG/2D/Raster/Raster graphics editors/Free raster graphics editors  (depth=2)
+[12:03:11]   ✅ 'CG/2D/Raster' completado: 120 artículos nuevos
+
+── Root: Digital_art ──
+[12:03:11]   📁 CG/DigitalArt  (depth=0)
+[12:04:10]      ✅ 50 artículos en 'CG/DigitalArt'
+[12:05:09]      ✅ 100 artículos en 'CG/DigitalArt'
+[12:05:33]   ✅ 'CG/DigitalArt' completado: 120 artículos nuevos
+
+── Root: Visual_effects ──
+[12:05:33]   📁 CG/VFX  (depth=0)
+[12:05:58]   📁 CG/VFX/Visual effects artists  (depth=1)
+[12:06:33]      ✅ 50 artículos en 'CG/VFX'
+[12:07:00]   📁 CG/VFX/Visual effects awards  (depth=1)
+[12:07:03]   📁 CG/VFX/Visual effects companies  (depth=1)
+[12:07:32]      ✅ 100 artículos en 'CG/VFX'
+[12:07:54]   ✅ 'CG/VFX' completado: 120 artículos nuevos
+
+── Root: Digital_compositing ──
+[12:07:54]   📁 CG/VFX/Compositing  (depth=0)
+[12:07:55]      ⚠ Categoría no existe: Digital_compositing
+[12:07:55]   ✅ 'CG/VFX/Compositing' completado: 0 artículos nuevos
+
+── Root: Particle_system ──
+[12:07:55]   📁 CG/VFX/Particles  (depth=0)
+[12:07:55]      ⚠ Categoría no existe: Particle_system
+[12:07:55]   ✅ 'CG/VFX/Particles' completado: 0 artículos nuevos
+
+── Root: Virtual_reality ──
+[12:07:55]   📁 CG/VR  (depth=0)
+[12:08:55]      ✅ 50 artículos en 'CG/VR'
+[12:09:51]      ✅ 100 artículos en 'CG/VR'
+[12:10:14]   ✅ 'CG/VR' completado: 120 artículos nuevos
+
+── Root: Augmented_reality ──
+[12:10:14]   📁 CG/AR  (depth=0)
+[12:11:11]      ✅ 50 artículos en 'CG/AR'
+[12:12:01]   📁 CG/AR/Augmented reality-related lists  (depth=1)
+[12:12:04]   📁 CG/AR/Augmented reality applications  (depth=1)
+[12:12:09]      ✅ 100 artículos en 'CG/AR'
+[12:12:33]   ✅ 'CG/AR' completado: 120 artículos nuevos
+
+── Root: Mixed_reality ──
+[12:12:33]   📁 CG/MR  (depth=0)
+[12:12:59]   📁 CG/MR/Meta Quest  (depth=1)
+[12:13:07]   📁 CG/MR/Metaverse  (depth=1)
+[12:13:16]   📁 CG/MR/Mixed reality games  (depth=1)
+[12:13:24]   📁 CG/MR/Oculus Rift  (depth=1)
+[12:13:34]      ✅ 50 artículos en 'CG/MR'
+[12:13:35]   📁 CG/MR/On-set virtual production  (depth=1)
+[12:13:40]   📁 CG/MR/PlayStation VR  (depth=1)
+[12:13:44]   📁 CG/MR/Simulated reality in fiction  (depth=1)
+[12:14:01]   📁 CG/MR/Virtual avatars  (depth=1)
+[12:14:23]   📁 CG/MR/Meta Quest/Meta Quest games  (depth=2)
+[12:14:36]      ✅ 100 artículos en 'CG/MR'
+[12:14:59]   ✅ 'CG/MR' completado: 120 artículos nuevos
+
+── Root: Computational_geometry ──
+[12:14:59]   📁 CG/Geometry  (depth=0)
+[12:15:59]      ✅ 50 artículos en 'CG/Geometry'
+[12:16:22]   📁 CG/Geometry/Computational geometry journals  (depth=1)
+[12:16:26]   📁 CG/Geometry/Geometric data structures  (depth=1)
+[12:16:54]   📁 CG/Geometry/Geometric algorithms  (depth=1)
+[12:16:59]      ✅ 100 artículos en 'CG/Geometry'
+[12:17:23]   ✅ 'CG/Geometry' completado: 120 artículos nuevos
+
+── Root: Polygon_mesh ──
+[12:17:23]   📁 CG/Geometry/PolygonMesh  (depth=0)
+[12:17:24]      ⚠ Categoría no existe: Polygon_mesh
+[12:17:24]   ✅ 'CG/Geometry/PolygonMesh' completado: 0 artículos nuevos
+
+── Root: Bezier_curve ──
+[12:17:24]   📁 CG/Geometry/Curves  (depth=0)
+[12:17:24]      ⚠ Categoría no existe: Bezier_curve
+[12:17:24]   ✅ 'CG/Geometry/Curves' completado: 0 artículos nuevos
+
+── Root: NURBS ──
+[12:17:24]   📁 CG/Geometry/NURBS  (depth=0)
+[12:17:25]      ⚠ Categoría no existe: NURBS
+[12:17:25]   ✅ 'CG/Geometry/NURBS' completado: 0 artículos nuevos
+
+── Root: 3D_computer_graphics_software ──
+[12:17:25]   📁 CG/Software  (depth=0)
+[12:17:26]   ✅ 'CG/Software' completado: 0 artículos nuevos
+
+── Root: Game_engines ──
+[12:17:26]   📁 CG/Software/GameEngines  (depth=0)
+[12:17:27]   ✅ 'CG/Software/GameEngines' completado: 0 artículos nuevos
+
+── Root: Video_game_graphics ──
+[12:17:27]   📁 CG/Games  (depth=0)
+[12:17:43]   📁 CG/Games/Video games by graphical style  (depth=1)
+[12:17:44]   📁 CG/Games/Video games by graphical style/Video games with 2.5D graphics  (depth=2)
+[12:18:26]      ✅ 50 artículos en 'CG/Games'
+[12:19:22]      ✅ 100 artículos en 'CG/Games'
+[12:19:43]   ✅ 'CG/Games' completado: 120 artículos nuevos

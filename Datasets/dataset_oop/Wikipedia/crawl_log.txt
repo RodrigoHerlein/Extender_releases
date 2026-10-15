@@ -1,0 +1,300 @@
+
+
+=== CRAWL INICIADO 2026-10-06T12:19:43.472274 ===
+=== Dataset: Programación Orientada a Objetos ===
+
+── Root: Object-oriented_programming ──
+[12:19:43]   📁 OOP  (depth=0)
+[12:20:40]      ✅ 50 artículos en 'OOP'
+[12:21:36]      ✅ 100 artículos en 'OOP'
+[12:21:36]   ✅ 'OOP' completado: 100 artículos nuevos
+
+── Root: Object-oriented_programming_languages ──
+[12:21:36]   📁 OOP/Languages  (depth=0)
+[12:22:34]      ✅ 50 artículos en 'OOP/Languages'
+[12:23:31]      ✅ 100 artículos en 'OOP/Languages'
+[12:23:31]   ✅ 'OOP/Languages' completado: 100 artículos nuevos
+
+── Root: Object-oriented_design ──
+[12:23:31]   📁 OOP/Design  (depth=0)
+[12:23:32]      ⚠ No existe: Object-oriented_design
+[12:23:32]   ✅ 'OOP/Design' completado: 0 artículos nuevos
+
+── Root: Object-oriented_analysis_and_design ──
+[12:23:32]   📁 OOP/OOAD  (depth=0)
+[12:23:33]      ⚠ No existe: Object-oriented_analysis_and_design
+[12:23:33]   ✅ 'OOP/OOAD' completado: 0 artículos nuevos
+
+── Root: Class_(computer_programming) ──
+[12:23:33]   📁 OOP/Concepts/Class  (depth=0)
+[12:23:59]   ✅ 'OOP/Concepts/Class' completado: 23 artículos nuevos
+
+── Root: Inheritance_(object-oriented_programming) ──
+[12:23:59]   📁 OOP/Concepts/Inheritance  (depth=0)
+[12:24:00]      ⚠ No existe: Inheritance_(object-oriented_programming)
+[12:24:00]   ✅ 'OOP/Concepts/Inheritance' completado: 0 artículos nuevos
+
+── Root: Polymorphism_(computer_science) ──
+[12:24:00]   📁 OOP/Concepts/Polymorphism  (depth=0)
+[12:24:28]   📁 OOP/Concepts/Polymorphism/Generic programming  (depth=1)
+[12:24:45]   📁 OOP/Concepts/Polymorphism/Generic programming/Metaprogramming  (depth=2)
+[12:24:56]   ✅ 'OOP/Concepts/Polymorphism' completado: 47 artículos nuevos
+
+── Root: Encapsulation_(computer_programming) ──
+[12:24:56]   📁 OOP/Concepts/Encapsulation  (depth=0)
+[12:24:57]      ⚠ No existe: Encapsulation_(computer_programming)
+[12:24:57]   ✅ 'OOP/Concepts/Encapsulation' completado: 0 artículos nuevos
+
+── Root: Abstraction_(computer_science) ──
+[12:24:57]   📁 OOP/Concepts/Abstraction  (depth=0)
+[12:24:58]      ⚠ No existe: Abstraction_(computer_science)
+[12:24:58]   ✅ 'OOP/Concepts/Abstraction' completado: 0 artículos nuevos
+
+── Root: Type_system ──
+[12:24:58]   📁 OOP/Concepts/Types  (depth=0)
+[12:24:59]      ⚠ No existe: Type_system
+[12:24:59]   ✅ 'OOP/Concepts/Types' completado: 0 artículos nuevos
+
+── Root: Interface_(object-oriented_programming) ──
+[12:24:59]   📁 OOP/Concepts/Interfaces  (depth=0)
+[12:24:59]      ⚠ No existe: Interface_(object-oriented_programming)
+[12:24:59]   ✅ 'OOP/Concepts/Interfaces' completado: 0 artículos nuevos
+
+── Root: Software_design_patterns ──
+[12:24:59]   📁 OOP/Patterns  (depth=0)
+[12:25:56]      ✅ 50 artículos en 'OOP/Patterns'
+[12:26:51]      ✅ 100 artículos en 'OOP/Patterns'
+[12:26:51]   ✅ 'OOP/Patterns' completado: 100 artículos nuevos
+
+── Root: Creational_patterns ──
+[12:26:51]   📁 OOP/Patterns/Creational  (depth=0)
+[12:26:52]      ⚠ No existe: Creational_patterns
+[12:26:52]   ✅ 'OOP/Patterns/Creational' completado: 0 artículos nuevos
+
+── Root: Structural_patterns ──
+[12:26:52]   📁 OOP/Patterns/Structural  (depth=0)
+[12:26:53]      ⚠ No existe: Structural_patterns
+[12:26:53]   ✅ 'OOP/Patterns/Structural' completado: 0 artículos nuevos
+
+── Root: Behavioral_patterns ──
+[12:26:53]   📁 OOP/Patterns/Behavioral  (depth=0)
+[12:26:53]      ⚠ No existe: Behavioral_patterns
+[12:26:53]   ✅ 'OOP/Patterns/Behavioral' completado: 0 artículos nuevos
+
+── Root: Architectural_pattern_(computer_science) ──
+[12:26:53]   📁 OOP/Patterns/Architectural  (depth=0)
+[12:27:06]   📁 OOP/Patterns/Architectural/Serverless computing  (depth=1)
+[12:27:16]   ✅ 'OOP/Patterns/Architectural' completado: 19 artículos nuevos
+
+── Root: Anti-patterns ──
+[12:27:16]   📁 OOP/AntiPatterns  (depth=0)
+[12:27:50]   ✅ 'OOP/AntiPatterns' completado: 31 artículos nuevos
+
+── Root: Java_(programming_language) ──
+[12:27:50]   📁 OOP/Languages/Java  (depth=0)
+[12:28:48]      ✅ 50 artículos en 'OOP/Languages/Java'
+[12:29:17]   📁 OOP/Languages/Java/Java APIs  (depth=1)
+[12:29:46]      ✅ 100 artículos en 'OOP/Languages/Java'
+[12:29:46]   ✅ 'OOP/Languages/Java' completado: 100 artículos nuevos
+
+── Root: C++ ──
+[12:29:46]   📁 OOP/Languages/Cpp  (depth=0)
+[12:30:41]      ✅ 50 artículos en 'OOP/Languages/Cpp'
+[12:31:17]   📁 OOP/Languages/Cpp/Articles with example C++ code  (depth=1)
+[12:31:37]      ✅ 100 artículos en 'OOP/Languages/Cpp'
+[12:31:37]   ✅ 'OOP/Languages/Cpp' completado: 100 artículos nuevos
+
+── Root: Python_(programming_language) ──
+[12:31:37]   📁 OOP/Languages/Python  (depth=0)
+[12:32:22]   📁 OOP/Languages/Python/Articles with example Python (programming language) code  (depth=1)
+[12:32:33]      ✅ 50 artículos en 'OOP/Languages/Python'
+[12:33:34]      ✅ 100 artículos en 'OOP/Languages/Python'
+[12:33:34]   ✅ 'OOP/Languages/Python' completado: 100 artículos nuevos
+
+── Root: C_Sharp_(programming_language) ──
+[12:33:34]   📁 OOP/Languages/CSharp  (depth=0)
+[12:33:45]   📁 OOP/Languages/CSharp/Software programmed in C Sharp  (depth=1)
+[12:34:00]   📁 OOP/Languages/CSharp/Software programmed in C Sharp/C Sharp libraries  (depth=2)
+[12:34:20]   📁 OOP/Languages/CSharp/Software programmed in C Sharp/Free software programmed in C Sharp  (depth=2)
+[12:34:35]      ✅ 50 artículos en 'OOP/Languages/CSharp'
+[12:35:31]      ✅ 100 artículos en 'OOP/Languages/CSharp'
+[12:35:31]   ✅ 'OOP/Languages/CSharp' completado: 100 artículos nuevos
+
+── Root: Ruby_(programming_language) ──
+[12:35:31]   📁 OOP/Languages/Ruby  (depth=0)
+[12:36:15]   📁 OOP/Languages/Ruby/Free software programmed in Ruby  (depth=1)
+[12:36:29]      ✅ 50 artículos en 'OOP/Languages/Ruby'
+[12:37:24]   ✅ 'OOP/Languages/Ruby' completado: 97 artículos nuevos
+
+── Root: Kotlin_(programming_language) ──
+[12:37:24]   📁 OOP/Languages/Kotlin  (depth=0)
+[12:37:25]      ⚠ No existe: Kotlin_(programming_language)
+[12:37:25]   ✅ 'OOP/Languages/Kotlin' completado: 0 artículos nuevos
+
+── Root: Smalltalk ──
+[12:37:25]   📁 OOP/Languages/Smalltalk  (depth=0)
+[12:37:26]      ⚠ No existe: Smalltalk
+[12:37:26]   ✅ 'OOP/Languages/Smalltalk' completado: 0 artículos nuevos
+
+── Root: SOLID_(object-oriented_design) ──
+[12:37:26]   📁 OOP/Principles/SOLID  (depth=0)
+[12:37:26]      ⚠ No existe: SOLID_(object-oriented_design)
+[12:37:26]   ✅ 'OOP/Principles/SOLID' completado: 0 artículos nuevos
+
+── Root: Design_by_contract ──
+[12:37:26]   📁 OOP/Principles/DBC  (depth=0)
+[12:37:27]      ⚠ No existe: Design_by_contract
+[12:37:27]   ✅ 'OOP/Principles/DBC' completado: 0 artículos nuevos
+
+── Root: Separation_of_concerns ──
+[12:37:27]   📁 OOP/Principles/SoC  (depth=0)
+[12:37:28]      ⚠ No existe: Separation_of_concerns
+[12:37:28]   ✅ 'OOP/Principles/SoC' completado: 0 artículos nuevos
+
+── Root: Dependency_injection ──
+[12:37:28]   📁 OOP/Principles/DI  (depth=0)
+[12:37:29]      ⚠ No existe: Dependency_injection
+[12:37:29]   ✅ 'OOP/Principles/DI' completado: 0 artículos nuevos
+
+── Root: Inversion_of_control ──
+[12:37:29]   📁 OOP/Principles/IoC  (depth=0)
+[12:37:29]      ⚠ No existe: Inversion_of_control
+[12:37:29]   ✅ 'OOP/Principles/IoC' completado: 0 artículos nuevos
+
+── Root: Law_of_Demeter ──
+[12:37:29]   📁 OOP/Principles/Demeter  (depth=0)
+[12:37:30]      ⚠ No existe: Law_of_Demeter
+[12:37:30]   ✅ 'OOP/Principles/Demeter' completado: 0 artículos nuevos
+
+── Root: Agile_software_development ──
+[12:37:30]   📁 OOP/Methodologies/Agile  (depth=0)
+[12:38:28]      ✅ 50 artículos en 'OOP/Methodologies/Agile'
+[12:38:46]   📁 OOP/Methodologies/Agile/DevOps  (depth=1)
+[12:38:51]   📁 OOP/Methodologies/Agile/Dynamic systems development method  (depth=1)
+[12:38:54]   📁 OOP/Methodologies/Agile/Extreme programming  (depth=1)
+[12:39:26]      ✅ 100 artículos en 'OOP/Methodologies/Agile'
+[12:39:26]   ✅ 'OOP/Methodologies/Agile' completado: 100 artículos nuevos
+
+── Root: Extreme_programming ──
+[12:39:26]   📁 OOP/Methodologies/XP  (depth=0)
+[12:39:30]   📁 OOP/Methodologies/XP/Continuous integration  (depth=1)
+[12:39:51]   ✅ 'OOP/Methodologies/XP' completado: 19 artículos nuevos
+
+── Root: Test-driven_development ──
+[12:39:51]   📁 OOP/Methodologies/TDD  (depth=0)
+[12:39:52]      ⚠ No existe: Test-driven_development
+[12:39:52]   ✅ 'OOP/Methodologies/TDD' completado: 0 artículos nuevos
+
+── Root: Refactoring ──
+[12:39:52]   📁 OOP/Refactoring  (depth=0)
+[12:39:53]      ⚠ No existe: Refactoring
+[12:39:53]   ✅ 'OOP/Refactoring' completado: 0 artículos nuevos
+
+── Root: Unified_Modeling_Language ──
+[12:39:53]   📁 OOP/UML  (depth=0)
+[12:40:49]      ✅ 50 artículos en 'OOP/UML'
+[12:41:01]   📁 OOP/UML/Systems Modeling Language  (depth=1)
+[12:41:13]   📁 OOP/UML/UML tools  (depth=1)
+[12:41:42]   📁 OOP/UML/Unified Modeling Language diagrams  (depth=1)
+[12:41:47]      ✅ 100 artículos en 'OOP/UML'
+[12:41:47]   ✅ 'OOP/UML' completado: 100 artículos nuevos
+
+── Root: Class_diagram ──
+[12:41:47]   📁 OOP/UML/ClassDiagram  (depth=0)
+[12:41:48]      ⚠ No existe: Class_diagram
+[12:41:48]   ✅ 'OOP/UML/ClassDiagram' completado: 0 artículos nuevos
+
+── Root: Sequence_diagram ──
+[12:41:48]   📁 OOP/UML/SequenceDiagram  (depth=0)
+[12:41:49]      ⚠ No existe: Sequence_diagram
+[12:41:49]   ✅ 'OOP/UML/SequenceDiagram' completado: 0 artículos nuevos
+
+── Root: Software_framework ──
+[12:41:49]   📁 OOP/Frameworks  (depth=0)
+[12:41:49]      ⚠ No existe: Software_framework
+[12:41:49]   ✅ 'OOP/Frameworks' completado: 0 artículos nuevos
+
+── Root: Model-view-controller ──
+[12:41:49]   📁 OOP/Patterns/Architectural/MVC  (depth=0)
+[12:41:50]      ⚠ No existe: Model-view-controller
+[12:41:50]   ✅ 'OOP/Patterns/Architectural/MVC' completado: 0 artículos nuevos
+
+── Root: Model-view-viewmodel ──
+[12:41:50]   📁 OOP/Patterns/Architectural/MVVM  (depth=0)
+[12:41:51]      ⚠ No existe: Model-view-viewmodel
+[12:41:51]   ✅ 'OOP/Patterns/Architectural/MVVM' completado: 0 artículos nuevos
+
+── Root: Spring_Framework ──
+[12:41:51]   📁 OOP/Frameworks/Spring  (depth=0)
+[12:41:52]      ⚠ No existe: Spring_Framework
+[12:41:52]   ✅ 'OOP/Frameworks/Spring' completado: 0 artículos nuevos
+
+── Root: Django_(web_framework) ──
+[12:41:52]   📁 OOP/Frameworks/Django  (depth=0)
+[12:41:52]      ⚠ No existe: Django_(web_framework)
+[12:41:52]   ✅ 'OOP/Frameworks/Django' completado: 0 artículos nuevos
+
+── Root: Functional_programming ──
+[12:41:52]   📁 OOP/Related/Functional  (depth=0)
+[12:42:52]      ✅ 50 artículos en 'OOP/Related/Functional'
+[12:43:05]   📁 OOP/Related/Functional/Combinatory logic  (depth=1)
+[12:43:16]   📁 OOP/Related/Functional/Dependently typed programming  (depth=1)
+[12:43:28]   📁 OOP/Related/Functional/Functional data structures  (depth=1)
+[12:43:32]   📁 OOP/Related/Functional/Functional languages  (depth=1)
+[12:43:53]      ✅ 100 artículos en 'OOP/Related/Functional'
+[12:43:53]   ✅ 'OOP/Related/Functional' completado: 100 artículos nuevos
+
+── Root: Generic_programming ──
+[12:43:53]   📁 OOP/Related/Generic  (depth=0)
+[12:43:55]   📁 OOP/Related/Generic/Metaprogramming  (depth=1)
+[12:43:56]   📁 OOP/Related/Generic/Metaprogramming/Language workbench  (depth=2)
+[12:44:04]   📁 OOP/Related/Generic/Metaprogramming/Program transformation  (depth=2)
+[12:44:14]   ✅ 'OOP/Related/Generic' completado: 15 artículos nuevos
+
+── Root: Aspect-oriented_programming ──
+[12:44:14]   📁 OOP/Related/AOP  (depth=0)
+[12:44:30]   ✅ 'OOP/Related/AOP' completado: 13 artículos nuevos
+
+── Root: Prototype-based_programming ──
+[12:44:30]   📁 OOP/Related/Prototype  (depth=0)
+[12:44:34]   📁 OOP/Related/Prototype/Prototype-based programming languages  (depth=1)
+[12:44:52]   📁 OOP/Related/Prototype/Prototype-based programming languages/JavaScript  (depth=2)
+[12:45:28]      ✅ 50 artículos en 'OOP/Related/Prototype'
+[12:45:43]   📁 OOP/Related/Prototype/Prototype-based programming languages/TypeScript  (depth=2)
+[12:45:48]   ✅ 'OOP/Related/Prototype' completado: 66 artículos nuevos
+
+── Root: Software_engineering ──
+[12:45:48]   📁 OOP/SoftEng  (depth=0)
+[12:46:43]      ✅ 50 artículos en 'OOP/SoftEng'
+[12:47:05]   📁 OOP/SoftEng/Software  (depth=1)
+[12:47:32]   📁 OOP/SoftEng/Software engineers  (depth=1)
+[12:47:40]      ✅ 100 artículos en 'OOP/SoftEng'
+[12:47:40]   ✅ 'OOP/SoftEng' completado: 100 artículos nuevos
+
+── Root: Software_architecture ──
+[12:47:40]   📁 OOP/SoftEng/Architecture  (depth=0)
+[12:48:36]      ✅ 50 artículos en 'OOP/SoftEng/Architecture'
+[12:49:28]      ✅ 100 artículos en 'OOP/SoftEng/Architecture'
+[12:49:28]   ✅ 'OOP/SoftEng/Architecture' completado: 100 artículos nuevos
+
+── Root: Code_refactoring ──
+[12:49:28]   📁 OOP/SoftEng/Refactoring  (depth=0)
+[12:49:32]   ✅ 'OOP/SoftEng/Refactoring' completado: 3 artículos nuevos
+
+── Root: Unit_testing ──
+[12:49:32]   📁 OOP/SoftEng/Testing  (depth=0)
+[12:49:46]   📁 OOP/SoftEng/Testing/Unit testing frameworks  (depth=1)
+[12:50:10]   ✅ 'OOP/SoftEng/Testing' completado: 33 artículos nuevos
+
+── Root: Version_control ──
+[12:50:10]   📁 OOP/SoftEng/VersionControl  (depth=0)
+[12:50:43]   📁 OOP/SoftEng/VersionControl/GitHub  (depth=1)
+[12:50:59]   📁 OOP/SoftEng/VersionControl/Version control systems  (depth=1)
+[12:51:09]      ✅ 50 artículos en 'OOP/SoftEng/VersionControl'
+[12:51:33]   📁 OOP/SoftEng/VersionControl/GitHub/Electron (software framework)  (depth=2)
+[12:51:37]   📁 OOP/SoftEng/VersionControl/GitHub/GitHub people  (depth=2)
+[12:51:46]   📁 OOP/SoftEng/VersionControl/Version control systems/Discontinued version control systems  (depth=2)
+[12:51:54]   📁 OOP/SoftEng/VersionControl/Version control systems/Concurrent Versions System  (depth=2)
+[12:52:06]   📁 OOP/SoftEng/VersionControl/Version control systems/Distributed version control systems  (depth=2)
+[12:52:10]      ✅ 100 artículos en 'OOP/SoftEng/VersionControl'
+[12:52:10]   ✅ 'OOP/SoftEng/VersionControl' completado: 100 artículos nuevos

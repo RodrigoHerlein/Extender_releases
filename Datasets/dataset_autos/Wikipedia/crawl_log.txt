@@ -1,0 +1,415 @@
+
+
+=== CRAWL INICIADO 2026-10-06T13:33:04.425345 ===
+=== Dataset: Autos / Automóviles ===
+
+── Root: Automobiles ──
+[13:33:04]   📁 Cars  (depth=0)
+[13:33:05]   ✅ 'Cars' completado: 0 artículos nuevos
+
+── Root: Automotive_industry ──
+[13:33:05]   📁 Cars/Industry  (depth=0)
+[13:34:03]      ✅ 50 artículos en 'Cars/Industry'
+[13:34:20]   📁 Cars/Industry/Automotive industry by country  (depth=1)
+[13:34:47]   📁 Cars/Industry/Automotive industry in Europe  (depth=1)
+[13:34:53]   📁 Cars/Industry/People in the automotive industry  (depth=1)
+[13:35:03]      ✅ 100 artículos en 'Cars/Industry'
+[13:35:03]   ✅ 'Cars/Industry' completado: 100 artículos nuevos
+
+── Root: Car ──
+[13:35:03]   📁 Cars/General  (depth=0)
+[13:35:03]      ⚠ No existe: Car
+[13:35:03]   ✅ 'Cars/General' completado: 0 artículos nuevos
+
+── Root: Automotive_engineering ──
+[13:35:03]   📁 Cars/Engineering  (depth=0)
+[13:36:01]      ✅ 50 artículos en 'Cars/Engineering'
+[13:36:12]   📁 Cars/Engineering/Automotive engineers  (depth=1)
+[13:36:50]   📁 Cars/Engineering/Self-driving cars  (depth=1)
+[13:37:02]      ✅ 100 artículos en 'Cars/Engineering'
+[13:37:02]   ✅ 'Cars/Engineering' completado: 100 artículos nuevos
+
+── Root: Vehicle_technology ──
+[13:37:02]   📁 Cars/Technology  (depth=0)
+[13:37:59]      ✅ 50 artículos en 'Cars/Technology'
+[13:38:35]   📁 Cars/Technology/Automotive technologies  (depth=1)
+[13:38:54]      ✅ 100 artículos en 'Cars/Technology'
+[13:38:54]   ✅ 'Cars/Technology' completado: 100 artículos nuevos
+
+── Root: Automobile_manufacturers ──
+[13:38:54]   📁 Cars/Manufacturers  (depth=0)
+[13:38:55]   ✅ 'Cars/Manufacturers' completado: 0 artículos nuevos
+
+── Root: German_automobile_manufacturers ──
+[13:38:55]   📁 Cars/Manufacturers/Germany  (depth=0)
+[13:38:56]      ⚠ No existe: German_automobile_manufacturers
+[13:38:56]   ✅ 'Cars/Manufacturers/Germany' completado: 0 artículos nuevos
+
+── Root: Italian_automobile_manufacturers ──
+[13:38:56]   📁 Cars/Manufacturers/Italy  (depth=0)
+[13:38:57]      ⚠ No existe: Italian_automobile_manufacturers
+[13:38:57]   ✅ 'Cars/Manufacturers/Italy' completado: 0 artículos nuevos
+
+── Root: Japanese_automobile_manufacturers ──
+[13:38:57]   📁 Cars/Manufacturers/Japan  (depth=0)
+[13:38:58]      ⚠ No existe: Japanese_automobile_manufacturers
+[13:38:58]   ✅ 'Cars/Manufacturers/Japan' completado: 0 artículos nuevos
+
+── Root: American_automobile_manufacturers ──
+[13:38:58]   📁 Cars/Manufacturers/USA  (depth=0)
+[13:38:58]      ⚠ No existe: American_automobile_manufacturers
+[13:38:58]   ✅ 'Cars/Manufacturers/USA' completado: 0 artículos nuevos
+
+── Root: Mercedes-Benz ──
+[13:38:58]   📁 Cars/Manufacturers/Mercedes  (depth=0)
+[13:40:00]      ✅ 50 artículos en 'Cars/Manufacturers/Mercedes'
+[13:40:06]   📁 Cars/Manufacturers/Mercedes/Daimler Motoren Gesellschaft  (depth=1)
+[13:40:25]   📁 Cars/Manufacturers/Mercedes/Mercedes-Benz designers  (depth=1)
+[13:40:31]   📁 Cars/Manufacturers/Mercedes/Mercedes-Benz engines  (depth=1)
+[13:40:59]      ✅ 100 artículos en 'Cars/Manufacturers/Mercedes'
+[13:40:59]   ✅ 'Cars/Manufacturers/Mercedes' completado: 100 artículos nuevos
+
+── Root: BMW ──
+[13:40:59]   📁 Cars/Manufacturers/BMW  (depth=0)
+[13:41:56]      ✅ 50 artículos en 'Cars/Manufacturers/BMW'
+[13:42:27]   📁 Cars/Manufacturers/BMW/BMW engines  (depth=1)
+[13:42:53]      ✅ 100 artículos en 'Cars/Manufacturers/BMW'
+[13:42:53]   ✅ 'Cars/Manufacturers/BMW' completado: 100 artículos nuevos
+
+── Root: Volkswagen ──
+[13:42:53]   📁 Cars/Manufacturers/VW  (depth=0)
+[13:42:54]      ⚠ No existe: Volkswagen
+[13:42:54]   ✅ 'Cars/Manufacturers/VW' completado: 0 artículos nuevos
+
+── Root: Toyota ──
+[13:42:54]   📁 Cars/Manufacturers/Toyota  (depth=0)
+[13:43:55]      ✅ 50 artículos en 'Cars/Manufacturers/Toyota'
+[13:44:53]      ✅ 100 artículos en 'Cars/Manufacturers/Toyota'
+[13:44:53]   ✅ 'Cars/Manufacturers/Toyota' completado: 100 artículos nuevos
+
+── Root: Ford_Motor_Company ──
+[13:44:53]   📁 Cars/Manufacturers/Ford  (depth=0)
+[13:45:54]      ✅ 50 artículos en 'Cars/Manufacturers/Ford'
+[13:46:54]      ✅ 100 artículos en 'Cars/Manufacturers/Ford'
+[13:46:54]   ✅ 'Cars/Manufacturers/Ford' completado: 100 artículos nuevos
+
+── Root: Ferrari ──
+[13:46:54]   📁 Cars/Manufacturers/Ferrari  (depth=0)
+[13:47:35]   📁 Cars/Manufacturers/Ferrari/Ferrari engines  (depth=1)
+[13:48:00]   📁 Cars/Manufacturers/Ferrari/Ferrari in motorsport  (depth=1)
+[13:48:06]      ✅ 50 artículos en 'Cars/Manufacturers/Ferrari'
+[13:48:31]   📁 Cars/Manufacturers/Ferrari/Ferrari World Abu Dhabi  (depth=1)
+[13:48:35]   📁 Cars/Manufacturers/Ferrari/Ferrari people  (depth=1)
+[13:49:34]      ✅ 100 artículos en 'Cars/Manufacturers/Ferrari'
+[13:49:34]   ✅ 'Cars/Manufacturers/Ferrari' completado: 100 artículos nuevos
+
+── Root: Lamborghini ──
+[13:49:34]   📁 Cars/Manufacturers/Lamborghini  (depth=0)
+[13:49:52]   📁 Cars/Manufacturers/Lamborghini/Lamborghini vehicles  (depth=1)
+[13:50:27]   📁 Cars/Manufacturers/Lamborghini/Ducati (company)  (depth=1)
+[13:50:34]      ✅ 50 artículos en 'Cars/Manufacturers/Lamborghini'
+[13:50:37]   📁 Cars/Manufacturers/Lamborghini/Lamborghini engines  (depth=1)
+[13:50:45]   📁 Cars/Manufacturers/Lamborghini/Italdesign Giugiaro  (depth=1)
+[13:50:50]   📁 Cars/Manufacturers/Lamborghini/Lamborghini Super Trofeo  (depth=1)
+[13:50:52]   📁 Cars/Manufacturers/Lamborghini/Lamborghini people  (depth=1)
+[13:51:17]   📁 Cars/Manufacturers/Lamborghini/Lamborghini video games  (depth=1)
+[13:51:21]   📁 Cars/Manufacturers/Lamborghini/Lamborghini vehicles/Lamborghini custom and concept cars  (depth=2)
+[13:51:40]      ✅ 100 artículos en 'Cars/Manufacturers/Lamborghini'
+[13:51:40]   ✅ 'Cars/Manufacturers/Lamborghini' completado: 100 artículos nuevos
+
+── Root: Porsche ──
+[13:51:40]   📁 Cars/Manufacturers/Porsche  (depth=0)
+[13:52:24]   📁 Cars/Manufacturers/Porsche/Porsche in motorsport  (depth=1)
+[13:52:37]      ✅ 50 artículos en 'Cars/Manufacturers/Porsche'
+[13:52:57]   📁 Cars/Manufacturers/Porsche/Porsche people  (depth=1)
+[13:53:29]   📁 Cars/Manufacturers/Porsche/Porsche vehicles  (depth=1)
+[13:53:40]      ✅ 100 artículos en 'Cars/Manufacturers/Porsche'
+[13:53:40]   ✅ 'Cars/Manufacturers/Porsche' completado: 100 artículos nuevos
+
+── Root: Tesla,_Inc. ──
+[13:53:40]   📁 Cars/Manufacturers/Tesla  (depth=0)
+[13:54:38]   📁 Cars/Manufacturers/Tesla/Tesla factories  (depth=1)
+[13:54:46]      ✅ 50 artículos en 'Cars/Manufacturers/Tesla'
+[13:54:52]   📁 Cars/Manufacturers/Tesla/Tesla, Inc. litigation  (depth=1)
+[13:55:01]   📁 Cars/Manufacturers/Tesla/Tesla, Inc. people  (depth=1)
+[13:55:38]   📁 Cars/Manufacturers/Tesla/Tesla, Inc.-related lists  (depth=1)
+[13:55:39]   📁 Cars/Manufacturers/Tesla/Tesla vehicles  (depth=1)
+[13:55:50]      ✅ 100 artículos en 'Cars/Manufacturers/Tesla'
+[13:55:50]   ✅ 'Cars/Manufacturers/Tesla' completado: 100 artículos nuevos
+
+── Root: Electric_vehicles ──
+[13:55:50]   📁 Cars/Types/Electric  (depth=0)
+[13:56:49]      ✅ 50 artículos en 'Cars/Types/Electric'
+[13:57:45]      ✅ 100 artículos en 'Cars/Types/Electric'
+[13:57:45]   ✅ 'Cars/Types/Electric' completado: 100 artículos nuevos
+
+── Root: Hybrid_vehicles ──
+[13:57:45]   📁 Cars/Types/Hybrid  (depth=0)
+[13:58:30]   📁 Cars/Types/Hybrid/Diesel hybrid vehicles  (depth=1)
+[13:58:43]      ✅ 50 artículos en 'Cars/Types/Hybrid'
+[13:59:28]   📁 Cars/Types/Hybrid/Hybrid electric vehicles  (depth=1)
+[13:59:43]      ✅ 100 artículos en 'Cars/Types/Hybrid'
+[13:59:43]   ✅ 'Cars/Types/Hybrid' completado: 100 artículos nuevos
+
+── Root: Sport_utility_vehicles ──
+[13:59:43]   📁 Cars/Types/SUV  (depth=0)
+[14:00:32]   📁 Cars/Types/SUV/ARO vehicles  (depth=1)
+[14:00:36]   📁 Cars/Types/SUV/Compact sport utility vehicles  (depth=1)
+[14:00:43]      ✅ 50 artículos en 'Cars/Types/SUV'
+[14:01:41]      ✅ 100 artículos en 'Cars/Types/SUV'
+[14:01:41]   ✅ 'Cars/Types/SUV' completado: 100 artículos nuevos
+
+── Root: Sedans ──
+[14:01:41]   📁 Cars/Types/Sedan  (depth=0)
+[14:02:39]      ✅ 50 artículos en 'Cars/Types/Sedan'
+[14:03:34]      ✅ 100 artículos en 'Cars/Types/Sedan'
+[14:03:34]   ✅ 'Cars/Types/Sedan' completado: 100 artículos nuevos
+
+── Root: Sports_cars ──
+[14:03:34]   📁 Cars/Types/Sports  (depth=0)
+[14:04:30]      ✅ 50 artículos en 'Cars/Types/Sports'
+[14:05:26]      ✅ 100 artículos en 'Cars/Types/Sports'
+[14:05:26]   ✅ 'Cars/Types/Sports' completado: 100 artículos nuevos
+
+── Root: Concept_cars ──
+[14:05:26]   📁 Cars/Design/Concept  (depth=0)
+[14:06:22]      ✅ 50 artículos en 'Cars/Design/Concept'
+[14:07:17]      ✅ 100 artículos en 'Cars/Design/Concept'
+[14:07:17]   ✅ 'Cars/Design/Concept' completado: 100 artículos nuevos
+
+── Root: Pickup_trucks ──
+[14:07:17]   📁 Cars/Types/Pickup  (depth=0)
+[14:08:15]      ✅ 50 artículos en 'Cars/Types/Pickup'
+[14:09:13]      ✅ 100 artículos en 'Cars/Types/Pickup'
+[14:09:13]   ✅ 'Cars/Types/Pickup' completado: 100 artículos nuevos
+
+── Root: Luxury_vehicles ──
+[14:09:13]   📁 Cars/Types/Luxury  (depth=0)
+[14:10:13]      ✅ 50 artículos en 'Cars/Types/Luxury'
+[14:11:09]      ✅ 100 artículos en 'Cars/Types/Luxury'
+[14:11:09]   ✅ 'Cars/Types/Luxury' completado: 100 artículos nuevos
+
+── Root: Autonomous_vehicles ──
+[14:11:09]   📁 Cars/Types/Autonomous  (depth=0)
+[14:11:09]      ⚠ No existe: Autonomous_vehicles
+[14:11:09]   ✅ 'Cars/Types/Autonomous' completado: 0 artículos nuevos
+
+── Root: Internal_combustion_engines ──
+[14:11:09]   📁 Cars/Engineering/Engine/ICE  (depth=0)
+[14:11:10]      ⚠ No existe: Internal_combustion_engines
+[14:11:10]   ✅ 'Cars/Engineering/Engine/ICE' completado: 0 artículos nuevos
+
+── Root: Electric_motors ──
+[14:11:10]   📁 Cars/Engineering/Engine/Electric  (depth=0)
+[14:12:05]      ✅ 50 artículos en 'Cars/Engineering/Engine/Electric'
+[14:12:59]      ✅ 100 artículos en 'Cars/Engineering/Engine/Electric'
+[14:12:59]   ✅ 'Cars/Engineering/Engine/Electric' completado: 100 artículos nuevos
+
+── Root: Transmission_(mechanics) ──
+[14:12:59]   📁 Cars/Engineering/Transmission  (depth=0)
+[14:13:00]      ⚠ No existe: Transmission_(mechanics)
+[14:13:00]   ✅ 'Cars/Engineering/Transmission' completado: 0 artículos nuevos
+
+── Root: Suspension_(vehicle) ──
+[14:13:00]   📁 Cars/Engineering/Suspension  (depth=0)
+[14:13:01]      ⚠ No existe: Suspension_(vehicle)
+[14:13:01]   ✅ 'Cars/Engineering/Suspension' completado: 0 artículos nuevos
+
+── Root: Braking_system ──
+[14:13:01]   📁 Cars/Engineering/Brakes  (depth=0)
+[14:13:01]      ⚠ No existe: Braking_system
+[14:13:01]   ✅ 'Cars/Engineering/Brakes' completado: 0 artículos nuevos
+
+── Root: Automotive_safety ──
+[14:13:01]   📁 Cars/Engineering/Safety  (depth=0)
+[14:13:57]      ✅ 50 artículos en 'Cars/Engineering/Safety'
+[14:14:52]      ✅ 100 artículos en 'Cars/Engineering/Safety'
+[14:14:52]   ✅ 'Cars/Engineering/Safety' completado: 100 artículos nuevos
+
+── Root: Aerodynamics ──
+[14:14:52]   📁 Cars/Engineering/Aerodynamics  (depth=0)
+[14:15:49]      ✅ 50 artículos en 'Cars/Engineering/Aerodynamics'
+[14:16:49]      ✅ 100 artículos en 'Cars/Engineering/Aerodynamics'
+[14:16:49]   ✅ 'Cars/Engineering/Aerodynamics' completado: 100 artículos nuevos
+
+── Root: Fuel_injection ──
+[14:16:49]   📁 Cars/Engineering/FuelInjection  (depth=0)
+[14:16:49]      ⚠ No existe: Fuel_injection
+[14:16:49]   ✅ 'Cars/Engineering/FuelInjection' completado: 0 artículos nuevos
+
+── Root: Turbocharger ──
+[14:16:49]   📁 Cars/Engineering/Turbo  (depth=0)
+[14:16:50]      ⚠ No existe: Turbocharger
+[14:16:50]   ✅ 'Cars/Engineering/Turbo' completado: 0 artículos nuevos
+
+── Root: Battery_electric_vehicle ──
+[14:16:50]   📁 Cars/Engineering/BatteryEV  (depth=0)
+[14:16:51]      ⚠ No existe: Battery_electric_vehicle
+[14:16:51]   ✅ 'Cars/Engineering/BatteryEV' completado: 0 artículos nuevos
+
+── Root: Charging_station ──
+[14:16:51]   📁 Cars/Technology/Charging  (depth=0)
+[14:16:52]      ⚠ No existe: Charging_station
+[14:16:52]   ✅ 'Cars/Technology/Charging' completado: 0 artículos nuevos
+
+── Root: Four-stroke_engine ──
+[14:16:52]   📁 Cars/Engineering/Engine/FourStroke  (depth=0)
+[14:16:52]      ⚠ No existe: Four-stroke_engine
+[14:16:52]   ✅ 'Cars/Engineering/Engine/FourStroke' completado: 0 artículos nuevos
+
+── Root: Diesel_engine ──
+[14:16:52]   📁 Cars/Engineering/Engine/Diesel  (depth=0)
+[14:16:53]      ⚠ No existe: Diesel_engine
+[14:16:53]   ✅ 'Cars/Engineering/Engine/Diesel' completado: 0 artículos nuevos
+
+── Root: V8_engine ──
+[14:16:53]   📁 Cars/Engineering/Engine/V8  (depth=0)
+[14:16:54]      ⚠ No existe: V8_engine
+[14:16:54]   ✅ 'Cars/Engineering/Engine/V8' completado: 0 artículos nuevos
+
+── Root: Flat-six_engine ──
+[14:16:54]   📁 Cars/Engineering/Engine/Flat6  (depth=0)
+[14:16:55]      ⚠ No existe: Flat-six_engine
+[14:16:55]   ✅ 'Cars/Engineering/Engine/Flat6' completado: 0 artículos nuevos
+
+── Root: Formula_One ──
+[14:16:55]   📁 Cars/Racing/F1  (depth=0)
+[14:18:02]      ✅ 50 artículos en 'Cars/Racing/F1'
+[14:18:13]   📁 Cars/Racing/F1/British Formula One Championship  (depth=1)
+[14:18:21]   📁 Cars/Racing/F1/Formula One cars  (depth=1)
+[14:18:58]      ✅ 100 artículos en 'Cars/Racing/F1'
+[14:18:58]   ✅ 'Cars/Racing/F1' completado: 100 artículos nuevos
+
+── Root: Motorsport ──
+[14:18:58]   📁 Cars/Racing  (depth=0)
+[14:19:01]   📁 Cars/Racing/Motorsport by populated place  (depth=1)
+[14:19:02]   📁 Cars/Racing/Motorsport by continent  (depth=1)
+[14:19:03]   📁 Cars/Racing/Motorsport by country  (depth=1)
+[14:19:04]   📁 Cars/Racing/Motorsport by type  (depth=1)
+[14:19:40]   📁 Cars/Racing/Motorsport-related lists  (depth=1)
+[14:19:43]   📁 Cars/Racing/Motorsport posters  (depth=1)
+[14:19:44]   📁 Cars/Racing/Motorsport competition program cover images  (depth=1)
+[14:19:46]   📁 Cars/Racing/Motor racing  (depth=1)
+[14:19:48]   📁 Cars/Racing/Motorsport competitions  (depth=1)
+[14:19:49]   📁 Cars/Racing/Motorsport controversies  (depth=1)
+[14:19:50]   📁 Cars/Racing/Motorsport deaths  (depth=1)
+[14:19:55]   📁 Cars/Racing/History of motorsport  (depth=1)
+[14:20:09]      ✅ 50 artículos en 'Cars/Racing'
+[14:20:10]   📁 Cars/Racing/Motorsport logos  (depth=1)
+[14:20:12]   📁 Cars/Racing/Motorsport mass media  (depth=1)
+[14:20:14]   📁 Cars/Racing/Motorsport organizations  (depth=1)
+[14:20:18]   📁 Cars/Racing/Motorsport technology  (depth=1)
+[14:20:21]   📁 Cars/Racing/Motorsports seat manufacturers  (depth=1)
+[14:20:35]   📁 Cars/Racing/Motorsport people  (depth=1)
+[14:20:38]   📁 Cars/Racing/Motorsport terminology  (depth=1)
+[14:21:14]      ✅ 100 artículos en 'Cars/Racing'
+[14:21:14]   ✅ 'Cars/Racing' completado: 100 artículos nuevos
+
+── Root: Le_Mans_24_Hours ──
+[14:21:14]   📁 Cars/Racing/LeMans  (depth=0)
+[14:21:15]      ⚠ No existe: Le_Mans_24_Hours
+[14:21:15]   ✅ 'Cars/Racing/LeMans' completado: 0 artículos nuevos
+
+── Root: NASCAR ──
+[14:21:15]   📁 Cars/Racing/NASCAR  (depth=0)
+[14:21:57]   📁 Cars/Racing/NASCAR/NASCAR-related lists  (depth=1)
+[14:22:17]      ✅ 50 artículos en 'Cars/Racing/NASCAR'
+[14:22:34]   📁 Cars/Racing/NASCAR/ARCA Menards Series races  (depth=1)
+[14:23:14]      ✅ 100 artículos en 'Cars/Racing/NASCAR'
+[14:23:14]   ✅ 'Cars/Racing/NASCAR' completado: 100 artículos nuevos
+
+── Root: Rally_racing ──
+[14:23:14]   📁 Cars/Racing/Rally  (depth=0)
+[14:23:15]   ✅ 'Cars/Racing/Rally' completado: 0 artículos nuevos
+
+── Root: IndyCar_Series ──
+[14:23:15]   📁 Cars/Racing/IndyCar  (depth=0)
+[14:23:54]   📁 Cars/Racing/IndyCar/American open-wheel car racing champions  (depth=1)
+[14:23:57]   📁 Cars/Racing/IndyCar/American open-wheel car racing controversies  (depth=1)
+[14:24:16]      ✅ 50 artículos en 'Cars/Racing/IndyCar'
+[14:24:28]   📁 Cars/Racing/IndyCar/IndyCar Series champions  (depth=1)
+[14:24:52]   📁 Cars/Racing/IndyCar/IndyCar Series engine manufacturers  (depth=1)
+[14:25:05]   📁 Cars/Racing/IndyCar/Hulman–George family  (depth=1)
+[14:25:15]   📁 Cars/Racing/IndyCar/Indy Lights  (depth=1)
+[14:25:20]   📁 Cars/Racing/IndyCar/Indy NXT  (depth=1)
+[14:25:24]   📁 Cars/Racing/IndyCar/Indy Pro 2000 Championship  (depth=1)
+[14:25:29]      ✅ 100 artículos en 'Cars/Racing/IndyCar'
+[14:25:29]   ✅ 'Cars/Racing/IndyCar' completado: 100 artículos nuevos
+
+── Root: World_Rally_Championship ──
+[14:25:29]   📁 Cars/Racing/WRC  (depth=0)
+[14:25:59]   📁 Cars/Racing/WRC/Drive DMACK Fiesta Trophy  (depth=1)
+[14:26:03]   📁 Cars/Racing/WRC/World Rally Championship drivers  (depth=1)
+[14:26:38]      ✅ 50 artículos en 'Cars/Racing/WRC'
+[14:27:50]      ✅ 100 artículos en 'Cars/Racing/WRC'
+[14:27:50]   ✅ 'Cars/Racing/WRC' completado: 100 artículos nuevos
+
+── Root: Self-driving_car ──
+[14:27:50]   📁 Cars/Tech/SelfDriving  (depth=0)
+[14:27:51]      ⚠ No existe: Self-driving_car
+[14:27:51]   ✅ 'Cars/Tech/SelfDriving' completado: 0 artículos nuevos
+
+── Root: Advanced_driver-assistance_systems ──
+[14:27:51]   📁 Cars/Tech/ADAS  (depth=0)
+[14:27:52]      ⚠ No existe: Advanced_driver-assistance_systems
+[14:27:52]   ✅ 'Cars/Tech/ADAS' completado: 0 artículos nuevos
+
+── Root: Vehicle_to_grid ──
+[14:27:52]   📁 Cars/Tech/V2G  (depth=0)
+[14:27:53]      ⚠ No existe: Vehicle_to_grid
+[14:27:53]   ✅ 'Cars/Tech/V2G' completado: 0 artículos nuevos
+
+── Root: Hydrogen_vehicle ──
+[14:27:53]   📁 Cars/Tech/Hydrogen  (depth=0)
+[14:27:54]      ⚠ No existe: Hydrogen_vehicle
+[14:27:54]   ✅ 'Cars/Tech/Hydrogen' completado: 0 artículos nuevos
+
+── Root: Connected_car ──
+[14:27:54]   📁 Cars/Tech/Connected  (depth=0)
+[14:27:54]      ⚠ No existe: Connected_car
+[14:27:54]   ✅ 'Cars/Tech/Connected' completado: 0 artículos nuevos
+
+── Root: Vehicle_dynamics ──
+[14:27:54]   📁 Cars/Tech/Dynamics  (depth=0)
+[14:28:06]   📁 Cars/Tech/Dynamics/Tires  (depth=1)
+[14:28:51]      ✅ 50 artículos en 'Cars/Tech/Dynamics'
+[14:29:47]      ✅ 100 artículos en 'Cars/Tech/Dynamics'
+[14:29:47]   ✅ 'Cars/Tech/Dynamics' completado: 100 artículos nuevos
+
+── Root: History_of_the_automobile ──
+[14:29:47]   📁 Cars/History  (depth=0)
+[14:30:11]   📁 Cars/History/Automotive museums  (depth=1)
+[14:30:48]      ✅ 50 artículos en 'Cars/History'
+[14:30:54]   📁 Cars/History/Cars by period  (depth=1)
+[14:31:04]   📁 Cars/History/History of automotive companies  (depth=1)
+[14:31:13]   📁 Cars/History/Defunct auto racing series  (depth=1)
+[14:31:51]      ✅ 100 artículos en 'Cars/History'
+[14:31:51]   ✅ 'Cars/History' completado: 100 artículos nuevos
+
+── Root: Automotive_design ──
+[14:31:51]   📁 Cars/Design  (depth=0)
+[14:32:06]   📁 Cars/Design/Automotive safety  (depth=1)
+[14:32:44]   📁 Cars/Design/Car body styles  (depth=1)
+[14:32:52]      ✅ 50 artículos en 'Cars/Design'
+[14:33:29]   📁 Cars/Design/Car classifications  (depth=1)
+[14:33:47]      ✅ 100 artículos en 'Cars/Design'
+[14:33:47]   ✅ 'Cars/Design' completado: 100 artículos nuevos
+
+── Root: Car_culture ──
+[14:33:47]   📁 Cars/Culture  (depth=0)
+[14:34:15]   📁 Cars/Culture/Automotive museums  (depth=1)
+[14:34:18]   📁 Cars/Culture/Car collectors  (depth=1)
+[14:34:40]   📁 Cars/Culture/Auto shows  (depth=1)
+[14:34:48]      ✅ 50 artículos en 'Cars/Culture'
+[14:35:11]   📁 Cars/Culture/Automobile associations  (depth=1)
+[14:35:47]      ✅ 100 artículos en 'Cars/Culture'
+[14:35:47]   ✅ 'Cars/Culture' completado: 100 artículos nuevos
+
+── Root: Classic_cars ──
+[14:35:47]   📁 Cars/History/Classic  (depth=0)
+[14:35:48]      ⚠ No existe: Classic_cars
+[14:35:48]   ✅ 'Cars/History/Classic' completado: 0 artículos nuevos
+
+── Root: Automobile_safety ──
+[14:35:48]   📁 Cars/Safety  (depth=0)
+[14:35:49]   ✅ 'Cars/Safety' completado: 0 artículos nuevos

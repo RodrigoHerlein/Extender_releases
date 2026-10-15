@@ -1,0 +1,1129 @@
+{
+  "map_name": "Software_2",
+  "known_map": null,
+  "timestamp": "2026-09-16T17:51:06",
+  "fast_mode": false,
+  "best_enc": "path_aware",
+  "best_configs": {
+    "path_aware": {
+      "score": 0.6284,
+      "focus": 0.4551,
+      "coh": 0.8017,
+      "params": {
+        "umap_n_neighbors": 15,
+        "umap_n_components": 5,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_coherence": 0.1,
+        "max_topic_fraction": 0.25,
+        "domain_category_min_fraction": 0.3
+      }
+    },
+    "hybrid": {
+      "score": 0.6256,
+      "focus": 0.419,
+      "coh": 0.8323,
+      "params": {
+        "umap_n_neighbors": 15,
+        "umap_n_components": 5,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_coherence": 0.1,
+        "max_topic_fraction": 0.25,
+        "domain_category_min_fraction": 0.3
+      }
+    }
+  },
+  "top5_by_enc": {
+    "path_aware": {
+      "score": [
+        {
+          "run_i": 1,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4551,
+          "coh": 0.8017,
+          "score": 0.6284,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 7.16
+        },
+        {
+          "run_i": 2,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4551,
+          "coh": 0.8017,
+          "score": 0.6284,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.91
+        },
+        {
+          "run_i": 3,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4551,
+          "coh": 0.8017,
+          "score": 0.6284,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.93
+        },
+        {
+          "run_i": 4,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4551,
+          "coh": 0.8017,
+          "score": 0.6284,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.93
+        },
+        {
+          "run_i": 5,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4551,
+          "coh": 0.8017,
+          "score": 0.6284,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.53
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 19,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.5149,
+          "coh": 0.5224,
+          "score": 0.5187,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.72
+        },
+        {
+          "run_i": 20,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.5149,
+          "coh": 0.5224,
+          "score": 0.5187,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.74
+        },
+        {
+          "run_i": 21,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.5149,
+          "coh": 0.5224,
+          "score": 0.5187,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.71
+        },
+        {
+          "run_i": 22,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.5149,
+          "coh": 0.5224,
+          "score": 0.5187,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.62
+        },
+        {
+          "run_i": 23,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.5149,
+          "coh": 0.5224,
+          "score": 0.5187,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.74
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 55,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4064,
+          "coh": 0.808,
+          "score": 0.6072,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.82
+        },
+        {
+          "run_i": 56,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4064,
+          "coh": 0.808,
+          "score": 0.6072,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.83
+        },
+        {
+          "run_i": 57,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4064,
+          "coh": 0.808,
+          "score": 0.6072,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.01
+        },
+        {
+          "run_i": 58,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4064,
+          "coh": 0.808,
+          "score": 0.6072,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.19
+        },
+        {
+          "run_i": 59,
+          "enc": "path_aware",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4064,
+          "coh": 0.808,
+          "score": 0.6072,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.0
+        }
+      ]
+    },
+    "hybrid": {
+      "score": [
+        {
+          "run_i": 325,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.419,
+          "coh": 0.8323,
+          "score": 0.6256,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 7.04
+        },
+        {
+          "run_i": 326,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.419,
+          "coh": 0.8323,
+          "score": 0.6256,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.99
+        },
+        {
+          "run_i": 327,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.419,
+          "coh": 0.8323,
+          "score": 0.6256,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.95
+        },
+        {
+          "run_i": 328,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.419,
+          "coh": 0.8323,
+          "score": 0.6256,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.32
+        },
+        {
+          "run_i": 329,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.419,
+          "coh": 0.8323,
+          "score": 0.6256,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.97
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 505,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 20,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4884,
+          "coh": 0.4975,
+          "score": 0.4929,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.85
+        },
+        {
+          "run_i": 506,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 20,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4884,
+          "coh": 0.4975,
+          "score": 0.4929,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.88
+        },
+        {
+          "run_i": 507,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 20,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4884,
+          "coh": 0.4975,
+          "score": 0.4929,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.89
+        },
+        {
+          "run_i": 508,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 20,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4884,
+          "coh": 0.4975,
+          "score": 0.4929,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.81
+        },
+        {
+          "run_i": 509,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 20,
+            "umap_n_components": 5,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4884,
+          "coh": 0.4975,
+          "score": 0.4929,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.74
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 352,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4157,
+          "coh": 0.8327,
+          "score": 0.6242,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.96
+        },
+        {
+          "run_i": 353,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4157,
+          "coh": 0.8327,
+          "score": 0.6242,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.96
+        },
+        {
+          "run_i": 354,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.1,
+            "max_topic_fraction": 0.5,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4157,
+          "coh": 0.8327,
+          "score": 0.6242,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.95
+        },
+        {
+          "run_i": 355,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.25,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4157,
+          "coh": 0.8327,
+          "score": 0.6242,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 6.99
+        },
+        {
+          "run_i": 356,
+          "enc": "hybrid",
+          "params": {
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_coherence": 0.12,
+            "max_topic_fraction": 0.35,
+            "domain_category_min_fraction": 0.3
+          },
+          "focus": 0.4157,
+          "coh": 0.8327,
+          "score": 0.6242,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 7.02
+        }
+      ]
+    }
+  },
+  "concept_map": {
+    "title": "Software_2",
+    "root": "Software",
+    "concepts": [
+      "Software",
+      "Software Engineering",
+      "Programming Languages",
+      "Artificial Intelligence",
+      "Operating Systems",
+      "Databases",
+      "Distributed Systems"
+    ],
+    "relations": [
+      {
+        "src": "Software",
+        "link": "Specialization of",
+        "dst": "Software Engineering"
+      },
+      {
+        "src": "Software",
+        "link": "Implemented in",
+        "dst": "Programming Languages"
+      },
+      {
+        "src": "Software",
+        "link": "is transformed by",
+        "dst": "Artificial Intelligence"
+      },
+      {
+        "src": "Software",
+        "link": "executed in",
+        "dst": "Operating Systems"
+      },
+      {
+        "src": "Software",
+        "link": "manages",
+        "dst": "Databases"
+      },
+      {
+        "src": "Operating Systems",
+        "link": "extends to",
+        "dst": "Distributed Systems"
+      },
+      {
+        "src": "Distributed Systems",
+        "link": "scales",
+        "dst": "Databases"
+      }
+    ],
+    "config": {
+      "path_max_depth": 12,
+      "path_max_paths_per_node": 200,
+      "hybrid_window_k": 3,
+      "n_aspects": 4,
+      "top_k_per_aspect": 500,
+      "min_aspect_sim": 0.1,
+      "min_doc_relevance": 0.05,
+      "umap_n_neighbors": 20,
+      "umap_n_components": 10,
+      "n_output_topics": 8,
+      "min_cluster_size": 5,
+      "min_samples": 1,
+      "min_nr_topics": 3,
+      "max_nr_topics": 12,
+      "focus_weight": 0.45,
+      "specificity_weight": 0.35,
+      "quality_weight": 0.2,
+      "min_coherence": 0.12,
+      "max_topic_fraction": 0.4,
+      "min_output_focus": 0.02,
+      "domain_category_min_fraction": 0.3,
+      "exclude_category_max_fraction": 0.3,
+      "domain_category_penalty": 0.05,
+      "__encoder": "path_aware",
+      "__domain_kw": "",
+      "__exclude_kw": ""
+    },
+    "events": [
+      {
+        "ts": "2026-09-16T19:19:37.129Z",
+        "epochId": 4,
+        "type": "param",
+        "icon": "🔀",
+        "text": "Representación: Caminos"
+      },
+      {
+        "ts": "2026-09-16T19:18:59.572Z",
+        "epochId": 4,
+        "type": "param",
+        "icon": "⚙",
+        "text": "Coherencia mínima → 0.12"
+      },
+      {
+        "ts": "2026-09-16T19:18:50.118Z",
+        "epochId": 4,
+        "type": "param",
+        "icon": "⚙",
+        "text": "Tópicos de salida → 8"
+      },
+      {
+        "ts": "2026-09-16T19:18:45.325Z",
+        "epochId": 4,
+        "type": "param",
+        "icon": "⚙",
+        "text": "Tamaño mín. cluster → 5"
+      },
+      {
+        "ts": "2026-09-16T19:17:58.723Z",
+        "epochId": 4,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"programming_operating_language\""
+      },
+      {
+        "ts": "2026-09-16T19:17:49.300Z",
+        "epochId": 4,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Outline of the C sharp programming language\""
+      },
+      {
+        "ts": "2026-09-16T19:17:13.876Z",
+        "epochId": 4,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"programming_operating_language\""
+      },
+      {
+        "ts": "2026-09-16T16:52:05.953Z",
+        "epochId": 3,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Distributed Systems —[scales]→ Databases"
+      },
+      {
+        "ts": "2026-09-16T16:51:47.444Z",
+        "epochId": 3,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Operating Systems —[extends to]→ Distributed Systems"
+      },
+      {
+        "ts": "2026-09-16T16:51:33.708Z",
+        "epochId": 3,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Distributed Systems\""
+      },
+      {
+        "ts": "2026-09-16T16:51:17.540Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Parallel computing\""
+      },
+      {
+        "ts": "2026-09-16T16:51:09.668Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Distributed computing\""
+      },
+      {
+        "ts": "2026-09-16T16:51:08.067Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Distributed operating system\""
+      },
+      {
+        "ts": "2026-09-16T16:50:56.843Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"software_engineering_data\""
+      },
+      {
+        "ts": "2026-09-16T16:50:35.569Z",
+        "epochId": 3,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Software —[manages]→ Databases"
+      },
+      {
+        "ts": "2026-09-16T16:50:25.219Z",
+        "epochId": 3,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Databases\""
+      },
+      {
+        "ts": "2026-09-16T16:50:13.379Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Data mesh\""
+      },
+      {
+        "ts": "2026-09-16T16:50:07.251Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Distributed concurrency control\""
+      },
+      {
+        "ts": "2026-09-16T16:49:50.971Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Spanner (database)\""
+      },
+      {
+        "ts": "2026-09-16T16:49:41.011Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Document-oriented database\""
+      },
+      {
+        "ts": "2026-09-16T16:49:23.124Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Data administration\""
+      },
+      {
+        "ts": "2026-09-16T16:49:19.011Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Database transaction schedule\""
+      },
+      {
+        "ts": "2026-09-16T16:49:12.787Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Database application\""
+      },
+      {
+        "ts": "2026-09-16T16:48:56.843Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Database\""
+      },
+      {
+        "ts": "2026-09-16T16:48:39.019Z",
+        "epochId": 3,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"software_engineering_data\""
+      },
+      {
+        "ts": "2026-09-16T16:24:59.714Z",
+        "epochId": 2,
+        "type": "param",
+        "icon": "🔀",
+        "text": "Representación: Tripletas"
+      },
+      {
+        "ts": "2026-09-16T16:24:20.087Z",
+        "epochId": 2,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Software —[executed in]→ Operating Systems"
+      },
+      {
+        "ts": "2026-09-16T16:24:07.533Z",
+        "epochId": 2,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Operating Systems\""
+      },
+      {
+        "ts": "2026-09-16T16:23:28.554Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"List of operating systems\""
+      },
+      {
+        "ts": "2026-09-16T16:23:01.626Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Access Linux Platform\""
+      },
+      {
+        "ts": "2026-09-16T16:22:40.594Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Operating system\""
+      },
+      {
+        "ts": "2026-09-16T16:22:35.386Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"operating_operating systems_systems\""
+      },
+      {
+        "ts": "2026-09-16T16:21:26.531Z",
+        "epochId": 2,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Software —[is transformed by]→ Artificial Intelligence"
+      },
+      {
+        "ts": "2026-09-16T16:21:17.700Z",
+        "epochId": 2,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Artificial Intelligence\""
+      },
+      {
+        "ts": "2026-09-16T16:19:59.074Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"AI-assisted software development\""
+      },
+      {
+        "ts": "2026-09-16T16:19:50.106Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"AI agent\""
+      },
+      {
+        "ts": "2026-09-16T16:19:42.146Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Outline of machine learning\""
+      },
+      {
+        "ts": "2026-09-16T16:19:33.417Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Artificial intelligence\""
+      },
+      {
+        "ts": "2026-09-16T16:19:23.818Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"ai_learning_machine learning\""
+      },
+      {
+        "ts": "2026-09-16T16:19:04.271Z",
+        "epochId": 2,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Software —[Implemented in]→ Programming Languages"
+      },
+      {
+        "ts": "2026-09-16T16:18:54.610Z",
+        "epochId": 2,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Programming Languages\""
+      },
+      {
+        "ts": "2026-09-16T16:17:23.657Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Go (programming language)\""
+      },
+      {
+        "ts": "2026-09-16T16:17:17.585Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Outline of the Rust programming language\""
+      },
+      {
+        "ts": "2026-09-16T16:16:54.626Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Java (programming language)\""
+      },
+      {
+        "ts": "2026-09-16T16:16:29.059Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Programming language\""
+      },
+      {
+        "ts": "2026-09-16T16:16:24.609Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"programming_language_programming language\""
+      },
+      {
+        "ts": "2026-09-16T16:16:06.393Z",
+        "epochId": 2,
+        "type": "arc",
+        "icon": "🔗",
+        "text": "Software —[Specialization of]→ Software Engineering"
+      },
+      {
+        "ts": "2026-09-16T16:15:13.109Z",
+        "epochId": 2,
+        "type": "node",
+        "icon": "➕",
+        "text": "Nodo agregado: \"Software Engineering\""
+      },
+      {
+        "ts": "2026-09-16T16:14:39.721Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Software requirements\""
+      },
+      {
+        "ts": "2026-09-16T16:14:32.297Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Software design\""
+      },
+      {
+        "ts": "2026-09-16T16:14:21.809Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Agile software development\""
+      },
+      {
+        "ts": "2026-09-16T16:14:08.889Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Software development process\""
+      },
+      {
+        "ts": "2026-09-16T16:13:48.657Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📄",
+        "text": "Doc visitado: \"Software engineering\""
+      },
+      {
+        "ts": "2026-09-16T16:13:30.786Z",
+        "epochId": 2,
+        "type": "doc",
+        "icon": "📋",
+        "text": "Todos los docs de \"software_engineering_software engineering\""
+      },
+      {
+        "ts": "2026-09-16T14:18:36.788Z",
+        "epochId": 1,
+        "type": "param",
+        "icon": "🔀",
+        "text": "Representación: Nodos aislados"
+      },
+      {
+        "ts": "2026-09-16T14:18:30.651Z",
+        "epochId": 1,
+        "type": "node",
+        "icon": "🌟",
+        "text": "Raíz agregada: \"Software\""
+      }
+    ]
+  }
+}

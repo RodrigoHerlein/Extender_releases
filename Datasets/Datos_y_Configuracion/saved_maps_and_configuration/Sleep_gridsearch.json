@@ -1,0 +1,2221 @@
+{
+  "map_name": "sleep",
+  "known_map": "Sleep",
+  "timestamp": "2026-08-31T22:23:30",
+  "fast_mode": false,
+  "best_enc": "node_label",
+  "best_configs": {
+    "node_label": {
+      "score": 0.6277,
+      "focus": 0.3605,
+      "coh": 0.8949,
+      "params": {
+        "domain_category_min_fraction": 0.2,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_output_focus": 0.05,
+        "umap_n_neighbors": 15,
+        "umap_n_components": 5
+      }
+    },
+    "relation_aware": {
+      "score": 0.6041,
+      "focus": 0.3618,
+      "coh": 0.8464,
+      "params": {
+        "domain_category_min_fraction": 0.1,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_output_focus": 0.05,
+        "umap_n_neighbors": 15,
+        "umap_n_components": 5
+      }
+    },
+    "path_aware": {
+      "score": 0.6247,
+      "focus": 0.3746,
+      "coh": 0.8748,
+      "params": {
+        "domain_category_min_fraction": 0.2,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_output_focus": 0.05,
+        "umap_n_neighbors": 20,
+        "umap_n_components": 10
+      }
+    },
+    "hybrid": {
+      "score": 0.6243,
+      "focus": 0.3885,
+      "coh": 0.8601,
+      "params": {
+        "domain_category_min_fraction": 0.3,
+        "n_output_topics": 6,
+        "min_cluster_size": 2,
+        "min_samples": 1,
+        "min_output_focus": 0.05,
+        "umap_n_neighbors": 15,
+        "umap_n_components": 5
+      }
+    }
+  },
+  "top5_by_enc": {
+    "node_label": {
+      "score": [
+        {
+          "run_i": 73,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 13.64
+        },
+        {
+          "run_i": 77,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.79
+        },
+        {
+          "run_i": 145,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.71
+        },
+        {
+          "run_i": 149,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.66
+        },
+        {
+          "run_i": 2,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 14.2
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 2,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 14.2
+        },
+        {
+          "run_i": 6,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.71
+        },
+        {
+          "run_i": 74,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.74
+        },
+        {
+          "run_i": 78,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.67
+        },
+        {
+          "run_i": 146,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3616,
+          "coh": 0.8664,
+          "score": 0.614,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.94
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 73,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 13.64
+        },
+        {
+          "run_i": 77,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.79
+        },
+        {
+          "run_i": 145,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.71
+        },
+        {
+          "run_i": 149,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3605,
+          "coh": 0.8949,
+          "score": 0.6277,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.66
+        },
+        {
+          "run_i": 97,
+          "enc": "node_label",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3419,
+          "coh": 0.8857,
+          "score": 0.6138,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.73
+        }
+      ]
+    },
+    "relation_aware": {
+      "score": [
+        {
+          "run_i": 217,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3618,
+          "coh": 0.8464,
+          "score": 0.6041,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 14.07
+        },
+        {
+          "run_i": 221,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3618,
+          "coh": 0.8464,
+          "score": 0.6041,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.81
+        },
+        {
+          "run_i": 289,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3618,
+          "coh": 0.8464,
+          "score": 0.6041,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.57
+        },
+        {
+          "run_i": 293,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3618,
+          "coh": 0.8464,
+          "score": 0.6041,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.26
+        },
+        {
+          "run_i": 361,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3618,
+          "coh": 0.8464,
+          "score": 0.6041,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.79
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 228,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3791,
+          "coh": 0.594,
+          "score": 0.4865,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 13.45
+        },
+        {
+          "run_i": 232,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3791,
+          "coh": 0.594,
+          "score": 0.4865,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.3
+        },
+        {
+          "run_i": 300,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3791,
+          "coh": 0.594,
+          "score": 0.4865,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.45
+        },
+        {
+          "run_i": 304,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3791,
+          "coh": 0.594,
+          "score": 0.4865,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.23
+        },
+        {
+          "run_i": 372,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3791,
+          "coh": 0.594,
+          "score": 0.4865,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.35
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 241,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3236,
+          "coh": 0.8581,
+          "score": 0.5909,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 21.0
+        },
+        {
+          "run_i": 245,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3236,
+          "coh": 0.8581,
+          "score": 0.5909,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.87
+        },
+        {
+          "run_i": 313,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3236,
+          "coh": 0.8581,
+          "score": 0.5909,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.57
+        },
+        {
+          "run_i": 317,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3236,
+          "coh": 0.8581,
+          "score": 0.5909,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.44
+        },
+        {
+          "run_i": 385,
+          "enc": "relation_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3236,
+          "coh": 0.8581,
+          "score": 0.5909,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 21.14
+        }
+      ]
+    },
+    "path_aware": {
+      "score": [
+        {
+          "run_i": 508,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3746,
+          "coh": 0.8748,
+          "score": 0.6247,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 19.96
+        },
+        {
+          "run_i": 512,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3746,
+          "coh": 0.8748,
+          "score": 0.6247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 18.41
+        },
+        {
+          "run_i": 580,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3746,
+          "coh": 0.8748,
+          "score": 0.6247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.93
+        },
+        {
+          "run_i": 584,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3746,
+          "coh": 0.8748,
+          "score": 0.6247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 21.18
+        },
+        {
+          "run_i": 532,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3561,
+          "coh": 0.8759,
+          "score": 0.616,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.0
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 442,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3767,
+          "coh": 0.6727,
+          "score": 0.5247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 34.74
+        },
+        {
+          "run_i": 446,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3767,
+          "coh": 0.6727,
+          "score": 0.5247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 36.09
+        },
+        {
+          "run_i": 514,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3767,
+          "coh": 0.6727,
+          "score": 0.5247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 27.78
+        },
+        {
+          "run_i": 518,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3767,
+          "coh": 0.6727,
+          "score": 0.5247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 34.94
+        },
+        {
+          "run_i": 586,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 3,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 10
+          },
+          "focus": 0.3767,
+          "coh": 0.6727,
+          "score": 0.5247,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.84
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 532,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3561,
+          "coh": 0.8759,
+          "score": 0.616,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.0
+        },
+        {
+          "run_i": 536,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3561,
+          "coh": 0.8759,
+          "score": 0.616,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 20.16
+        },
+        {
+          "run_i": 604,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3561,
+          "coh": 0.8759,
+          "score": 0.616,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.97
+        },
+        {
+          "run_i": 608,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3561,
+          "coh": 0.8759,
+          "score": 0.616,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.53
+        },
+        {
+          "run_i": 508,
+          "enc": "path_aware",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3746,
+          "coh": 0.8748,
+          "score": 0.6247,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 19.96
+        }
+      ]
+    },
+    "hybrid": {
+      "score": [
+        {
+          "run_i": 793,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3885,
+          "coh": 0.8601,
+          "score": 0.6243,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 17.03
+        },
+        {
+          "run_i": 797,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3885,
+          "coh": 0.8601,
+          "score": 0.6243,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 17.74
+        },
+        {
+          "run_i": 652,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3881,
+          "coh": 0.8549,
+          "score": 0.6215,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 16.03
+        },
+        {
+          "run_i": 656,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.1,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3881,
+          "coh": 0.8549,
+          "score": 0.6215,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 15.12
+        },
+        {
+          "run_i": 724,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 20,
+            "umap_n_components": 10
+          },
+          "focus": 0.3881,
+          "coh": 0.8549,
+          "score": 0.6215,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 23.11
+        }
+      ],
+      "focus": [
+        {
+          "run_i": 741,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.4041,
+          "coh": 0.6025,
+          "score": 0.5033,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 21.33
+        },
+        {
+          "run_i": 765,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 8,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.4041,
+          "coh": 0.6025,
+          "score": 0.5033,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 19.56
+        },
+        {
+          "run_i": 789,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.2,
+            "n_output_topics": 10,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.4041,
+          "coh": 0.6025,
+          "score": 0.5033,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 15.73
+        },
+        {
+          "run_i": 813,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.4041,
+          "coh": 0.6025,
+          "score": 0.5033,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 14.48
+        },
+        {
+          "run_i": 837,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 5,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.4041,
+          "coh": 0.6025,
+          "score": 0.5033,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 14.4
+        }
+      ],
+      "coh": [
+        {
+          "run_i": 841,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3391,
+          "coh": 0.8709,
+          "score": 0.605,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 15.46
+        },
+        {
+          "run_i": 845,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 10,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3391,
+          "coh": 0.8709,
+          "score": 0.605,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 15.61
+        },
+        {
+          "run_i": 817,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3576,
+          "coh": 0.8645,
+          "score": 0.6111,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 16.45
+        },
+        {
+          "run_i": 821,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 8,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.15,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3576,
+          "coh": 0.8645,
+          "score": 0.6111,
+          "is_best": false,
+          "error": null,
+          "elapsed_s": 15.56
+        },
+        {
+          "run_i": 793,
+          "enc": "hybrid",
+          "params": {
+            "domain_category_min_fraction": 0.3,
+            "n_output_topics": 6,
+            "min_cluster_size": 2,
+            "min_samples": 1,
+            "min_output_focus": 0.05,
+            "umap_n_neighbors": 15,
+            "umap_n_components": 5
+          },
+          "focus": 0.3885,
+          "coh": 0.8601,
+          "score": 0.6243,
+          "is_best": true,
+          "error": null,
+          "elapsed_s": 17.03
+        }
+      ]
+    }
+  },
+  "concept_map": {
+    "title": "sleep",
+    "root": "consciousness",
+    "concepts": [
+      "sleep",
+      "non-REM",
+      "REM",
+      "any non-REM sleep",
+      "stage 3 & 4",
+      "deep sleep",
+      "increase in delta waves",
+      "release of growth hormones",
+      "Hypnosis",
+      "social-cognitive theory of hypnosis",
+      "psychological dependence",
+      "feeling that drug is needed to continue feeling of well being",
+      "sleep deprivation",
+      "microsleep",
+      "withdrawal",
+      "physical symptoms resulting from lack of addictive drug",
+      "morphine",
+      "narcotic drug derived from opium",
+      "LSD",
+      "fungus called ergot",
+      "hypnotized people are not in an altered state",
+      "hypnotized people just play the role expected of them at the given situation",
+      "basic suggestion effect",
+      "gives people excuse to do things",
+      "powerful synthetic hallucinogen",
+      "sleepwalking",
+      "episode of moving around during deep sleep",
+      "serotonin",
+      "sleepiness",
+      "consciousness",
+      "person's awareness of their surroundings",
+      "REM rebound",
+      "increased amounts of REM sleep after being deprived of REM sleep previously",
+      "heroin",
+      "narcotic drug derived from opium that is extremely addictive",
+      "purer form of morphine",
+      "psilocybin",
+      "native americans for ritual purposes",
+      "altered state",
+      "shift in quality or pattern of mental activity as compared to waking",
+      "caffeine",
+      "sobriety",
+      "manifest content",
+      "actual dream",
+      "cocaine",
+      "natural drug derived from leaves of coca plant",
+      "to treat severe pain",
+      "psychoactive drugs",
+      "REM paralysis",
+      "inability of the voluntary msucles to move",
+      "nicotine",
+      "active ingredient in tobacco",
+      "hallucinogenics",
+      "drugs that produce hallucinations",
+      "night terrors",
+      "extreme fear or terror experienced during sleep",
+      "activation information mode model (AIM)",
+      "dreams are related to waking hour experiences",
+      "insomnia",
+      "inability to fall asleep, stay asleep or get good quality sleep",
+      "melatonin",
+      "suprachiasmatic nucleus",
+      "PCP",
+      "MDMA/ ecstasy/X",
+      "marijuana",
+      "mescaline",
+      "altered sense of time",
+      "mild visual distortions",
+      "feeling of euphoria",
+      "REM behavior disorder",
+      "lack of REM paralysis",
+      "gentle tyrant",
+      "stimulants",
+      "depressants",
+      "narcotics",
+      "dreams",
+      "nightmares",
+      "bad dreams occuring during REM sleep",
+      "physical dependence",
+      "body becomes unable to function normally without a particular drug",
+      "narcolepsy",
+      "person falling asleep immediately to REM sleep without warning",
+      "restorative theory",
+      "sleep allows body to restore chemical balance and cellular damage",
+      "sleep apnea",
+      "person stops breathing for roughly half a minute or more during sleep",
+      "long, slow waves that indicate deepest stage of sleep",
+      "benzodiazepines",
+      "halcion",
+      "valium",
+      "xanax",
+      "rohypnol",
+      "ativan",
+      "librium",
+      "barbiturates",
+      "major tranquilizers",
+      "waking consciousness",
+      "state of consciousness in which the person is especially susceptible to suggestions",
+      "stage 2",
+      "stage 1",
+      "opium-related drugs that suppress sense of pain",
+      "activation-synthesis hypothesis",
+      "brief sidesteps into sleep lasting only a few seconds",
+      "any significant loss of sleep",
+      "concentration problems",
+      "less physical alertness and cognitive ability",
+      "irritability",
+      "increase in theta waves",
+      "brainwaves indicating early stages of sleep",
+      "circadian rhythm",
+      "bodily cycle rhythm that occurs over 24 hour period",
+      "mild hallucinogen derived from leaves and flowers of particular type of hemp plant",
+      "amphetamines",
+      "benzedrine",
+      "methedrine",
+      "dexedrine",
+      "natural hallucinogen derived from peyote cactus buttons",
+      "date rape drug",
+      "cannot perceive reality",
+      "drugs that alter thinking, perception and memory",
+      "sleep disorders",
+      "alcohol",
+      "drugs",
+      "drugs that increase the functioning of the nervous system",
+      "drugs that lower anxiety and reduce stress",
+      "adaptive theory",
+      "sleep evolved to avoid predators",
+      "hallucinations",
+      "unaware of being asleep",
+      "hypnic jerk",
+      "thoughts, feelings and sensations are clear, organized, and the person feels alert",
+      "synthesized stimulants",
+      "minor tranquilizers",
+      "latent content",
+      "hidden meaning behind dream",
+      "mild stimulant found in coffee, tea, and several other plant based substances",
+      "lack of REM sleep",
+      "opium",
+      "substance derived from the opium poppy from which all narcotic drugs are derived",
+      "hypothalamus",
+      "depressant drugs that have a sedative effect",
+      "methamphetamine",
+      "stage of sleep with rapid eye movement under eyelid, typically experiencing a dream",
+      "overweight people",
+      "chemical resulting from fermentation or distillation of various kinds of vegetable matter",
+      "designer drug that can have both stimulant and hallucinatory effcts",
+      "drugs that decrease nervous system functions",
+      "shallow, irregular breathing",
+      "slower heart rate",
+      "body temperature drop",
+      "tranquilizer that can cause stimulant, depressant, narcotic, or hallucinogenic effects",
+      "rush",
+      "highly addictive",
+      "ADHD",
+      "raise body temperature",
+      "dehydrate body",
+      "dreams are created by higher centers of cortex to explain activation of brain stem",
+      "natural hallucinoge fround in certain mushrooms",
+      "sense of arousal"
+    ],
+    "relations": [
+      {
+        "src": "sleep",
+        "link": "stages of sleep",
+        "dst": "non-REM"
+      },
+      {
+        "src": "sleep",
+        "link": "stages of sleep",
+        "dst": "REM"
+      },
+      {
+        "src": "non-REM",
+        "link": "defined as",
+        "dst": "any non-REM sleep"
+      },
+      {
+        "src": "stage 3 & 4",
+        "link": "characterized by",
+        "dst": "deep sleep"
+      },
+      {
+        "src": "stage 3 & 4",
+        "link": "characterized by",
+        "dst": "increase in delta waves"
+      },
+      {
+        "src": "stage 3 & 4",
+        "link": "characterized by",
+        "dst": "release of growth hormones"
+      },
+      {
+        "src": "Hypnosis",
+        "link": "described with",
+        "dst": "social-cognitive theory of hypnosis"
+      },
+      {
+        "src": "psychological dependence",
+        "link": "defined as",
+        "dst": "feeling that drug is needed to continue feeling of well being"
+      },
+      {
+        "src": "sleep",
+        "link": "consequences of not sleeping",
+        "dst": "sleep deprivation"
+      },
+      {
+        "src": "sleep",
+        "link": "consequences of not sleeping",
+        "dst": "microsleep"
+      },
+      {
+        "src": "withdrawal",
+        "link": "defined as",
+        "dst": "physical symptoms resulting from lack of addictive drug"
+      },
+      {
+        "src": "morphine",
+        "link": "defined as",
+        "dst": "narcotic drug derived from opium"
+      },
+      {
+        "src": "LSD",
+        "link": "synthesized from",
+        "dst": "fungus called ergot"
+      },
+      {
+        "src": "social-cognitive theory of hypnosis",
+        "link": "states",
+        "dst": "hypnotized people are not in an altered state"
+      },
+      {
+        "src": "social-cognitive theory of hypnosis",
+        "link": "states",
+        "dst": "hypnotized people just play the role expected of them at the given situation"
+      },
+      {
+        "src": "basic suggestion effect",
+        "link": "states",
+        "dst": "gives people excuse to do things"
+      },
+      {
+        "src": "LSD",
+        "link": "defined as",
+        "dst": "powerful synthetic hallucinogen"
+      },
+      {
+        "src": "sleepwalking",
+        "link": "defined as",
+        "dst": "episode of moving around during deep sleep"
+      },
+      {
+        "src": "serotonin",
+        "link": "related to",
+        "dst": "sleepiness"
+      },
+      {
+        "src": "consciousness",
+        "link": "defined as",
+        "dst": "person's awareness of their surroundings"
+      },
+      {
+        "src": "REM rebound",
+        "link": "described as",
+        "dst": "increased amounts of REM sleep after being deprived of REM sleep previously"
+      },
+      {
+        "src": "Hypnosis",
+        "link": "runs on",
+        "dst": "basic suggestion effect"
+      },
+      {
+        "src": "heroin",
+        "link": "defined as",
+        "dst": "narcotic drug derived from opium that is extremely addictive"
+      },
+      {
+        "src": "heroin",
+        "link": "defined as",
+        "dst": "purer form of morphine"
+      },
+      {
+        "src": "psilocybin",
+        "link": "used by",
+        "dst": "native americans for ritual purposes"
+      },
+      {
+        "src": "altered state",
+        "link": "defined as",
+        "dst": "shift in quality or pattern of mental activity as compared to waking"
+      },
+      {
+        "src": "caffeine",
+        "link": "does not induce",
+        "dst": "sobriety"
+      },
+      {
+        "src": "manifest content",
+        "link": "defined as",
+        "dst": "actual dream"
+      },
+      {
+        "src": "cocaine",
+        "link": "defined as",
+        "dst": "natural drug derived from leaves of coca plant"
+      },
+      {
+        "src": "morphine",
+        "link": "used",
+        "dst": "to treat severe pain"
+      },
+      {
+        "src": "altered state",
+        "link": "different types",
+        "dst": "sleep"
+      },
+      {
+        "src": "altered state",
+        "link": "different types",
+        "dst": "psychoactive drugs"
+      },
+      {
+        "src": "altered state",
+        "link": "different types",
+        "dst": "Hypnosis"
+      },
+      {
+        "src": "REM paralysis",
+        "link": "described as",
+        "dst": "inability of the voluntary msucles to move"
+      },
+      {
+        "src": "nicotine",
+        "link": "defined as",
+        "dst": "active ingredient in tobacco"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "defined as",
+        "dst": "drugs that produce hallucinations"
+      },
+      {
+        "src": "night terrors",
+        "link": "defined as",
+        "dst": "extreme fear or terror experienced during sleep"
+      },
+      {
+        "src": "activation information mode model (AIM)",
+        "link": "states",
+        "dst": "dreams are related to waking hour experiences"
+      },
+      {
+        "src": "insomnia",
+        "link": "defined as",
+        "dst": "inability to fall asleep, stay asleep or get good quality sleep"
+      },
+      {
+        "src": "melatonin",
+        "link": "through",
+        "dst": "suprachiasmatic nucleus"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "PCP"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "psilocybin"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "MDMA/ ecstasy/X"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "marijuana"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "mescaline"
+      },
+      {
+        "src": "hallucinogenics",
+        "link": "such as",
+        "dst": "LSD"
+      },
+      {
+        "src": "marijuana",
+        "link": "users report",
+        "dst": "altered sense of time"
+      },
+      {
+        "src": "marijuana",
+        "link": "users report",
+        "dst": "mild visual distortions"
+      },
+      {
+        "src": "marijuana",
+        "link": "users report",
+        "dst": "feeling of euphoria"
+      },
+      {
+        "src": "REM behavior disorder",
+        "link": "defined as",
+        "dst": "lack of REM paralysis"
+      },
+      {
+        "src": "sleep",
+        "link": "referred to as",
+        "dst": "gentle tyrant"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "categorized by",
+        "dst": "stimulants"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "categorized by",
+        "dst": "depressants"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "categorized by",
+        "dst": "narcotics"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "categorized by",
+        "dst": "hallucinogenics"
+      },
+      {
+        "src": "sleep",
+        "link": "related with",
+        "dst": "dreams"
+      },
+      {
+        "src": "nightmares",
+        "link": "defined as",
+        "dst": "bad dreams occuring during REM sleep"
+      },
+      {
+        "src": "physical dependence",
+        "link": "defined as",
+        "dst": "body becomes unable to function normally without a particular drug"
+      },
+      {
+        "src": "narcolepsy",
+        "link": "defined as",
+        "dst": "person falling asleep immediately to REM sleep without warning"
+      },
+      {
+        "src": "restorative theory",
+        "link": "states",
+        "dst": "sleep allows body to restore chemical balance and cellular damage"
+      },
+      {
+        "src": "sleep apnea",
+        "link": "defined as",
+        "dst": "person stops breathing for roughly half a minute or more during sleep"
+      },
+      {
+        "src": "increase in delta waves",
+        "link": "defined as",
+        "dst": "long, slow waves that indicate deepest stage of sleep"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "halcion"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "valium"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "xanax"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "rohypnol"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "ativan"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "such as",
+        "dst": "librium"
+      },
+      {
+        "src": "consciousness",
+        "link": "different state called",
+        "dst": "altered state"
+      },
+      {
+        "src": "barbiturates",
+        "link": "also called",
+        "dst": "major tranquilizers"
+      },
+      {
+        "src": "melatonin",
+        "link": "related to",
+        "dst": "sleepiness"
+      },
+      {
+        "src": "consciousness",
+        "link": "most people spent in",
+        "dst": "waking consciousness"
+      },
+      {
+        "src": "Hypnosis",
+        "link": "defined as",
+        "dst": "state of consciousness in which the person is especially susceptible to suggestions"
+      },
+      {
+        "src": "non-REM",
+        "link": "different stages of sleep",
+        "dst": "stage 2"
+      },
+      {
+        "src": "non-REM",
+        "link": "different stages of sleep",
+        "dst": "stage 3 & 4"
+      },
+      {
+        "src": "non-REM",
+        "link": "different stages of sleep",
+        "dst": "stage 1"
+      },
+      {
+        "src": "narcotics",
+        "link": "defined as",
+        "dst": "opium-related drugs that suppress sense of pain"
+      },
+      {
+        "src": "dreams",
+        "link": "described by",
+        "dst": "activation-synthesis hypothesis"
+      },
+      {
+        "src": "microsleep",
+        "link": "defined as",
+        "dst": "brief sidesteps into sleep lasting only a few seconds"
+      },
+      {
+        "src": "any significant loss of sleep",
+        "link": "results in",
+        "dst": "concentration problems"
+      },
+      {
+        "src": "any significant loss of sleep",
+        "link": "results in",
+        "dst": "less physical alertness and cognitive ability"
+      },
+      {
+        "src": "any significant loss of sleep",
+        "link": "results in",
+        "dst": "irritability"
+      },
+      {
+        "src": "increase in theta waves",
+        "link": "defined as",
+        "dst": "brainwaves indicating early stages of sleep"
+      },
+      {
+        "src": "circadian rhythm",
+        "link": "defined as",
+        "dst": "bodily cycle rhythm that occurs over 24 hour period"
+      },
+      {
+        "src": "marijuana",
+        "link": "defined as",
+        "dst": "mild hallucinogen derived from leaves and flowers of particular type of hemp plant"
+      },
+      {
+        "src": "amphetamines",
+        "link": "such as",
+        "dst": "benzedrine"
+      },
+      {
+        "src": "amphetamines",
+        "link": "such as",
+        "dst": "methedrine"
+      },
+      {
+        "src": "amphetamines",
+        "link": "such as",
+        "dst": "dexedrine"
+      },
+      {
+        "src": "mescaline",
+        "link": "defined as",
+        "dst": "natural hallucinogen derived from peyote cactus buttons"
+      },
+      {
+        "src": "rohypnol",
+        "link": "also called",
+        "dst": "date rape drug"
+      },
+      {
+        "src": "LSD",
+        "link": "users",
+        "dst": "cannot perceive reality"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "defined as",
+        "dst": "drugs that alter thinking, perception and memory"
+      },
+      {
+        "src": "sleep",
+        "link": "disturbed by",
+        "dst": "sleep disorders"
+      },
+      {
+        "src": "altered state",
+        "link": "could be influenced by",
+        "dst": "alcohol"
+      },
+      {
+        "src": "altered state",
+        "link": "could be influenced by",
+        "dst": "drugs"
+      },
+      {
+        "src": "stimulants",
+        "link": "defined as",
+        "dst": "drugs that increase the functioning of the nervous system"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "defined as",
+        "dst": "drugs that lower anxiety and reduce stress"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "can develop",
+        "dst": "physical dependence"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "can develop",
+        "dst": "withdrawal"
+      },
+      {
+        "src": "psychoactive drugs",
+        "link": "can develop",
+        "dst": "psychological dependence"
+      },
+      {
+        "src": "adaptive theory",
+        "link": "states",
+        "dst": "sleep evolved to avoid predators"
+      },
+      {
+        "src": "stage 1",
+        "link": "characterized by",
+        "dst": "hallucinations"
+      },
+      {
+        "src": "stage 1",
+        "link": "characterized by",
+        "dst": "unaware of being asleep"
+      },
+      {
+        "src": "stage 1",
+        "link": "characterized by",
+        "dst": "increase in theta waves"
+      },
+      {
+        "src": "stage 1",
+        "link": "characterized by",
+        "dst": "hypnic jerk"
+      },
+      {
+        "src": "waking consciousness",
+        "link": "defined as",
+        "dst": "thoughts, feelings and sensations are clear, organized, and the person feels alert"
+      },
+      {
+        "src": "amphetamines",
+        "link": "defined as",
+        "dst": "synthesized stimulants"
+      },
+      {
+        "src": "benzodiazepines",
+        "link": "also called",
+        "dst": "minor tranquilizers"
+      },
+      {
+        "src": "latent content",
+        "link": "defined as",
+        "dst": "hidden meaning behind dream"
+      },
+      {
+        "src": "caffeine",
+        "link": "defined as",
+        "dst": "mild stimulant found in coffee, tea, and several other plant based substances"
+      },
+      {
+        "src": "activation-synthesis hypothesis",
+        "link": "rewritten into",
+        "dst": "activation information mode model (AIM)"
+      },
+      {
+        "src": "REM rebound",
+        "link": "occurs with",
+        "dst": "lack of REM sleep"
+      },
+      {
+        "src": "narcotics",
+        "link": "such as",
+        "dst": "opium"
+      },
+      {
+        "src": "narcotics",
+        "link": "such as",
+        "dst": "heroin"
+      },
+      {
+        "src": "narcotics",
+        "link": "such as",
+        "dst": "morphine"
+      },
+      {
+        "src": "opium",
+        "link": "defined as",
+        "dst": "substance derived from the opium poppy from which all narcotic drugs are derived"
+      },
+      {
+        "src": "hypothalamus",
+        "link": "controls release of",
+        "dst": "serotonin"
+      },
+      {
+        "src": "hypothalamus",
+        "link": "controls release of",
+        "dst": "melatonin"
+      },
+      {
+        "src": "sleep deprivation",
+        "link": "defined as",
+        "dst": "any significant loss of sleep"
+      },
+      {
+        "src": "mescaline",
+        "link": "used by",
+        "dst": "native americans for ritual purposes"
+      },
+      {
+        "src": "dreams",
+        "link": "described by Freud",
+        "dst": "latent content"
+      },
+      {
+        "src": "dreams",
+        "link": "described by Freud",
+        "dst": "manifest content"
+      },
+      {
+        "src": "barbiturates",
+        "link": "defined as",
+        "dst": "depressant drugs that have a sedative effect"
+      },
+      {
+        "src": "stimulants",
+        "link": "such as",
+        "dst": "cocaine"
+      },
+      {
+        "src": "stimulants",
+        "link": "such as",
+        "dst": "caffeine"
+      },
+      {
+        "src": "stimulants",
+        "link": "such as",
+        "dst": "amphetamines"
+      },
+      {
+        "src": "stimulants",
+        "link": "such as",
+        "dst": "methamphetamine"
+      },
+      {
+        "src": "stimulants",
+        "link": "such as",
+        "dst": "nicotine"
+      },
+      {
+        "src": "REM",
+        "link": "described as",
+        "dst": "stage of sleep with rapid eye movement under eyelid, typically experiencing a dream"
+      },
+      {
+        "src": "amphetamines",
+        "link": "treats",
+        "dst": "overweight people"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "sleepwalking"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "insomnia"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "REM behavior disorder"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "night terrors"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "narcolepsy"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "sleep apnea"
+      },
+      {
+        "src": "sleep disorders",
+        "link": "such as",
+        "dst": "nightmares"
+      },
+      {
+        "src": "sleep",
+        "link": "controlled by",
+        "dst": "hypothalamus"
+      },
+      {
+        "src": "alcohol",
+        "link": "defined as",
+        "dst": "chemical resulting from fermentation or distillation of various kinds of vegetable matter"
+      },
+      {
+        "src": "MDMA/ ecstasy/X",
+        "link": "defined as",
+        "dst": "designer drug that can have both stimulant and hallucinatory effcts"
+      },
+      {
+        "src": "depressants",
+        "link": "defined as",
+        "dst": "drugs that decrease nervous system functions"
+      },
+      {
+        "src": "stage 2",
+        "link": "characterized by",
+        "dst": "shallow, irregular breathing"
+      },
+      {
+        "src": "stage 2",
+        "link": "characterized by",
+        "dst": "slower heart rate"
+      },
+      {
+        "src": "stage 2",
+        "link": "characterized by",
+        "dst": "body temperature drop"
+      },
+      {
+        "src": "PCP",
+        "link": "defined as",
+        "dst": "tranquilizer that can cause stimulant, depressant, narcotic, or hallucinogenic effects"
+      },
+      {
+        "src": "nicotine",
+        "link": "provides",
+        "dst": "rush"
+      },
+      {
+        "src": "depressants",
+        "link": "such as",
+        "dst": "barbiturates"
+      },
+      {
+        "src": "depressants",
+        "link": "such as",
+        "dst": "benzodiazepines"
+      },
+      {
+        "src": "depressants",
+        "link": "such as",
+        "dst": "alcohol"
+      },
+      {
+        "src": "natural drug derived from leaves of coca plant",
+        "link": "also",
+        "dst": "highly addictive"
+      },
+      {
+        "src": "sleep",
+        "link": "theories of sleep",
+        "dst": "adaptive theory"
+      },
+      {
+        "src": "sleep",
+        "link": "theories of sleep",
+        "dst": "restorative theory"
+      },
+      {
+        "src": "REM",
+        "link": "characterized by",
+        "dst": "REM paralysis"
+      },
+      {
+        "src": "REM",
+        "link": "characterized by",
+        "dst": "REM rebound"
+      },
+      {
+        "src": "methamphetamine",
+        "link": "used to treat",
+        "dst": "narcolepsy"
+      },
+      {
+        "src": "methamphetamine",
+        "link": "used to treat",
+        "dst": "ADHD"
+      },
+      {
+        "src": "MDMA/ ecstasy/X",
+        "link": "can",
+        "dst": "raise body temperature"
+      },
+      {
+        "src": "MDMA/ ecstasy/X",
+        "link": "can",
+        "dst": "dehydrate body"
+      },
+      {
+        "src": "activation-synthesis hypothesis",
+        "link": "states that",
+        "dst": "dreams are created by higher centers of cortex to explain activation of brain stem"
+      },
+      {
+        "src": "psilocybin",
+        "link": "defined as",
+        "dst": "natural hallucinoge fround in certain mushrooms"
+      },
+      {
+        "src": "depressant drugs that have a sedative effect",
+        "link": "also",
+        "dst": "highly addictive"
+      },
+      {
+        "src": "sleep",
+        "link": "managed through",
+        "dst": "circadian rhythm"
+      },
+      {
+        "src": "rush",
+        "link": "described as",
+        "dst": "sense of arousal"
+      }
+    ]
+  }
+}
