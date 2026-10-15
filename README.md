@@ -6,6 +6,8 @@
 
 Ejecutá `abrir_extender.bat`. Instala Flask si no está, levanta el servidor y abre el navegador en `http://localhost:5000` automáticamente.
 
+La primera vez que se trabaja con un corpus debe calcular los embeddings del mismo y tardará mucho más en ejecutarse.
+
 
 ---
 
