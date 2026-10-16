@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0.."
+cd /d "%~dp0"
 
 echo Verificando Flask...
 python -c "import flask" 2>nul || (
