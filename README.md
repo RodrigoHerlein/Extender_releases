@@ -60,3 +60,11 @@ Instalación:
 ```bash
 pip install flask bertopic umap-learn hdbscan sentence-transformers scikit-learn numpy
 ```
+
+## Debe usarse python 3.11 o 3.12: https://www.python.org/downloads/release/python-31117/
+
+Instalar python 3.11 con winget desde el cmd (windows): winget install Python.Python.3.11
+
+Verificar que python se encuentre vinculado a la variable PATH del sistema.
+
+Controlar la versión instalada: python --version
